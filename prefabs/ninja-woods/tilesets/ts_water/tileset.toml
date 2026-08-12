@@ -30,6 +30,10 @@ edges= { e = "open", s = "open", w = "open" }
 "ESW|SE" = 1
 "ESW|SE,SW" = 1
 "ESW|SW" = 1
+"ES|" = 1
+"ES|SE" = 1
+"EW|" = 1
+"E|" = 1
 "NESW|" = 2
 "NESW|NE" = 2
 "NESW|NE,NW" = 2
@@ -46,6 +50,29 @@ edges= { e = "open", s = "open", w = "open" }
 "NESW|SE" = 2
 "NESW|SE,SW" = 2
 "NESW|SW" = 2
+"NES|" = 2
+"NES|NE" = 2
+"NES|NE,SE" = 2
+"NES|SE" = 2
+"NEW|" = 2
+"NEW|NE" = 2
+"NEW|NE,NW" = 2
+"NEW|NW" = 2
+"NE|" = 2
+"NE|NE" = 2
+"NSW|" = 2
+"NSW|NW" = 2
+"NSW|NW,SW" = 2
+"NSW|SW" = 2
+"NS|" = 2
+"NW|" = 2
+"NW|NW" = 2
+"N|" = 2
+"SW|" = 1
+"SW|SW" = 1
+"S|" = 1
+"W|" = 1
+"|" = 1
 
 [tile_size]
 height = 128
