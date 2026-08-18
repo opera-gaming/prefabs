@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Simple Zoom"
+description = "A simple-zoom room transition — the outgoing room zooms into itself as the incoming room fades in."
+category = "effects"
+tags = ["effect:transition", "effect:simple-zoom", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

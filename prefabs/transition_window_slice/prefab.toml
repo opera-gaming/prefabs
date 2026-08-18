@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Window Slice"
+description = "A window-slice room transition — vertical slices wipe across to reveal the next room."
+category = "effects"
+tags = ["effect:transition", "effect:window-slice", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

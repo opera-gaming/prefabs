@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Heart"
+description = "A heart-shaped room transition — a heart wipe grows from the centre to reveal the incoming room."
+category = "effects"
+tags = ["effect:transition", "effect:heart", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

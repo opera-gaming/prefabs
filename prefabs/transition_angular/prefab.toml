@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Angular"
+description = "An angular room transition — a radial wipe sweeping around the center by angle."
+category = "effects"
+tags = ["effect:transition", "effect:angular", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Radial"
+description = "A radial room transition — a clock-hand sweep rotates around the centre to reveal the next room."
+category = "effects"
+tags = ["effect:transition", "effect:radial", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

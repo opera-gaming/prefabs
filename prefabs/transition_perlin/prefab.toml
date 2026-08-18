@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Perlin"
+description = "A perlin-noise dissolve room transition — the outgoing room breaks up along a noise field to reveal the next."
+category = "effects"
+tags = ["effect:transition", "effect:perlin", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

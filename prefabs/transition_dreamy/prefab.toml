@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Dreamy"
+description = "A dreamy room transition — a gentle wavy displacement crossfade between the outgoing and incoming rooms."
+category = "effects"
+tags = ["effect:transition", "effect:dreamy", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

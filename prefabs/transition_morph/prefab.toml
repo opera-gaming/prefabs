@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Morph"
+description = "A morph room transition — the two rooms warp into one another along their colour gradients while cross-fading."
+category = "effects"
+tags = ["effect:transition", "effect:morph", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Cube"
+description = "A rotating-cube room transition — the rooms map onto two faces of a spinning 3D cube."
+category = "effects"
+tags = ["effect:transition", "effect:cube", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

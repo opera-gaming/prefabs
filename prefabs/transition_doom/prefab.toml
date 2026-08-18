@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Doom"
+description = "A Doom-style room transition — vertical bars slide down like the classic DOOM screen melt."
+category = "effects"
+tags = ["effect:transition", "effect:doom", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

@@ -1,0 +1,11 @@
+# Prefab manifest — a derived transition. Inherits everything from
+# transition-base and overrides only the fragment shader.
+name = "Transition Glitch Displace"
+description = "A glitchy room transition — voronoi-driven displacement with a desaturated flash between rooms."
+category = "effects"
+tags = ["effect:transition", "effect:glitch-displace", "role:library"]
+
+[parent-link]
+# Sibling prefab in this catalog; short form resolves it as a local
+# sibling directory instead of a network fetch.
+source = "transition_base@v0.6.4"

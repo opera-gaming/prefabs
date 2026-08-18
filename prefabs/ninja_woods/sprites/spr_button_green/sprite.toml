@@ -1,0 +1,11 @@
+#:schema ../../.gm-schema/v1.json#sprite
+
+fps = 0.0
+
+[nine_slice]
+bottom = 23
+enabled = false
+left = 46
+right = 46
+tile_mode = ["stretch", "stretch", "stretch", "stretch", "stretch"]
+top = 13
