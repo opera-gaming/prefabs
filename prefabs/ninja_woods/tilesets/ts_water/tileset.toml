@@ -18,6 +18,32 @@ y = 0
 h = 0
 v = 0
 
+[autotile.default]
+template = "sides_47"
+edges= { e = "open", s = "open", w = "open" }
+
+[autotile.default.tiles]
+"ESW|" = 1
+"ESW|SE" = 1
+"ESW|SE,SW" = 1
+"ESW|SW" = 1
+"NESW|" = 2
+"NESW|NE" = 2
+"NESW|NE,NW" = 2
+"NESW|NE,NW,SE" = 2
+"NESW|NE,NW,SE,SW" = 2
+"NESW|NE,NW,SW" = 2
+"NESW|NE,SE" = 2
+"NESW|NE,SE,SW" = 2
+"NESW|NE,SW" = 2
+"NESW|NW" = 2
+"NESW|NW,SE" = 2
+"NESW|NW,SE,SW" = 2
+"NESW|NW,SW" = 2
+"NESW|SE" = 2
+"NESW|SE,SW" = 2
+"NESW|SW" = 2
+
 [tile_size]
 height = 128
 width = 128
