@@ -14,6 +14,24 @@ tile_count = 27
 x = 0
 y = 0
 
+[autotile.default.tiles]
+- = 16
+NE = 14
+"NE+NW" = 13
+"NE+NW+SE" = 5
+"NE+NW+SE+SW" = 1
+"NE+NW+SW" = 9
+"NE+SE" = 6
+"NE+SE+SW" = 2
+"NE+SW" = 10
+NW = 15
+"NW+SE" = 7
+"NW+SE+SW" = 3
+"NW+SW" = 11
+SE = 8
+"SE+SW" = 4
+SW = 12
+
 [separation]
 h = 0
 v = 0
@@ -21,3 +39,6 @@ v = 0
 [tile_size]
 height = 16
 width = 16
+
+[autotile.default]
+template = "corners_16"

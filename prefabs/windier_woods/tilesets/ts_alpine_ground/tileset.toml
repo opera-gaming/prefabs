@@ -14,6 +14,51 @@ tile_count = 108
 x = 0
 y = 0
 
+[autotile.default]
+template = "sides_47"
+
+[autotile.default.tiles]
+"ESW|" = [74, 101]
+"ESW|SE" = [74, 101]
+"ESW|SE,SW" = [74, 101]
+"ESW|SW" = [74, 101]
+"ES|" = 73
+"ES|SE" = 73
+"NESW|" = 86
+"NESW|NE" = 100
+"NESW|NE,NW" = 100
+"NESW|NE,NW,SE" = 100
+"NESW|NE,NW,SE,SW" = 100
+"NESW|NE,NW,SW" = 100
+"NESW|NE,SE" = 100
+"NESW|NE,SE,SW" = 100
+"NESW|NE,SW" = 100
+"NESW|NW" = 102
+"NESW|NW,SE" = 102
+"NESW|NW,SE,SW" = 102
+"NESW|NW,SW" = 102
+"NESW|SE" = 76
+"NESW|SE,SW" = 76
+"NESW|SW" = 78
+"NES|" = [85, 90]
+"NES|NE" = [85, 90]
+"NES|NE,SE" = [85, 90]
+"NES|SE" = [85, 90]
+"NEW|" = [98, 77]
+"NEW|NE" = [98, 77]
+"NEW|NE,NW" = [98, 77]
+"NEW|NW" = [98, 77]
+"NE|" = 97
+"NE|NE" = 97
+"NSW|" = [87, 88]
+"NSW|NW" = [87, 88]
+"NSW|NW,SW" = [87, 88]
+"NSW|SW" = [87, 88]
+"NW|" = 99
+"NW|NW" = 99
+"SW|" = 75
+"SW|SW" = 75
+
 [separation]
 h = 0
 v = 0
