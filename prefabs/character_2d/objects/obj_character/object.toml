@@ -1,0 +1,47 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# The capsule: a kinematic body the character's own walking moves (root motion
+# from the clips drives the rig; the body is placed on the rig every step). It
+# pushes dynamic things and stops at obj_solid. Authored for char_scale 0.8
+# (a 1.8 m rig is 432 px tall at 300 px/m); image_xscale/yscale rescale it.
+# Kinematic: never moved by forces or hits -- hits are the caller's decision
+# (character_ragdoll), not Box2D's.
+[physics]
+kind = "kinematic"
+
+[physics.body]
+density = 1.0
+friction = 0.3
+restitution = 0.0
+
+[physics.body.shape]
+type = "polygon"
+points = [[-36.0, -396.0], [-20.0, -424.0], [20.0, -424.0], [36.0, -396.0],
+          [36.0, -36.0], [20.0, -8.0], [-20.0, -8.0], [-36.0, -36.0]]
+scale = "instance"
+
+# rig_asset = -1 means the prefab's own mannequin. Override per instance
+# (`rig_asset = rig_ninja`) or call character_set_rig() to re-skin at runtime.
+[[variables]]
+name = "rig_asset"
+type = "expression"
+value = "-1"
+
+# 300 px per metre at 1.0; 0.8 is the size the prefabs are laid out for.
+[[variables]]
+name = "char_scale"
+type = "real"
+value = 0.8
+
+# Tap/click beside it to walk there, above its head to jump. Off for a
+# character the game drives itself (character_walk_to / character_jump).
+[[variables]]
+name = "tap_control"
+type = "boolean"
+value = true
+
+# Facing at creation: 1 right, -1 left.
+[[variables]]
+name = "facing"
+type = "integer"
+value = 1

@@ -1,0 +1,9 @@
+#:schema ../../.gm-schema/v1.json#room
+
+# Demo only (excluded from the prefab): a flat physics room with a floor, the
+# character, and a driver that walks/jumps/drops it so `gmx run` shows it off.
+size = { width = 1600, height = 900 }
+
+physics_world = true
+physics_gravity_y = 120.0
+physics_pix_to_meters = 0.1

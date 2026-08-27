@@ -1,0 +1,20 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# One limb segment. The AABB is authored 12x44 and scaled per instance, so one
+# object serves every bone length. Values are boomfunk-sl's tuned set: low
+# restitution and real angular damping are what stop a jointed chain ringing.
+[physics]
+kind = "dynamic"
+
+[physics.body]
+density = 0.5
+friction = 0.6
+restitution = 0.05
+linear_damping = 0.02
+angular_damping = 0.4
+
+[physics.body.shape]
+type = "aabb"
+origin = [-6.0, -22.0]
+size = [12.0, 44.0]
+scale = "instance"

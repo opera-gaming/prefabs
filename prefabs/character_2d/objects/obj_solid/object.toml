@@ -1,0 +1,21 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# What the character's bodies collide with. A static 1x1 box centred on the
+# instance and scaled per instance (image_xscale x image_yscale = px). The
+# collision events that make Box2D generate contacts live on obj_ragdoll_part
+# and obj_character against THIS object, so a world's own floor is made to
+# count by parenting its collider object to obj_solid at runtime (obj_character
+# does that from global.sidescroller_wall_object).
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+friction = 0.6
+restitution = 0.05
+
+[physics.body.shape]
+type = "aabb"
+origin = [-0.5, -0.5]
+size = [1.0, 1.0]
+scale = "instance"

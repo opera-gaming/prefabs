@@ -1,0 +1,11 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "instances"
+depth = 0
+
+# The world builds its own floor and walls in Create; nothing else to place.
+[[entries]]
+id = "inst_rm_world_world"
+object = "obj_world"
+x = 0.0
+y = 0.0

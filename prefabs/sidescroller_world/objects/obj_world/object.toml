@@ -1,0 +1,30 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Draws the backdrop just in front of the room's background colour layer (its
+# depth is set in Create), so it is behind every other instance whatever layer
+# it sits on.
+
+[[variables]]
+name = "bg_sprite"
+type = "expression"
+value = "-1"
+
+[[variables]]
+name = "bg_scale"
+type = "real"
+value = 2.0
+
+[[variables]]
+name = "ground_frac"
+type = "real"
+value = 0.73
+
+[[variables]]
+name = "wall_t"
+type = "real"
+value = 16.0
+
+[[variables]]
+name = "walk_margin"
+type = "real"
+value = 200.0

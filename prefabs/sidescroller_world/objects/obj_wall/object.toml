@@ -1,0 +1,19 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Static collider: a 1x1 box centred on the instance, scaled per instance
+# (image_xscale x image_yscale = width x height in px). Zero density is what
+# makes it immovable. obj_world creates the floor and walls from it; place more
+# for platforms.
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+friction = 0.6
+restitution = 0.05
+
+[physics.body.shape]
+type = "aabb"
+origin = [-0.5, -0.5]
+size = [1.0, 1.0]
+scale = "instance"

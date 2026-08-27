@@ -1,0 +1,26 @@
+name = "sidescroller_world"
+license = "Apache-2.0"
+description = "An empty side-scrolling world to start a game from: a 3200×1800 physics room scrolling a tileable 1600×900 backdrop at 2×, with a floor and walls, a safe-zone camera, and a deliberately generic grey 'REPLACE ME' city street as the placeholder art. Swap the backdrop with the generating-backgrounds skill; drop a character_2d in."
+category = "world"
+tags = ["genre:platformer", "projection:side-view", "role:world", "role:template", "style:placeholder", "capability:physics", "capability:camera"]
+asset_bundle = false
+
+[assets."objects/obj_world"]
+description = "The world: draws the backdrop tiled at bg_scale, builds the floor and walls as static physics bodies, publishes global.sidescroller_ground_y / _left / _right, and scrolls a safe-zone camera after global.sidescroller_focus_x/_y."
+tags = ["asset_type:object", "role:controller"]
+
+[assets."objects/obj_wall"]
+description = "Static 1×1 physics box scaled per instance — the floor and walls obj_world creates, usable for platforms too."
+tags = ["asset_type:object", "role:collider"]
+
+[assets."sprites/spr_bg"]
+description = "Placeholder backdrop: a flat grey city street with a visible ground plane, tiling horizontally, stamped REPLACE ME. 1600×900, ground line at y=657."
+tags = ["asset_type:sprite", "role:background", "style:placeholder"]
+
+[assets."rooms/rm_world"]
+description = "The ready-made world room: 3200×1800, 1600×900 view, physics on (gravity 120 px/s², 0.1 px→m), one obj_world instance."
+tags = ["asset_type:room"]
+
+[assets."scripts/sidescroller_world_api"]
+description = "world_focus(x, y) for whatever the camera should follow; world_cam_follow_x/_y safe-zone helpers."
+tags = ["asset_type:script", "role:api"]

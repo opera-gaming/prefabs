@@ -1,0 +1,4 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Demo driver (excluded from the prefab). Scripted so a headless run exercises
+# walk, jump and ragdoll without input: keyboard/mouse still work on top.

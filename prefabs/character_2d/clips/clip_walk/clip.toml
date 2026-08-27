@@ -1,0 +1,4 @@
+#:schema ../../.gm-schema/v1.json#clip
+[[marker]]
+name = "left-foot"
+at = 0.277
