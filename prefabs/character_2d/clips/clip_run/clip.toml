@@ -1,0 +1,7 @@
+#:schema ../../.gm-schema/v1.json#clip
+
+# The left foot's plant; clip_walk marks the same moment, so a switch between
+# them can land on the matching phase.
+[[marker]]
+name = "left-foot"
+at = 0.24
