@@ -1,0 +1,60 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Draws the backdrop just in front of the room's background colour layer (its
+# depth is set in Create), so it is behind every other instance whatever layer
+# it sits on.
+
+[[variables]]
+name = "bg_sprite"
+type = "expression"
+value = "-1"
+
+[[variables]]
+name = "bg_scale"
+type = "real"
+value = 2.0
+
+# Parallax layers behind the backdrop, -1 = none. Each scrolls at its factor of
+# the camera (1 = with the world); same 16:9 size as the backdrop, drawn at bg_scale.
+[[variables]]
+name = "bg_far"
+type = "expression"
+value = "-1"
+
+[[variables]]
+name = "far_factor"
+type = "real"
+value = 0.2
+
+[[variables]]
+name = "bg_mid"
+type = "expression"
+value = "-1"
+
+[[variables]]
+name = "mid_factor"
+type = "real"
+value = 0.5
+
+# Scene scale, pixels per metre in the backdrop as drawn (the generating-backgrounds
+# skill writes the backdrop's own as `<sprite>::meta.px_per_m`). Published for
+# characters to size themselves by.
+[[variables]]
+name = "px_per_m"
+type = "real"
+value = 120.0
+
+[[variables]]
+name = "ground_frac"
+type = "real"
+value = 0.73
+
+[[variables]]
+name = "wall_t"
+type = "real"
+value = 16.0
+
+[[variables]]
+name = "walk_margin"
+type = "real"
+value = 200.0

@@ -1,0 +1,38 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Static collider: a 1x1 box centred on the instance, scaled per instance
+# (image_xscale x image_yscale = width x height in px). Zero density is what
+# makes it immovable. obj_world creates the floor and walls from it; place more
+# for platforms.
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+friction = 0.6
+restitution = 0.05
+
+[physics.body.shape]
+type = "aabb"
+origin = [-0.5, -0.5]
+size = [1.0, 1.0]
+scale = "instance"
+
+# The world's own floor and walls stay invisible; a platform placed in a room
+# sets this to see it (a plain slab in `colour`).
+[[variables]]
+name = "draw"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "colour"
+type = "expression"
+value = "c_dkgray"
+
+# A three-slice platform sprite (generating-platforms) drawn stretched over
+# the box; -1 draws the plain slab when `draw` is set.
+[[variables]]
+name = "platform_sprite"
+type = "expression"
+value = "-1"
