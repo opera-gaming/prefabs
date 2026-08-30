@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#clip
+
+# Motion starts at 0.43s and is upright at 1.67s.
+[[marker]]
+name = "rise"
+at = 0.20
+
+[[marker]]
+name = "upright"
+at = 1.85

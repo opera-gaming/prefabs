@@ -1,0 +1,11 @@
+#:schema ../../.gm-schema/v1.json#clip
+
+# The clip lies still until 2.17s and is upright at 5.67s; the rest is lead-in
+# and trailing idle that would read as the character freezing.
+[[marker]]
+name = "rise"
+at = 1.90
+
+[[marker]]
+name = "upright"
+at = 5.80

@@ -1,0 +1,12 @@
+#:schema ../../.gm-schema/v1.json#clip
+
+# From the hips' height in the clip: the feet leave the ground at 0.80 s and
+# touch down at 1.27 s. `airborne` is the tucked frame the character holds while
+# in the air; `land` is where the landing plays from.
+[[marker]]
+name = "airborne"
+at = 0.90
+
+[[marker]]
+name = "land"
+at = 1.27

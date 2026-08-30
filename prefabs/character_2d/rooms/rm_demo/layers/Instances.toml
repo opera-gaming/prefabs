@@ -1,0 +1,24 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_rm_demo_floor"
+object = "obj_solid"
+x = 800.0
+y = 668.0
+scale_x = 1600.0
+scale_y = 16.0
+
+[[entries]]
+id = "inst_rm_demo_character"
+object = "obj_character"
+x = 400.0
+y = 660.0
+
+[[entries]]
+id = "inst_rm_demo_driver"
+object = "obj_demo"
+x = 0.0
+y = 0.0

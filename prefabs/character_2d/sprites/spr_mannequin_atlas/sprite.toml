@@ -1,0 +1,6 @@
+#:schema ../../.gm-schema/v1.json#sprite
+
+# A rig's mesh vertices are PIXEL COORDINATES in this image, so it gets a
+# texture page to itself rather than being packed beside other sprites —
+# a neighbour on the page is sampled at the mesh edges.
+for_3d = true

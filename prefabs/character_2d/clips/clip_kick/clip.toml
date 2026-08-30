@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#clip
+
+# The two moments a foot is fully out; character_kick_hit tests the leading foot there.
+[[marker]]
+name = "hit"
+at = 0.62
+
+[[marker]]
+name = "hit"
+at = 0.86

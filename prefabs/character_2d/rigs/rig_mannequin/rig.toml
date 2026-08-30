@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#rig
+
+atlas = "spr_mannequin_atlas"
+draw_order = ["left_arm", "left_leg", "spine", "right_leg", "right_arm"]
+preserve_joints = true
