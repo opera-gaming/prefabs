@@ -8449,6 +8449,28 @@
         {
           "prefab": "character_2d",
           "kind": "clip",
+          "name": "clip_kick",
+          "description": "One-shot kick; the two `hit` markers are the moments character_kick_hit tests the leading foot against.",
+          "tags": [
+            "asset_type:clip",
+            "state:kick"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "character_2d",
+          "kind": "clip",
+          "name": "clip_run",
+          "description": "Looping run with root motion; marks the same `left-foot` stride phase as clip_walk, so a walk/run switch lands on the matching step.",
+          "tags": [
+            "asset_type:clip",
+            "state:run"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "character_2d",
+          "kind": "clip",
           "name": "clip_walk",
           "description": "Looping walk with root motion; the character drives itself with it.",
           "tags": [

@@ -37,9 +37,17 @@ tags = ["asset_type:clip", "state:idle"]
 description = "Looping walk with root motion; the character drives itself with it."
 tags = ["asset_type:clip", "state:walk"]
 
+[assets."clips/clip_run"]
+description = "Looping run with root motion; marks the same `left-foot` stride phase as clip_walk, so a walk/run switch lands on the matching step."
+tags = ["asset_type:clip", "state:run"]
+
 [assets."clips/clip_jump"]
 description = "One-shot jump with root motion (Mixamo 'Jump'), 2.2 s."
 tags = ["asset_type:clip", "state:jump"]
+
+[assets."clips/clip_kick"]
+description = "One-shot kick; the two `hit` markers are the moments character_kick_hit tests the leading foot against."
+tags = ["asset_type:clip", "state:kick"]
 
 [assets."clips/clip_getup_front"]
 description = "Get up from lying face down; `rise` and `upright` markers drive the ragdoll hand-off."
