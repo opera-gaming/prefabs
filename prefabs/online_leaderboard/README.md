@@ -129,7 +129,7 @@ enough for any URL-backed image.
 ## Local development vs. gx.games
 
 On gx.games, the API talks to the real backend over HTTP. Anywhere else
-(the GameMaker/gmx editor, a desktop build, `gmx run`, a `gmx gametest`) it
+(the GameMaker/gmx editor, a desktop build, `gmx run`, a `gmx test` run) it
 falls back to fake, hardcoded data - there's no real backend to talk to
 until the game is actually published and running embedded on gx.games.
 
