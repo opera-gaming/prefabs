@@ -9453,6 +9453,362 @@
       ]
     },
     {
+      "name": "breakout",
+      "version": "",
+      "display_name": "Breakout",
+      "description": "Clear the bricks, do not drop the ball — and steer it with the paddle.",
+      "category": "game",
+      "tags": [
+        "genre:arcade",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/breakout/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_ball",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_breakout",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_brick",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_paddle",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "script",
+          "name": "scr_breakout_serve",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "breakout",
+          "kind": "sprite",
+          "name": "spr_ball",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/breakout/sprites/spr_ball/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 14,
+              "height": 14
+            },
+            "colour": "#fff0c8"
+          }
+        },
+        {
+          "prefab": "breakout",
+          "kind": "sprite",
+          "name": "spr_brick",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/breakout/sprites/spr_brick/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 76,
+              "height": 26
+            },
+            "colour": "#e6786e"
+          }
+        },
+        {
+          "prefab": "breakout",
+          "kind": "sprite",
+          "name": "spr_paddle",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/breakout/sprites/spr_paddle/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 110,
+              "height": 18
+            },
+            "colour": "#96d2ff"
+          }
+        }
+      ]
+    },
+    {
+      "name": "bullet_hell",
+      "version": "",
+      "display_name": "Bullet hell",
+      "description": "Thread the pattern. One hit ends it, so the hitbox is smaller than you are.",
+      "category": "game",
+      "tags": [
+        "genre:shmup",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/bullet_hell/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_boss",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_bullet",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_hell",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_ship",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_shot",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "script",
+          "name": "scr_hell_patterns",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "sprite",
+          "name": "spr_boss",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/bullet_hell/sprites/spr_boss/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 72,
+              "height": 72
+            },
+            "colour": "#dc6e5a"
+          }
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "sprite",
+          "name": "spr_bullet",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/bullet_hell/sprites/spr_bullet/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 12,
+              "height": 12
+            },
+            "colour": "#ff82a0"
+          }
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "sprite",
+          "name": "spr_ship",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/bullet_hell/sprites/spr_ship/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 20,
+              "height": 20
+            },
+            "colour": "#96f0c8"
+          }
+        },
+        {
+          "prefab": "bullet_hell",
+          "kind": "sprite",
+          "name": "spr_shot",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/bullet_hell/sprites/spr_shot/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 6,
+              "height": 6
+            },
+            "colour": "#78dcff"
+          }
+        }
+      ]
+    },
+    {
       "name": "camera",
       "version": "",
       "display_name": "Follow camera",
@@ -9514,6 +9870,31 @@
           "prefab": "camera3d",
           "kind": "script",
           "name": "scr_camera3d_pick",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "camera3d_basics",
+      "version": "",
+      "display_name": "3D orbit camera",
+      "description": "A trackball camera you drag to orbit, with mouse picking that agrees with what you see.",
+      "category": "component",
+      "tags": [
+        "capability:camera",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/camera3d_basics/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "camera3d_basics",
+          "kind": "object",
+          "name": "obj_orbit_scene",
           "description": null,
           "tags": [],
           "preview": null
@@ -9749,6 +10130,31 @@
       ]
     },
     {
+      "name": "custom_mouse_pointer",
+      "version": "",
+      "display_name": "Custom mouse pointer",
+      "description": "Replace the OS cursor with something you draw in GUI space.",
+      "category": "component",
+      "tags": [
+        "capability:ui",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/custom_mouse_pointer/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "custom_mouse_pointer",
+          "kind": "object",
+          "name": "obj_pointer",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
       "name": "dialogue",
       "version": "",
       "display_name": "Conversations",
@@ -9825,6 +10231,139 @@
       ]
     },
     {
+      "name": "endless_runner",
+      "version": "",
+      "display_name": "Endless runner",
+      "description": "Jump the gaps on ground that never stops, and get further than last time.",
+      "category": "game",
+      "tags": [
+        "genre:runner",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/endless_runner/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "endless_runner",
+          "kind": "object",
+          "name": "obj_ground",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "object",
+          "name": "obj_player",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "object",
+          "name": "obj_runner",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "script",
+          "name": "scr_runner_world",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "sprite",
+          "name": "spr_ground",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/endless_runner/sprites/spr_ground/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 64,
+              "height": 64
+            },
+            "colour": "#465678"
+          }
+        },
+        {
+          "prefab": "endless_runner",
+          "kind": "sprite",
+          "name": "spr_player",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/endless_runner/sprites/spr_player/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 30,
+              "height": 42
+            },
+            "colour": "#8cdcff"
+          }
+        }
+      ]
+    },
+    {
       "name": "enemy_ai",
       "version": "",
       "display_name": "Enemy behaviour",
@@ -9860,6 +10399,39 @@
           "prefab": "enemy_ai",
           "kind": "script",
           "name": "scr_enemy_ai_patrol",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "falling_block",
+      "version": "",
+      "display_name": "Falling block",
+      "description": "Stack falling pieces, clear full rows, survive the speed ramp.",
+      "category": "game",
+      "tags": [
+        "genre:puzzle",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/falling_block/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "falling_block",
+          "kind": "object",
+          "name": "obj_stack",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "falling_block",
+          "kind": "room",
+          "name": "rm_stack",
           "description": null,
           "tags": [],
           "preview": null
@@ -26897,6 +27469,31 @@
           "prefab": "feel",
           "kind": "script",
           "name": "scr_feel_shake",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "font_system",
+      "version": "",
+      "display_name": "Font from a host family",
+      "description": "Reference an installed font by family name — no TTF in the repo.",
+      "category": "component",
+      "tags": [
+        "capability:text",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/font_system/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "font_system",
+          "kind": "font",
+          "name": "fnt_main",
           "description": null,
           "tags": [],
           "preview": null
@@ -64209,6 +64806,31 @@
       ]
     },
     {
+      "name": "isometric_basics",
+      "version": "",
+      "display_name": "Isometric scene",
+      "description": "A diamond grid you can hover and pan, with correct depth sorting.",
+      "category": "component",
+      "tags": [
+        "capability:iso",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/isometric_basics/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "isometric_basics",
+          "kind": "object",
+          "name": "obj_iso_scene",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
       "name": "kernel",
       "version": "",
       "display_name": "Kernel",
@@ -64370,6 +64992,31 @@
           "prefab": "lighting",
           "kind": "script",
           "name": "scr_lighting_draw",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "main_menu",
+      "version": "",
+      "display_name": "Main menu",
+      "description": "Keyboard and mouse menu — arrows or hover to select, Space or click to confirm.",
+      "category": "component",
+      "tags": [
+        "capability:ui",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/main_menu/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "main_menu",
+          "kind": "object",
+          "name": "obj_menu",
           "description": null,
           "tags": [],
           "preview": null
@@ -70074,6 +70721,191 @@
       ]
     },
     {
+      "name": "maze_chase",
+      "version": "",
+      "display_name": "Maze chase",
+      "description": "Eat every dot before the ghosts corner you — they route round the walls.",
+      "category": "game",
+      "tags": [
+        "genre:arcade",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/maze_chase/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_dot",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_ghost",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_hero",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_maze",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "sprite",
+          "name": "spr_dot",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/maze_chase/sprites/spr_dot/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 10,
+              "height": 10
+            },
+            "colour": "#f0f0dc"
+          }
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "sprite",
+          "name": "spr_ghost",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/maze_chase/sprites/spr_ghost/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 26,
+              "height": 26
+            },
+            "colour": "#eb6e82"
+          }
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "sprite",
+          "name": "spr_hero",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/maze_chase/sprites/spr_hero/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 26,
+              "height": 26
+            },
+            "colour": "#fadc5a"
+          }
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "sprite",
+          "name": "spr_maze_sheet",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/maze_chase/sprites/spr_maze_sheet/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 256,
+              "height": 224
+            },
+            "colour": "#3d4979"
+          }
+        },
+        {
+          "prefab": "maze_chase",
+          "kind": "tileset",
+          "name": "ts_maze",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
       "name": "motion",
       "version": "",
       "display_name": "Movement and collision",
@@ -70110,6 +70942,39 @@
           "prefab": "motion",
           "kind": "script",
           "name": "scr_motion_platformer",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "music_and_sfx",
+      "version": "",
+      "display_name": "Music and sound effects",
+      "description": "Looping music that survives room changes, plus one-shot effects.",
+      "category": "component",
+      "tags": [
+        "capability:audio",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/music_and_sfx/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "music_and_sfx",
+          "kind": "object",
+          "name": "obj_audio",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "music_and_sfx",
+          "kind": "script",
+          "name": "scr_audio_cues",
           "description": null,
           "tags": [],
           "preview": null
@@ -73181,6 +74046,216 @@
       ]
     },
     {
+      "name": "pause_menu",
+      "version": "",
+      "display_name": "Pause menu (freeze)",
+      "description": "Freeze the room, snapshot the screen, dim it, and resume on a key.",
+      "category": "component",
+      "tags": [
+        "capability:ui",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/pause_menu/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "pause_menu",
+          "kind": "object",
+          "name": "obj_pause",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "physics_arena",
+      "version": "",
+      "display_name": "Physics arena",
+      "description": "Roll a ball with real physics, knock out the targets, beat the clock.",
+      "category": "game",
+      "tags": [
+        "genre:physics",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/physics_arena/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_arena",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_ball",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_bumper",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_target",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "object",
+          "name": "obj_wall",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "sprite",
+          "name": "spr_ball",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/physics_arena/sprites/spr_ball/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 34,
+              "height": 34
+            },
+            "colour": "#fae182"
+          }
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "sprite",
+          "name": "spr_bumper",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/physics_arena/sprites/spr_bumper/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 52,
+              "height": 52
+            },
+            "colour": "#78d2be"
+          }
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "sprite",
+          "name": "spr_target",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/physics_arena/sprites/spr_target/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 36,
+              "height": 36
+            },
+            "colour": "#eb5f73"
+          }
+        },
+        {
+          "prefab": "physics_arena",
+          "kind": "sprite",
+          "name": "spr_wall",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/physics_arena/sprites/spr_wall/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 40,
+              "height": 40
+            },
+            "colour": "#424e7a"
+          }
+        }
+      ]
+    },
+    {
       "name": "physics_body",
       "version": "",
       "display_name": "Physics body hygiene",
@@ -74974,6 +76049,189 @@
             },
             "colour": "#4b3930"
           }
+        }
+      ]
+    },
+    {
+      "name": "platformer",
+      "version": "",
+      "display_name": "Platformer",
+      "description": "Run, jump, collect, reach the flag — a whole side-view game to start from.",
+      "category": "game",
+      "tags": [
+        "genre:platformer",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/platformer/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "platformer",
+          "kind": "object",
+          "name": "obj_coin",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "object",
+          "name": "obj_enemy",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "object",
+          "name": "obj_goal",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "object",
+          "name": "obj_level",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "object",
+          "name": "obj_player",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "room",
+          "name": "rm_level",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "platformer",
+          "kind": "sprite",
+          "name": "spr_coin",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/platformer/sprites/spr_coin/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 24,
+              "height": 24
+            },
+            "colour": "#f0c850"
+          }
+        },
+        {
+          "prefab": "platformer",
+          "kind": "sprite",
+          "name": "spr_enemy",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/platformer/sprites/spr_enemy/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 24,
+              "height": 34
+            },
+            "colour": "#d64a4a"
+          }
+        },
+        {
+          "prefab": "platformer",
+          "kind": "sprite",
+          "name": "spr_goal",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/platformer/sprites/spr_goal/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 24,
+              "height": 40
+            },
+            "colour": "#78dc8c"
+          }
+        },
+        {
+          "prefab": "platformer",
+          "kind": "sprite",
+          "name": "spr_player",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/platformer/sprites/spr_player/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 24,
+              "height": 40
+            },
+            "colour": "#4a7ad6"
+          }
+        },
+        {
+          "prefab": "platformer",
+          "kind": "sprite",
+          "name": "spr_terrain_sheet",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/platformer/sprites/spr_terrain_sheet/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 256,
+              "height": 224
+            },
+            "colour": "#4b5d75"
+          }
+        },
+        {
+          "prefab": "platformer",
+          "kind": "tileset",
+          "name": "ts_terrain",
+          "description": null,
+          "tags": [],
+          "preview": null
         }
       ]
     },
@@ -82593,6 +83851,104 @@
           "prefab": "projectile",
           "kind": "script",
           "name": "scr_projectile_cooldown",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "quiz_trivia",
+      "version": "",
+      "display_name": "Quiz / trivia",
+      "description": "Answer questions against the clock, with a combo for a streak.",
+      "category": "game",
+      "tags": [
+        "genre:quiz",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/quiz_trivia/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "quiz_trivia",
+          "kind": "object",
+          "name": "obj_quiz",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "quiz_trivia",
+          "kind": "room",
+          "name": "rm_quiz",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "rooms_as_state_machines",
+      "version": "",
+      "display_name": "Rooms as state machines",
+      "description": "Title → game → results → loop. The skeleton almost every game starts from.",
+      "category": "game",
+      "tags": [
+        "genre:structure",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/rooms_as_state_machines/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "object",
+          "name": "obj_game_controller",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "object",
+          "name": "obj_gameover_controller",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "object",
+          "name": "obj_title_controller",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "room",
+          "name": "rm_game",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "room",
+          "name": "rm_gameover",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rooms_as_state_machines",
+          "kind": "room",
+          "name": "rm_title",
           "description": null,
           "tags": [],
           "preview": null
@@ -94496,6 +95852,242 @@
       ]
     },
     {
+      "name": "snake",
+      "version": "",
+      "display_name": "Snake",
+      "description": "Eat, grow, and do not bite yourself — one step at a time on a grid.",
+      "category": "game",
+      "tags": [
+        "genre:arcade",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/snake/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "snake",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "object",
+          "name": "obj_snake",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "snake",
+          "kind": "script",
+          "name": "scr_snake_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "sokoban",
+      "version": "",
+      "display_name": "Sokoban",
+      "description": "Push every crate onto a mark. You can push, never pull, so a mistake is permanent.",
+      "category": "game",
+      "tags": [
+        "genre:puzzle",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/sokoban/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_block",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_crate",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_pusher",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_sokoban",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "room",
+          "name": "rm_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "script",
+          "name": "scr_sokoban_play",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "sprite",
+          "name": "spr_block",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/sokoban/sprites/spr_block/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 40,
+              "height": 40
+            },
+            "colour": "#424e7a"
+          }
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "sprite",
+          "name": "spr_crate",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/sokoban/sprites/spr_crate/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 36,
+              "height": 36
+            },
+            "colour": "#d7a55a"
+          }
+        },
+        {
+          "prefab": "sokoban",
+          "kind": "sprite",
+          "name": "spr_pusher",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/sokoban/sprites/spr_pusher/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 36,
+              "height": 36
+            },
+            "colour": "#96d2ff"
+          }
+        }
+      ]
+    },
+    {
       "name": "space_rocks_hd",
       "version": "",
       "display_name": "space_rocks_hd",
@@ -97029,6 +98621,31 @@
       ]
     },
     {
+      "name": "spawner",
+      "version": "",
+      "display_name": "Waves and spawning",
+      "description": "Spawn things on a timer, in waves, without flooding the room.",
+      "category": "component",
+      "tags": [
+        "capability:spawning",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/spawner/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "spawner",
+          "kind": "object",
+          "name": "obj_spawner",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
       "name": "tilemap",
       "version": "",
       "display_name": "Levels as text",
@@ -97101,6 +98718,216 @@
           "description": null,
           "tags": [],
           "preview": null
+        }
+      ]
+    },
+    {
+      "name": "title_screen",
+      "version": "",
+      "display_name": "Title screen",
+      "description": "A logo that breathes, a prompt, and a key or click to start.",
+      "category": "component",
+      "tags": [
+        "capability:ui",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/title_screen/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "title_screen",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        }
+      ]
+    },
+    {
+      "name": "top_down_arena",
+      "version": "",
+      "display_name": "Top-down arena",
+      "description": "Survive waves in one room: move, dodge, collect, and last as long as you can.",
+      "category": "game",
+      "tags": [
+        "genre:action",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/top_down_arena/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_arena",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_coin",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_enemy",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_player",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "object",
+          "name": "obj_wall",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "room",
+          "name": "rm_arena",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "room",
+          "name": "rm_results",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "room",
+          "name": "rm_title",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "sprite",
+          "name": "spr_coin",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/top_down_arena/sprites/spr_coin/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 14,
+              "height": 14
+            },
+            "colour": "#f5d250"
+          }
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "sprite",
+          "name": "spr_enemy",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/top_down_arena/sprites/spr_enemy/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 26,
+              "height": 26
+            },
+            "colour": "#e65a5a"
+          }
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "sprite",
+          "name": "spr_player",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/top_down_arena/sprites/spr_player/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 28,
+              "height": 28
+            },
+            "colour": "#78c8ff"
+          }
+        },
+        {
+          "prefab": "top_down_arena",
+          "kind": "sprite",
+          "name": "spr_wall",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/top_down_arena/sprites/spr_wall/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 40,
+              "height": 40
+            },
+            "colour": "#46506e"
+          }
         }
       ]
     },

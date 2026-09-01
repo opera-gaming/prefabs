@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#room
+
+# Wider than the view so the follow camera has somewhere to go.
+size = { width = 2880, height = 448 }
+enable_views = true
+
+# `enable_views` hands rendering to the viewports, so a room that turns it on
+# without a visible one draws nothing at all — a black screen with the HUD on
+# top, which validates, builds and boots without complaint. `view = { width,
+# height }` sizes the camera and is not a viewport; this is.
+[[views]]
+visible = true
+w_view = 640
+h_view = 360
+w_port = 960
+h_port = 540

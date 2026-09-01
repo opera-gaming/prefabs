@@ -1,0 +1,15 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_obj_runner_0"
+object = "obj_runner"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_obj_player_0"
+object = "obj_player"
+x = 220.0
+y = 200.0

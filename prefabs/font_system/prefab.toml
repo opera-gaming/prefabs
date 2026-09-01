@@ -1,0 +1,21 @@
+schema_version = 1
+name = "Font from a host family"
+description = "Reference an installed font by family name — no TTF in the repo."
+category = "component"
+tags = ["capability:text", "role:template"]
+
+install = "copy"
+requires = []
+
+seam = "fonts/fnt_main/font.toml"
+
+steps = [
+  "Use it as `fnt_main` in draw_set_font.",
+  "The compiler rasterises at BUILD time, so the runtime needs no host fonts — but the build machine does. If CI does not have the family, the build falls back and the text changes shape. `gmx tools font-freeze --project .` bakes the rasterised glyphs into the repo and removes that dependency.",
+  "For a fallback chain, make `family` a list — the first one present on the build machine wins. For a CSS generic, use \"sans-serif\", \"serif\" or \"monospace\".",
+]
+
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+[roles]
+fnt_main = "the font, resolved from a host family at build time rather than a TTF in the repo"

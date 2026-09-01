@@ -1,0 +1,21 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_obj_hell_0"
+object = "obj_hell"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_rm_play_obj_ship_0"
+object = "obj_ship"
+x = 480.0
+y = 450.0
+
+[[entries]]
+id = "inst_rm_play_obj_boss_0"
+object = "obj_boss"
+x = 480.0
+y = 130.0

@@ -1,0 +1,6 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Same split as the player: `sprite` is swappable art, `mask` is the patrol's
+# body. See obj_player.
+sprite = "spr_enemy"
+mask = "spr_enemy"

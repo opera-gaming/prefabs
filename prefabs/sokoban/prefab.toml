@@ -1,0 +1,56 @@
+schema_version = 1
+name = "Sokoban"
+description = "Push every crate onto a mark. You can push, never pull, so a mistake is permanent."
+category = "game"
+tags = ["genre:puzzle", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "tilemap"]
+
+seam = "scripts/scr_sokoban_data/scr_sokoban_data.gml"
+
+steps = [
+    "`sokoban.gametest.json` came with the prefab and already passes: the controller runs in rm_play, the level loads with crates, a direction key walks the pusher, a real move lands on the undo history, and Z pops it back off. Run it with `gmx test sokoban.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "Levels are text maps — `#` wall, `$` crate, `.` mark, `@` start, `*` a crate already on a mark. Add a string block to `levels` and there is another level.",
+    "Undo is not a convenience here. Pushing is irreversible, so a puzzle without undo is a puzzle you restart from the beginning on every mistake — which is why nobody finishes it.",
+]
+
+[roles]
+obj_sokoban = "builds the level, moves everything, tracks undo and completion"
+obj_pusher = "drawn at the player's cell; the controller does the moving"
+obj_crate = "pushed one cell at a time, never pulled"
+obj_block = "a wall"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "levels cleared and moves taken"
+
+[tuning]
+cell = 40
+move_score = -1
+level_score = 500
+
+# `#` wall, `$` crate, `.` mark, `@` start, `*` crate already on a mark.
+# Add a block and there is another level.
+[content]
+levels = [
+    [
+        "  #####",
+        "###   #",
+        "#.@$  #",
+        "### .$#",
+        "#.##$ #",
+        "# # . ##",
+        "#$ *$$.#",
+        "#   .  #",
+        "########",
+    ],
+    [
+        "########",
+        "#      #",
+        "# .$@$.#",
+        "#  ##  #",
+        "# .$ $.#",
+        "#      #",
+        "########",
+    ],
+]

@@ -1,0 +1,32 @@
+schema_version = 1
+name = "Rooms as state machines"
+description = "Title → game → results → loop. The skeleton almost every game starts from."
+category = "game"
+tags = ["genre:structure", "role:template"]
+
+# A project: it owns project.toml and [room_order], so it cannot be merged
+# into a game that already has them.
+install = "copy"
+requires = ["kernel"]
+
+seam = "objects/obj_game_controller/Step.gml"
+
+steps = [
+    "`rooms_as_state_machines.gametest.json` came with the prefab and already passes: the game opens on the title room, confirm moves it on to the game room, and the ten-second round ends in the gameover room. Run it with `gmx test rooms_as_state_machines.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+  "Put your game in obj_game_controller, or replace it entirely — it is a placeholder that ends the run on Space.",
+  "Every room needs a Background layer. Without one the surface is never cleared and draw calls pile up visually.",
+]
+traps = [
+    "Pausing is a kernel state, not a room. `::kernel::kernel_state_set(::kernel::kernel_states().pause)` is the whole of it: every pack gates its Step on `::kernel::kernel_playing()`, so the game stops without any pack knowing pause exists. Adding a pause room instead means the game keeps simulating behind it.",
+]
+
+[roles]
+obj_title_controller = "boots the kernel, then confirm goes to rm_game"
+obj_game_controller = "the placeholder game — your loop replaces its Step"
+obj_gameover_controller = "shows score and best; confirm returns to rm_title"
+rm_title = "boot room — its size is the window size"
+rm_game = "where the game is played"
+rm_gameover = "results"
+
+[tuning]
+title_prompt = "press SPACE to start"

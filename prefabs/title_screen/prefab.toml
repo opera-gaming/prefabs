@@ -1,0 +1,25 @@
+schema_version = 1
+name = "Title screen"
+description = "A logo that breathes, a prompt, and a key or click to start."
+category = "component"
+tags = ["capability:ui", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel"]
+
+seam = "objects/obj_title/Step.gml"
+
+steps = [
+  "Place obj_title on an instance layer in your title room, alongside ::kernel::obj_kernel.",
+  "Set `start_room` in the generated tuning to the room you want SPACE to lead to.",
+  "For a logo sprite: `gmx prefab add ninja_woods/sprites/spr_game_logo --centre-origin`, then draw it above the title text.",
+]
+
+[roles]
+obj_title = "the title: animates the logo on a seconds clock and moves to the next room on confirm"
+
+[tuning]
+game_title = "YOUR GAME"
+prompt = "press SPACE or click to start"
+wiggle_px = 6.0
+wiggle_hz = 1.4

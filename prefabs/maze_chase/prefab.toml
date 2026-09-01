@@ -1,0 +1,37 @@
+schema_version = 1
+name = "Maze chase"
+description = "Eat every dot before the ghosts corner you — they route round the walls."
+category = "game"
+tags = ["genre:arcade", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "pathgrid", "health", "motion"]
+
+seam = "rooms/rm_play/layers/Tiles.toml"
+
+steps = [
+    "`maze_chase.gametest.json` came with the prefab and already passes: the hero is in the maze, the maze is laid out with dots, a direction key walks the hero, a ghost routes toward it rather than standing still, and a ghost that reaches the hero costs health. Run it with `gmx test maze_chase.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The walls are the `Tiles` layer of rm_play and are the only copy of the maze. `gmx autotile shape rm_play` prints it back as `#` and `.` with the axes numbered, and `gmx autotile shape rm_play --op 'rect 7,12 7,15 clear'` opens a passage and redraws the tiles in the same run. You never pick a tile index: each filled cell gets the tile that fits its neighbours from `ts_maze`'s `[autotile]` table, so a corridor's corners and ends are drawn without the shape saying so.",
+    "The dots, hero and ghosts are placed instances in the same room — drag them in the editor, or edit `rooms/rm_play/layers/Instances.toml`. A dot is an instance rather than a tile because the game counts it: `instance_number(obj_dot) == 0` is how a cleared board is detected. A wall is a tile because nothing ever counts or destroys one. That is the line between the two, and it is worth holding: 222 walls as instances were 222 entries that only ever answered \"is this solid\".",
+    "Ghosts route with A* rather than moving straight at you, so a wall actually hides you. Raising `ghost_speed` past the player's makes the game unwinnable, not hard.",
+]
+
+[roles]
+obj_maze = "builds the maze, counts the dots, and ends the round"
+obj_hero = "moves cell to cell on the arrow keys; loses a life on contact"
+obj_ghost = "routes to the player around the walls"
+obj_dot = "one pellet; scores and vanishes"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "cleared or caught, and the best score"
+
+[tuning]
+cell = 32
+hero_speed = 3
+ghost_speed = 2
+hero_lives = 3
+iframe_seconds = 1.5
+dot_score = 10
+# How often a ghost recomputes its route, in seconds. Every frame is wasted
+# work on a maze this size; too rare and it walks into a wall you just left.
+repath_seconds = 0.35

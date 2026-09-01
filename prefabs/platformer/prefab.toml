@@ -1,0 +1,65 @@
+schema_version = 1
+name = "Platformer"
+description = "Run, jump, collect, reach the flag — a whole side-view game to start from."
+category = "game"
+tags = ["genre:platformer", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "motion", "camera"]
+
+# The terrain lives in the layer, and `gmx autotile shape` is how it is
+# read and edited, so this is the seam far more often than any GML file.
+seam = "rooms/rm_level/layers/Tiles.toml"
+
+steps = [
+    "`platformer.gametest.json` came with the recipe and already passes: the player exists, stands on the tile terrain without falling through, walks along it, and every patrol turns at its ledge. Run it with `gmx test platformer.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The terrain is the `Tiles` layer of rm_level, and it is the only copy of it. `gmx autotile shape rm_level` prints it back as a block of `#` and `.` with the axes numbered, and edits go through the same command: `gmx autotile shape rm_level --op 'rect 6,20 6,26 fill'` widens a platform and redraws the tiles and the legend in the same run. There is no map file to keep in step, which is the point — a second copy of the shape is a thing that can disagree with the tiles, and this one cannot. You never pick tile indices: each filled cell gets the tile that fits its neighbours from `ts_terrain`'s `[autotile]` table, which is why a platform's ends look different from its middle and why widening one redraws its cap. A shape the sheet cannot draw is refused with the offending cells named, rather than written and left to look wrong.",
+    "The actors are placed instances in the same room, so drag them in the editor or edit `rooms/rm_level/layers/Instances.toml`. They are placed at their own size rather than stretched to the cell: each placeholder is drawn at the height its `[art]` slot asks for and doubles as the `mask`, so swapping in real art at the same height leaves the hitbox alone.",
+    "The placeholder art is flat colour, and swapping it is data, not code. The `gmx prefab add ... --fit-height` lines printed above carry the size each slot wants; use those numbers rather than picking your own, and add a character's poses in one call so they share a factor. Then point `sprite` at the art in `object.toml`. `obj_player` and `obj_enemy` already carry `mask = \"spr_player\"` / `\"spr_enemy\"`, so the placeholder keeps being the hitbox the movement was tuned against and poses animate through `sprite_index` without moving it. Nothing scales at runtime, so the room file keeps saying what the game draws.",
+    "Terrain art is the tileset's sheet, and `ts_terrain` reads it as a 47-tile auto-tile template: an 8-wide grid whose first row is blank (tile index 0 is GameMaker's empty tile) and whose next six rows are the template. Replacing the art means replacing `sprites/spr_terrain_sheet/frame_000.png` with a sheet in that layout and re-running `gmx autotile derive ts_terrain --template 47 --origin 1,0 --force`, then `gmx autotile sample ts_terrain --render /tmp/t.png --tile-size 32` to check it by eye. `gmx new tileset --from-sheet ... --pick` cuts a handful of cells out of a catalog tilesheet instead, which is right for scenery and wrong here: a picked subset has none of the cells a table names, so the terrain would stop auto-tiling.",
+    "Size gaps and ledges from the jump rather than by eye. A jump clears `jump_strength^2 / (2 * gravity_per_frame)` pixels of height and `run_speed * 2 * jump_strength / gravity_per_frame` across — at the shipped numbers that is ~110px (3.4 cells) up and ~160px (5 cells) over, measured at 115px in practice because whole-frame steps overshoot slightly. A ledge above 3.4 cells needs a second jump; a gap under 5 cells is crossable.",
+    "The jump is variable-height: `motion_platformer_step` halves upward velocity on every frame `jump_held` is false. A one-frame tap rises ~19px, not ~115px. This matters most in gametests — hold the key down across the ascent or the jump you are asserting on barely leaves the ground.",
+    "Stomping enemies is `motion_platformer_stomp(jump, obj_enemy, bounce)`, and two things decide whether it feels fair. Call it *before* the contact-death test in obj_player's Step — a stomp is a frame where both are true and the first test wins. And hold `jump_held` true for a few frames after one, or the same variable-height rule above cuts the bounce to nothing for a player who was not already holding jump.",
+]
+
+[roles]
+obj_level = "boots the kernel and counts the coins the room holds"
+obj_player = "run and jump against the `Tiles` terrain, camera follow, coin/goal pickup"
+obj_coin = "a collectible; scores and vanishes"
+obj_goal = "touching it ends the run as won"
+obj_enemy = "patrols its platform and turns at the ledge"
+rm_level = "the only room — `Tiles` is the terrain movement collides against, and the only copy of the level shape"
+
+# Heights are in pixels of content, against `[tuning] cell = 32`. A character
+# a little taller than a cell reads as a character; one sized exactly to the
+# cell reads as another block. These are the numbers the movement was tuned
+# around, so an art pass has them rather than guessing.
+[art.player]
+catalog = "ninja_woods/sprites/spr_player_idle"
+placeholder = "flat rectangle"
+fit_height = 40
+
+[art.enemy]
+catalog = "ninja_woods/sprites/spr_enemy1_walk"
+placeholder = "flat rectangle, shorter than the player"
+fit_height = 34
+
+[art.coin]
+catalog = "ninja_woods/sprites/spr_coin"
+placeholder = "flat square"
+# Smaller than the 32px cell: a pickup sized to the grid reads as terrain.
+fit_height = 24
+
+[art.terrain]
+catalog = "world_tilesets/sprites/spr_illustrated_side_Flameville"
+placeholder = "a two-cell sheet: blank, then one flat block"
+fit_height = 32
+
+[tuning]
+cell = 32
+run_speed = 4
+jump_strength = 11
+gravity_per_frame = 0.55
+coin_score = 10
+# Slower than the player on purpose: a patrol you cannot outrun is a wall.
+enemy_speed = 1.5

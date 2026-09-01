@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#sprite
+
+# Bottom-centre: the character stands ON its y, so floors line up
+# without half-height maths in every draw call.
+origin = "bottom"

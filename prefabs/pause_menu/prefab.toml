@@ -1,0 +1,25 @@
+schema_version = 1
+name = "Pause menu (freeze)"
+description = "Freeze the room, snapshot the screen, dim it, and resume on a key."
+category = "component"
+tags = ["capability:ui", "role:template"]
+
+install = "copy"
+requires = ["kernel"]
+
+seam = "objects/obj_pause/Step.gml"
+
+steps = [
+  "Place obj_pause on an instance layer in your game room.",
+  "The snapshot captures application_surface, which is world drawing only — anything in Draw_GUI is composited after it and will be missing while paused.",
+  "This is the FREEZE approach: instance_deactivate_all stops everything, so nothing has to check a flag. The kernel's own pause is the other approach — it keeps the room running and every pack gates on kernel_playing(). Pick one; running both means two pause states.",
+]
+
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+[roles]
+obj_pause = "owns pausing: snapshots the screen, deactivates the room behind it, and dims on a ramp"
+
+[tuning]
+dim = 0.62
+fade_seconds = 0.18

@@ -1,0 +1,26 @@
+schema_version = 1
+name = "Custom mouse pointer"
+description = "Replace the OS cursor with something you draw in GUI space."
+category = "component"
+tags = ["capability:ui", "role:template"]
+
+# An addition: it has no project of its own, it joins yours.
+install = "copy"
+requires = []
+
+seam = "objects/obj_pointer/Draw_GUI.gml"
+
+steps = [
+  "Place obj_pointer on an instance layer in your first room. It is persistent, so one placement covers every room after it.",
+  "To use a sprite instead of the drawn arrow: `gmx prefab add incidentals_fantasy/sprites/spr_hand --centre-origin`, then swap the draw_primitive block in Draw_GUI.gml for draw_sprite_ext.",
+]
+
+traps = [
+    "Draw the cursor from `device_mouse_x_to_gui` / `device_mouse_y_to_gui`, not `mouse_x`/`mouse_y`. The latter are ROOM coordinates: with a static camera they agree, so the bug is invisible until the room scrolls, and then the drawn cursor drifts away from the real pointer.",
+]
+
+[roles]
+obj_pointer = "hides the OS cursor and draws the replacement in GUI space, at depth -9999 so nothing covers it"
+
+[tuning]
+size_px = 26

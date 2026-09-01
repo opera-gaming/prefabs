@@ -1,0 +1,8 @@
+#:schema .gm-schema/v1.json#project
+
+schema_version = 1
+name = "rooms_as_state_machines"
+
+# The order here is the flow: each controller sends you to the next room.
+[room_order]
+order = ["rm_title", "rm_game", "rm_gameover"]

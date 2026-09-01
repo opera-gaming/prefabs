@@ -1,0 +1,26 @@
+schema_version = 1
+name = "Music and sound effects"
+description = "Looping music that survives room changes, plus one-shot effects."
+category = "component"
+tags = ["capability:audio", "role:template"]
+
+install = "copy"
+requires = ["kernel"]
+
+seam = "objects/obj_audio/Create.gml"
+
+steps = [
+  "Place obj_audio on an instance layer in your first room. It is persistent, so one placement covers the game.",
+  "Play sounds through `cue_sfx(snd)` / `cue_music(snd)` rather than `with (obj_audio)`. They work from any object, do nothing in a room with no controller, and record `global.last_cue` / `global.cue_count` — which is the only thing a headless gametest can assert on, since a run with no audio device reports every sound as not playing.",
+  "Add a track: `gmx prefab add track_and_street_racer/sounds/OGG_Racing_Track1`, then set `music` in the generated tuning to its namespaced name and call music_play(::track_and_street_racer::OGG_Racing_Track1).",
+  "Set the track's sound.toml to `compression = \"streamed\"` — a multi-minute track uncompressed sits in RAM in full. Leave short effects uncompressed so they fire with no decode latency.",
+]
+
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+[roles]
+obj_audio = "persistent audio owner — holds the looping track across room changes and exposes music_play/sfx_play"
+
+[tuning]
+music_gain = 0.4
+sfx_gain = 1.0

@@ -1,0 +1,37 @@
+schema_version = 1
+name = "Snake"
+description = "Eat, grow, and do not bite yourself — one step at a time on a grid."
+category = "game"
+tags = ["genre:arcade", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "grid"]
+
+seam = "scripts/scr_snake_data/scr_snake_data.gml"
+
+steps = [
+    "`snake.gametest.json` came with the prefab and already passes: the snake runs in rm_play, has a body, advances a cell on its own tick, turns when you press a direction, and survives an open path. Run it with `gmx test snake.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "`step_seconds` is the whole difficulty curve — it shrinks each time you eat, down to `step_floor`.",
+    "The snake moves on a fixed tick rather than every frame. Turning is buffered until the next tick, so a fast double-tap cannot reverse you into your own neck.",
+]
+traps = [
+    "`obj_snake` is a controller, not the snake. Its own `x`/`y` stay at 0 for the whole run: the snake is `body`, an array of `{ col, row }` cells with the head first, drawn from the grid. Anything reading `obj_snake.x` to find the snake is reading 0.",
+]
+
+[roles]
+obj_snake = "the whole game: the body, the tick, the food and the collision"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "length reached, and the best so far"
+
+[tuning]
+cols = 24
+rows = 16
+cell = 30
+# Seconds between steps. Falls by `step_gain` each time you eat, never below
+# `step_floor` — the entire difficulty curve is these three numbers.
+step_seconds = 0.16
+step_gain = 0.004
+step_floor = 0.06
+food_score = 10
+start_length = 4

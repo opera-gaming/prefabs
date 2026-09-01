@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Not deactivated by its own instance_deactivate_all — an object that
+# freezes the room has to keep running to unfreeze it.
+persistent = true

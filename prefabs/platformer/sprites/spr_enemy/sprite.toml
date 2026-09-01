@@ -1,0 +1,7 @@
+#:schema ../../.gm-schema/v1.json#sprite
+
+# Bottom, like the player: both are placed by the map's third pass, whose `y`
+# is the bottom of the cell. A centre origin puts half the sprite inside the
+# block it stands on, and a body wedged in a wall cannot move at all — it
+# renders in the right place and simply never patrols.
+origin = "bottom"

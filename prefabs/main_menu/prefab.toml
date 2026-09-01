@@ -1,0 +1,44 @@
+schema_version = 1
+name = "Main menu"
+description = "Keyboard and mouse menu — arrows or hover to select, Space or click to confirm."
+category = "component"
+tags = ["capability:ui", "role:template"]
+
+install = "copy"
+requires = ["kernel", "ui_board", "feel"]
+
+seam = "objects/obj_menu/Step.gml"
+
+steps = [
+  "Place obj_menu on an instance layer in your menu room, alongside ::kernel::obj_kernel.",
+  "Edit the `items` table in the generated data script, and the matching branch in obj_menu's `choose` method.",
+]
+
+traps = [
+    "Hover only takes the selection on a frame where the mouse actually moved. Without that gate, arrow-key navigation snaps back to whatever item the resting cursor happens to sit over — it looks like the keyboard is being ignored, and only on machines where the pointer is parked over the menu.",
+]
+
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+[roles]
+obj_menu = "the menu: builds the ui_board spots from `[[content.items]]`, and reconciles keyboard selection with mouse hover"
+
+[tuning]
+item_w = 320
+item_h = 64
+gap = 14
+
+# `id` is what `on_choose` switches on, and what `ui_add` stores as the
+# spot's key. Without it every item reads back `undefined` and obj_menu
+# dies in its own Create the first time it is placed in a room.
+[[content.items]]
+id = "play"
+label = "Play"
+
+[[content.items]]
+id = "how"
+label = "How to play"
+
+[[content.items]]
+id = "quit"
+label = "Quit"

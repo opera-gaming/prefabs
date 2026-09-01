@@ -1,0 +1,25 @@
+schema_version = 1
+name = "3D orbit camera"
+description = "A trackball camera you drag to orbit, with mouse picking that agrees with what you see."
+category = "component"
+tags = ["capability:camera", "role:template"]
+
+install = "copy"
+requires = ["camera3d", "kernel"]
+
+seam = "objects/obj_orbit_scene/Step.gml"
+
+steps = [
+  "Place obj_orbit_scene on an instance layer in your room.",
+  "Replace the sphere list with your own scene, and submit your vertex buffers in Draw using ::camera3d::camera3d_position and camera3d_basis to build the view matrix.",
+  "If picking ever disagrees with the picture, test OFF-CENTRE: a wrong cross-product operand order has a zero coefficient at screen centre, so it looks perfect there and fails everywhere else.",
+]
+
+[roles]
+obj_orbit_scene = "holds the camera and the scene: right-drag orbits, the wheel dollies, and a click picks a thing by ray"
+
+[tuning]
+fov = 60
+distance = 300
+min_distance = 120
+max_distance = 900

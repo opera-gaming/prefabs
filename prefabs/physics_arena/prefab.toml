@@ -1,0 +1,40 @@
+schema_version = 1
+name = "Physics arena"
+description = "Roll a ball with real physics, knock out the targets, beat the clock."
+category = "game"
+tags = ["genre:physics", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "physics_body", "timer", "hud"]
+
+seam = "scripts/scr_physics_arena_data/scr_physics_arena_data.gml"
+
+steps = [
+    "`physics_arena.gametest.json` came with the prefab and already passes: the ball is in the arena with targets set, it rolls under the physics step, and the round clock counts down. Run it with `gmx test physics_arena.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The play room needs `physics_world = true`, and it already has it — a physics room without that flag simulates nothing while looking entirely correct.",
+    "`restitution` on the bumpers is what makes the arena feel alive. Above about 1.1 the ball gains energy every bounce and the speed cap becomes the only thing keeping it in the room.",
+    "Built-in `speed`/`direction` motion does nothing to instances in a physics room. Move bodies with `phy_*` or `physics_apply_*`, and anything else by writing x and y yourself.",
+]
+traps = [
+    "`obj_ball`, `obj_bumper` and `obj_target` have physics bodies. The solver owns their position, so assigning `x` or `y` is discarded and the instance simply never moves — no error, nothing on screen. Use `phy_position_x` / `phy_position_y` for a kinematic or static body, or apply a force or impulse to a dynamic one.",
+]
+
+[roles]
+obj_arena = "builds the arena, counts the targets, runs the clock"
+obj_ball = "the physics body — capped, impact-aware, and put back if it escapes"
+obj_target = "knocked out by a hard enough hit; scores"
+obj_bumper = "bouncy, static, and where most of the energy comes from"
+obj_wall = "the arena edge"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game, one physics room"
+rm_results = "targets cleared and the best score"
+
+[tuning]
+round_seconds = 45
+launch_speed = 9
+speed_cap = 14
+# How hard a hit has to be to knock a target out, in pixels per step — the
+# same scale as `speed_cap`, so a threshold above the cap can never fire.
+break_impact = 4
+target_score = 100
+nudge_force = 0.4
