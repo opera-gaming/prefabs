@@ -1,0 +1,12 @@
+schema_version = 1
+name = "Save slots"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::save_slots::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Numbered slots holding a struct each, written to a temporary file and moved into place so a crash mid-write cannot leave a save that exists, parses as nothing, and has replaced the good one. Reading a corrupt slot returns your fallback rather than throwing. Includes a summary read for a slot-select screen that wants a level and a play time without loading everything."
+category = "library"
+tags = ["capability:save", "capability:persistence", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

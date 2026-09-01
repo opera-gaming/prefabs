@@ -1,0 +1,13 @@
+schema_version = 1
+name = "3D orbit camera"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::camera3d::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = []
+
+description = "Orbit camera as two vectors rather than Euler angles: Rodrigues rotation, an orthonormalised basis, and ray-sphere picking that reuses that basis."
+category = "library"
+tags = ["capability:camera", "capability:3d", "capability:picking", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

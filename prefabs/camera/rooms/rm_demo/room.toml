@@ -1,0 +1,13 @@
+#:schema ../../.gm-schema/v1.json#room
+
+size = { width = 3840, height = 2160 }
+enable_views = true
+
+# An `enable_views` room with no visible viewport renders nothing — see the
+# platformer recipe's room for the same note.
+[[views]]
+visible = true
+w_view = 960
+h_view = 540
+w_port = 960
+h_port = 540

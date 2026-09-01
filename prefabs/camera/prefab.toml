@@ -1,0 +1,12 @@
+schema_version = 1
+name = "Follow camera"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::camera::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "A camera that follows a target with a deadzone it can move inside freely, eases toward it rather than snapping, and never shows outside the room. Three rules that are individually obvious and collectively fiddly — especially the clamp, which has to win over the ease or the view judders at the edges."
+category = "library"
+tags = ["capability:camera", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo", "sprites/spr_demo_dot"]

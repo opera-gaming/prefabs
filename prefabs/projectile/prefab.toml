@@ -1,0 +1,17 @@
+schema_version = 1
+name = "Shooting"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::projectile::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Launch a projectile at a direction and speed, age it, destroy it on timeout or once it is off the room, and report what it hit. Plus aiming at a point, leading a moving target, and a fire-rate cooldown that holding the key cannot outrun. The lifetime is the part everyone forgets: a bullet that flies off the room is still simulated, and the frame rate falls away minutes after the mistake."
+category = "library"
+tags = ["capability:shooting", "capability:combat", "genre:shooter", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_shot", "objects/obj_demo_target", "rooms/rm_demo", "sprites/spr_demo_shot", "sprites/spr_demo_target"]
+
+steps = [
+    "`projectile_step` runs in the projectile object's own Step event, not the shooter's.",
+    "Give the projectile object a sprite — a spriteless object has no collision mask, so it will never report a hit.",
+]

@@ -1,0 +1,12 @@
+schema_version = 1
+name = "Countdowns and stopwatches"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::timer::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Countdowns and stopwatches in seconds rather than frames, pausable, extendable, and formatted as m:ss or m:ss.cc. `timer_step` returns true on the single frame a countdown expires, so the round ends once instead of every frame after zero."
+category = "library"
+tags = ["capability:timing", "capability:hud", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

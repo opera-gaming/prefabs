@@ -1,0 +1,16 @@
+schema_version = 1
+name = "On-screen numbers"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::hud::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Bars with an optional lagging chase bar behind them so a big hit is legible, discrete pips for counts small enough to read at a glance, corner anchoring that survives a window resize, and a label helper that restores the previous alignment. All in GUI space, because a HUD in room coordinates scrolls away the moment the game gets a camera."
+category = "library"
+tags = ["capability:hud", "capability:ui", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "These draw in GUI space, so they belong in a Draw GUI event, not Draw.",
+]

@@ -1,0 +1,5 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+# No controller here: obj_demo is persistent and arrives with the run.

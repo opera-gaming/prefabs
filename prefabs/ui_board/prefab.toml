@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Interactive UI board"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::ui_board::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = ["kernel", "feel"]
+
+description = "Pointer-driven hotspots with hover, press and disabled states, grid and row layouts, selection and answer slots. The catalog holds roughly 1,500 UI and icon sprites with no gameplay layer that can use them; this is that layer."
+category = "library"
+tags = ["capability:ui", "capability:pointer", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

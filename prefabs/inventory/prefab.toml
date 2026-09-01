@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Carrying things"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::inventory::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Slots holding stacks of one item each, with add and remove that report how many actually moved rather than assuming it all fit. Also room-for, so a pickup prompt can be honest before the player walks into it. The returned count is the whole design: silently discarding the overflow is the bug this exists to prevent."
+category = "library"
+tags = ["capability:inventory", "capability:items", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "`inventory_add` returns how many fit — drop the difference on the floor rather than discarding it silently.",
+]

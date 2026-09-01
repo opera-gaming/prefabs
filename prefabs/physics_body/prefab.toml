@@ -1,0 +1,18 @@
+schema_version = 1
+name = "Physics body hygiene"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::physics_body::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "The things a Box2D body needs that an instance does not. A speed ceiling behind phy_bullet, because a body that gains energy off bouncy surfaces eventually outruns continuous collision and passes through a wall. Impact strength from a velocity reversal, which fires once per bounce with a magnitude rather than once per frame of contact with none. Stall detection, because a ball that comes to rest out of reach ends no run. Pinning, because writing x does nothing to a physics body. And a freeze that stops the body, since gating your own Step leaves the world integrating underneath it."
+category = "library"
+tags = ["capability:physics", "capability:box2d", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_ball", "objects/obj_demo_wall", "rooms/rm_demo", "sprites/spr_demo_ball", "sprites/spr_demo_wall"]
+
+steps = [
+    "The room needs `physics_world = true` in its `room.toml`, or none of the bodies simulate at all.",
+    "Set `phy_bullet = true` in Create on anything fast. `phys_clamp_speed` is the backstop behind it, not a replacement for it.",
+    "Declare fixtures in `[physics.body.shape]` at final pixel size. `scale = \"instance\"` bakes the fixture at instance-creation scale, which runs before Create.gml sets `image_xscale` — that mismatch is how a 16px sprite ends up with a 74px hitbox.",
+]

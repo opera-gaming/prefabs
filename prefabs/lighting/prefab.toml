@@ -1,0 +1,17 @@
+schema_version = 1
+name = "Darkness and lights"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::lighting::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "A surface filled with night and lights subtracted from it, with a gradient falloff so a light reads as light rather than as a hole in a sheet of paper. Lights are declared every frame by whatever owns them, so one that is destroyed simply stops adding itself. Every call re-checks the surface: a surface is volatile, and the frame after the OS frees one draws nothing — a game that looks perfect until it does not, on a machine you do not have."
+category = "library"
+tags = ["capability:lighting", "capability:rendering", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "Draw the lighting after the world and before the HUD — lighting the score display is rarely what anyone wants.",
+    "Call `light_free` in a Cleanup event. A surface left behind on every room change is a leak the game only notices an hour in.",
+]

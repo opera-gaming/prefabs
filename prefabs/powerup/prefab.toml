@@ -1,0 +1,12 @@
+schema_version = 1
+name = "Timed power-ups"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::powerup::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Named effects with a duration and a stacking rule — refresh the clock, extend it, or add a level. That rule is the whole design: picking one by accident is how a power-up ends up either useless or permanent. `powerup_step` returns what expired this frame, so an effect is undone exactly once instead of every frame after it ends."
+category = "library"
+tags = ["capability:powerups", "capability:buffs", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

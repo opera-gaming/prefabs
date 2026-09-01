@@ -1,0 +1,12 @@
+schema_version = 1
+name = "Currency and prices"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::economy::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "A purse where spending checks affordability and deducts in one step, so a balance cannot go negative between the check and the charge. Plus a price that grows per purchase, how many more are affordable right now for a buy-max button, and thousands separators — a raw seven-digit number is unreadable at exactly the moment a player looks at it."
+category = "library"
+tags = ["capability:economy", "capability:currency", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

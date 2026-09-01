@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Grid board"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::grid::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = ["kernel"]
+
+description = "A cell container with cell/pixel conversion and neighbour queries, occupancy tests, row detection and collapse, and snapshot/restore for undo. Four small concepts in one pack because a puzzle is not real without undo."
+category = "library"
+tags = ["capability:grid", "capability:pathfinding", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

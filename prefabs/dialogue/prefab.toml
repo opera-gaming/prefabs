@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Conversations"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::dialogue::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Lines with a speaker, revealed at a characters-per-second rate, advanced by a key. The first press completes the line and the second advances it, so an impatient player never skips text unread. Includes a drawn box and an active flag to gate the game's own input on, or the player walks around while talking."
+category = "library"
+tags = ["capability:dialogue", "capability:ui", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "Gate your own input on `dialogue_active`, or the player moves while the box is up.",
+]

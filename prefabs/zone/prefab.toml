@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Trigger regions"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::zone::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Rectangular and circular regions with enter/exit/inside/outside tracking, so a trigger fires on the single frame the answer changed rather than every frame the player stands in it. Plus distance to the edge, for a prompt that fades in on approach, and a reset so a player who died inside a trigger can set it off again."
+category = "library"
+tags = ["capability:triggers", "capability:regions", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "Call `zone_track` once per frame per zone — it advances state, so calling it twice in a frame eats the transition.",
+]

@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# The state performs the room change, so it has to outlive the room. A
+# persistent controller is the other half of that: one instance for the run.
+persistent = true

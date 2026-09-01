@@ -1,0 +1,17 @@
+schema_version = 1
+name = "Enemy behaviour"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::enemy_ai::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "One state field and the movements that go with it: chase, flee, wander with a hold time, patrol a route, and a sight radius with an optional line-of-sight check so walls hide you. Includes separation, without which a group of chasers converges into a single stack that reads as one enemy and lands every hit at once."
+category = "library"
+tags = ["capability:ai", "capability:enemies", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_enemy", "rooms/rm_demo"]
+
+steps = [
+    "These act on the calling instance, so they go in the enemy's own Step event.",
+    "`ai_separate` moves the *other* instances, so call it from one enemy, not from each — calling it in every enemy's Step doubles every push.",
+]
