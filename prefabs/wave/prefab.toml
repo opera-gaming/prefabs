@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Waves and difficulty"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::wave::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "A spawn interval that tightens each wave down to a floor, a wave counter and progress through the current one, and a per-wave batch size so the curve keeps climbing after the interval bottoms out. Deliberately knows nothing about what spawns: the same curve drives enemies, obstacles or cards."
+category = "library"
+tags = ["capability:difficulty", "capability:waves", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "`wave_reset` on a new run, or the second run starts at the difficulty the first one ended at.",
+]

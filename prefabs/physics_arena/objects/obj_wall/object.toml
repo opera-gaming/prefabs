@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#object
+
+sprite = "spr_wall"
+
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+restitution = 0.4
+friction = 0.2
+
+[physics.body.shape]
+type = "aabb"
+origin = [0.0, 0.0]
+size = [40.0, 40.0]

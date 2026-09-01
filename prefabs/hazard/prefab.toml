@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Hazards and checkpoints"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::hazard::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Respawn points that move as the player passes checkpoints, a respawn that stops the instance dead rather than putting it back at speed, a grace window after it, knockback for hazards that hurt instead of killing, and a fell-out-of-the-room check for the pit that is not an object."
+category = "library"
+tags = ["capability:hazards", "capability:checkpoints", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_spike", "rooms/rm_demo", "sprites/spr_demo_body", "sprites/spr_demo_spike"]
+
+steps = [
+    "`hazard_respawn` and `hazard_knockback` move the calling instance, so they go in the player's own event.",
+]

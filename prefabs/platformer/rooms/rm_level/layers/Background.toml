@@ -1,0 +1,11 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "background"
+# Deliberately far back. This is the fallback fill, so anything added later —
+# a sky gradient, parallax bands — has room to sit in front of it. At a depth
+# near the terrain's it instead *covers* them: an opaque fill hides every band
+# behind it, and the room looks like the art was never added.
+depth = 1000
+
+[background]
+colour = "#1B2233"

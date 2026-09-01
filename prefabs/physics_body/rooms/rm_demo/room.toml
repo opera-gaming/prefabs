@@ -1,0 +1,8 @@
+#:schema ../../.gm-schema/v1.json#room
+
+size = { width = 960, height = 540 }
+view = { width = 960, height = 540 }
+
+physics_world = true
+physics_gravity_x = 0.0
+physics_gravity_y = 0.0

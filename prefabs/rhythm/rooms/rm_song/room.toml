@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#room
+
+# One screen, no views: the playfield is the whole room, so there is no camera
+# to keep in step with the chart.
+size = { width = 640, height = 480 }

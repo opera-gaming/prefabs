@@ -1,0 +1,8 @@
+#:schema .gm-schema/v1.json#project
+
+schema_version = 1
+name = "levels"
+
+# Two rooms, because one cannot demonstrate an order.
+[room_order]
+order = ["rm_demo", "rm_demo_2"]

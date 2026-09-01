@@ -1,0 +1,134 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "instances"
+depth = 0
+
+# The actors of the level. This layer is the only copy of where they are —
+# drag them in the room editor, or edit the entries here. The terrain they
+# stand on is the `Tiles` layer beside this one.
+[[entries]]
+id = "inst_level"
+object = "obj_level"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_kernel"
+object = "::kernel::obj_kernel"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_obj_coin_0"
+object = "obj_coin"
+x = 656.0
+y = 80.0
+
+[[entries]]
+id = "inst_obj_coin_1"
+object = "obj_coin"
+x = 688.0
+y = 80.0
+
+[[entries]]
+id = "inst_obj_coin_2"
+object = "obj_coin"
+x = 1488.0
+y = 80.0
+
+[[entries]]
+id = "inst_obj_coin_3"
+object = "obj_coin"
+x = 1520.0
+y = 80.0
+
+[[entries]]
+id = "inst_obj_coin_4"
+object = "obj_coin"
+x = 1552.0
+y = 80.0
+
+[[entries]]
+id = "inst_obj_coin_5"
+object = "obj_coin"
+x = 2448.0
+y = 112.0
+
+[[entries]]
+id = "inst_obj_coin_6"
+object = "obj_coin"
+x = 2480.0
+y = 112.0
+
+[[entries]]
+id = "inst_obj_coin_7"
+object = "obj_coin"
+x = 2512.0
+y = 112.0
+
+[[entries]]
+id = "inst_obj_coin_8"
+object = "obj_coin"
+x = 1872.0
+y = 144.0
+
+[[entries]]
+id = "inst_obj_coin_9"
+object = "obj_coin"
+x = 336.0
+y = 176.0
+
+[[entries]]
+id = "inst_obj_coin_10"
+object = "obj_coin"
+x = 368.0
+y = 176.0
+
+[[entries]]
+id = "inst_obj_enemy_0"
+object = "obj_enemy"
+x = 1072.0
+y = 192.0
+
+[[entries]]
+id = "inst_obj_coin_11"
+object = "obj_coin"
+x = 752.0
+y = 208.0
+
+[[entries]]
+id = "inst_obj_coin_12"
+object = "obj_coin"
+x = 2224.0
+y = 208.0
+
+[[entries]]
+id = "inst_obj_enemy_1"
+object = "obj_enemy"
+x = 1616.0
+y = 256.0
+
+[[entries]]
+id = "inst_obj_enemy_2"
+object = "obj_enemy"
+x = 2608.0
+y = 256.0
+
+[[entries]]
+id = "inst_obj_goal_0"
+object = "obj_goal"
+x = 2704.0
+y = 256.0
+
+[[entries]]
+id = "inst_obj_player_0"
+object = "obj_player"
+x = 112.0
+y = 288.0
+
+[[entries]]
+id = "inst_obj_enemy_3"
+object = "obj_enemy"
+x = 400.0
+y = 288.0
+

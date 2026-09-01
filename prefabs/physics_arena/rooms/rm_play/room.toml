@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#room
+
+size = { width = 960, height = 540 }
+view = { width = 960, height = 540 }
+
+# Without this the bodies do not simulate at all, while everything
+# else about the room looks correct.
+physics_world = true
+physics_gravity_x = 0.0
+physics_gravity_y = 0.0

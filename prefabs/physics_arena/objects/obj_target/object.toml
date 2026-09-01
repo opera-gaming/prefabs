@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#object
+
+sprite = "spr_target"
+
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+restitution = 0.7
+friction = 0.1
+
+[physics.body.shape]
+type = "circle"
+centre = [18.0, 18.0]
+radius = 18.0

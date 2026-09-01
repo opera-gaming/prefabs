@@ -1,0 +1,74 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 160,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_quiz); global.gt_seen=false; global.gt_q=0; global.gt_index=-99; global.gt_t0=undefined; global.gt_counts=false; global.gt_advanced=false;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_quiz)) { with (obj_quiz) { global.gt_seen = true; global.gt_q = array_length(questions); if (global.gt_index == -99) global.gt_index = index; if (index > global.gt_index) global.gt_advanced = true; if (global.gt_t0 == undefined) global.gt_t0 = time_left; if (time_left < global.gt_t0 - 0.5) global.gt_counts = true; } }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "questions": {
+      "gml": "return global.gt_q > 0;"
+    },
+    "showing": {
+      "gml": "return global.gt_index >= 0;"
+    },
+    "counts": {
+      "gml": "return global.gt_counts;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 150,
+      "assert": {
+        "id": "seen",
+        "name": "the quiz runs in rm_quiz",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "questions",
+        "name": "the question table is loaded",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "showing",
+        "name": "a question is on the board",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "counts",
+        "name": "the answer clock counts down",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 148,
+      "code": [
+        "watch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 710,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_title=false; global.gt_game=false; global.gt_over=false;"
+    },
+    "watch": {
+      "gml": "if (room == rm_title) global.gt_title = true; if (room == rm_game) global.gt_game = true; if (room == rm_gameover) global.gt_over = true;"
+    },
+    "title": {
+      "gml": "return global.gt_title;"
+    },
+    "game": {
+      "gml": "return global.gt_game;"
+    },
+    "over": {
+      "gml": "return global.gt_over;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 30,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 700,
+      "assert": {
+        "id": "title",
+        "name": "the game opens on the title room",
+        "expect": true
+      }
+    },
+    {
+      "frame": 700,
+      "assert": {
+        "id": "game",
+        "name": "confirm moves the title on to the game room",
+        "expect": true
+      }
+    },
+    {
+      "frame": 700,
+      "assert": {
+        "id": "over",
+        "name": "the ten-second round ends in the gameover room",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 700,
+      "code": [
+        "watch"
+      ]
+    }
+  ]
+}

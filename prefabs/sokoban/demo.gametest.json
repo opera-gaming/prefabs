@@ -1,0 +1,193 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 210,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_p0=undefined; global.gt_moved=false; global.gt_hist_max=0; global.gt_hist_now=0; global.gt_crates=0;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_sokoban)) { with (obj_sokoban) { global.gt_seen = true; if (global.gt_p0 == undefined) global.gt_p0 = { c: board.px, r: board.py }; if (board.px != global.gt_p0.c || board.py != global.gt_p0.r) global.gt_moved = true; global.gt_hist_max = max(global.gt_hist_max, array_length(history)); global.gt_hist_now = array_length(history); var _n = 0; for (var _r = 0; _r < array_length(board.cells); _r++) {   var _row = board.cells[_r]; for (var _c = 0; _c < array_length(_row); _c++) if (_row[_c] == \"$\") _n += 1; } global.gt_crates = max(global.gt_crates, _n); } }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "crates": {
+      "gml": "return global.gt_crates > 0;"
+    },
+    "moved": {
+      "gml": "return global.gt_moved;"
+    },
+    "recorded": {
+      "gml": "return global.gt_hist_max > 0;"
+    },
+    "undone": {
+      "gml": "return global.gt_hist_now < global.gt_hist_max;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 140,
+      "inputs": [
+        {
+          "key": 90,
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 143,
+      "inputs": [
+        {
+          "key": 90,
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "seen",
+        "name": "the sokoban controller runs in rm_play",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "crates",
+        "name": "the level loads with crates to push",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "moved",
+        "name": "a direction key walks the pusher to another cell",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "recorded",
+        "name": "a real move is pushed onto the undo history",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "undone",
+        "name": "Z pops a move back off the history",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 2,
+      "until": 199,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 190,
+  "stop_on_error": true,
+  "chunks": {
+    "enter": {
+      "gml": "room_goto(rm_level);"
+    },
+    "init": {
+      "gml": "global.gt_seen=false; global.gt_ground=false; global.gt_x=0; global.gt_y=0; global.gt_enemies = instance_number(obj_enemy); global.gt_min = global.gt_enemies;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_player)) { global.gt_seen = true; if (obj_player.jump.on_ground) global.gt_ground = true; global.gt_y = max(global.gt_y, obj_player.y); global.gt_x = max(global.gt_x, obj_player.x); } global.gt_min = min(global.gt_min, instance_number(obj_enemy));"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "grounded": {
+      "gml": "return global.gt_ground;"
+    },
+    "in_world": {
+      "gml": "return global.gt_y < room_height;"
+    },
+    "moved_right": {
+      "gml": "return global.gt_x > 112;"
+    },
+    "patrols_kept": {
+      "gml": "return global.gt_min >= global.gt_enemies;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 30,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 140,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 180,
+      "assert": {
+        "id": "seen",
+        "name": "the player exists",
+        "expect": true
+      }
+    },
+    {
+      "frame": 180,
+      "assert": {
+        "id": "grounded",
+        "name": "and stands on tile terrain",
+        "expect": true
+      }
+    },
+    {
+      "frame": 180,
+      "assert": {
+        "id": "in_world",
+        "name": "the player stands on the level rather than falling through it",
+        "expect": true
+      }
+    },
+    {
+      "frame": 180,
+      "assert": {
+        "id": "moved_right",
+        "name": "and can walk along it",
+        "expect": true
+      }
+    },
+    {
+      "frame": 180,
+      "assert": {
+        "id": "patrols_kept",
+        "name": "and every patrol turns at its ledge rather than walking off",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 1,
+      "until": 178,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 2,
+      "code": [
+        "enter"
+      ]
+    }
+  ]
+}

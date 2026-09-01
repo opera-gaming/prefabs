@@ -1,0 +1,447 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_arena"
+object = "obj_arena"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_player"
+object = "obj_player"
+x = 480.0
+y = 270.0
+
+[[entries]]
+id = "inst_wall_0"
+object = "obj_wall"
+x = 20.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_1"
+object = "obj_wall"
+x = 20.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_2"
+object = "obj_wall"
+x = 60.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_3"
+object = "obj_wall"
+x = 60.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_4"
+object = "obj_wall"
+x = 100.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_5"
+object = "obj_wall"
+x = 100.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_6"
+object = "obj_wall"
+x = 140.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_7"
+object = "obj_wall"
+x = 140.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_8"
+object = "obj_wall"
+x = 180.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_9"
+object = "obj_wall"
+x = 180.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_10"
+object = "obj_wall"
+x = 220.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_11"
+object = "obj_wall"
+x = 220.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_12"
+object = "obj_wall"
+x = 260.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_13"
+object = "obj_wall"
+x = 260.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_14"
+object = "obj_wall"
+x = 300.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_15"
+object = "obj_wall"
+x = 300.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_16"
+object = "obj_wall"
+x = 340.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_17"
+object = "obj_wall"
+x = 340.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_18"
+object = "obj_wall"
+x = 380.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_19"
+object = "obj_wall"
+x = 380.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_20"
+object = "obj_wall"
+x = 420.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_21"
+object = "obj_wall"
+x = 420.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_22"
+object = "obj_wall"
+x = 460.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_23"
+object = "obj_wall"
+x = 460.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_24"
+object = "obj_wall"
+x = 500.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_25"
+object = "obj_wall"
+x = 500.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_26"
+object = "obj_wall"
+x = 540.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_27"
+object = "obj_wall"
+x = 540.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_28"
+object = "obj_wall"
+x = 580.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_29"
+object = "obj_wall"
+x = 580.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_30"
+object = "obj_wall"
+x = 620.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_31"
+object = "obj_wall"
+x = 620.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_32"
+object = "obj_wall"
+x = 660.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_33"
+object = "obj_wall"
+x = 660.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_34"
+object = "obj_wall"
+x = 700.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_35"
+object = "obj_wall"
+x = 700.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_36"
+object = "obj_wall"
+x = 740.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_37"
+object = "obj_wall"
+x = 740.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_38"
+object = "obj_wall"
+x = 780.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_39"
+object = "obj_wall"
+x = 780.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_40"
+object = "obj_wall"
+x = 820.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_41"
+object = "obj_wall"
+x = 820.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_42"
+object = "obj_wall"
+x = 860.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_43"
+object = "obj_wall"
+x = 860.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_44"
+object = "obj_wall"
+x = 900.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_45"
+object = "obj_wall"
+x = 900.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_46"
+object = "obj_wall"
+x = 940.0
+y = 20.0
+
+[[entries]]
+id = "inst_wall_47"
+object = "obj_wall"
+x = 940.0
+y = 520.0
+
+[[entries]]
+id = "inst_wall_48"
+object = "obj_wall"
+x = 20.0
+y = 60.0
+
+[[entries]]
+id = "inst_wall_49"
+object = "obj_wall"
+x = 940.0
+y = 60.0
+
+[[entries]]
+id = "inst_wall_50"
+object = "obj_wall"
+x = 20.0
+y = 100.0
+
+[[entries]]
+id = "inst_wall_51"
+object = "obj_wall"
+x = 940.0
+y = 100.0
+
+[[entries]]
+id = "inst_wall_52"
+object = "obj_wall"
+x = 20.0
+y = 140.0
+
+[[entries]]
+id = "inst_wall_53"
+object = "obj_wall"
+x = 940.0
+y = 140.0
+
+[[entries]]
+id = "inst_wall_54"
+object = "obj_wall"
+x = 20.0
+y = 180.0
+
+[[entries]]
+id = "inst_wall_55"
+object = "obj_wall"
+x = 940.0
+y = 180.0
+
+[[entries]]
+id = "inst_wall_56"
+object = "obj_wall"
+x = 20.0
+y = 220.0
+
+[[entries]]
+id = "inst_wall_57"
+object = "obj_wall"
+x = 940.0
+y = 220.0
+
+[[entries]]
+id = "inst_wall_58"
+object = "obj_wall"
+x = 20.0
+y = 260.0
+
+[[entries]]
+id = "inst_wall_59"
+object = "obj_wall"
+x = 940.0
+y = 260.0
+
+[[entries]]
+id = "inst_wall_60"
+object = "obj_wall"
+x = 20.0
+y = 300.0
+
+[[entries]]
+id = "inst_wall_61"
+object = "obj_wall"
+x = 940.0
+y = 300.0
+
+[[entries]]
+id = "inst_wall_62"
+object = "obj_wall"
+x = 20.0
+y = 340.0
+
+[[entries]]
+id = "inst_wall_63"
+object = "obj_wall"
+x = 940.0
+y = 340.0
+
+[[entries]]
+id = "inst_wall_64"
+object = "obj_wall"
+x = 20.0
+y = 380.0
+
+[[entries]]
+id = "inst_wall_65"
+object = "obj_wall"
+x = 940.0
+y = 380.0
+
+[[entries]]
+id = "inst_wall_66"
+object = "obj_wall"
+x = 20.0
+y = 420.0
+
+[[entries]]
+id = "inst_wall_67"
+object = "obj_wall"
+x = 940.0
+y = 420.0
+
+[[entries]]
+id = "inst_wall_68"
+object = "obj_wall"
+x = 20.0
+y = 460.0
+
+[[entries]]
+id = "inst_wall_69"
+object = "obj_wall"
+x = 940.0
+y = 460.0
+
+[[entries]]
+id = "inst_wall_70"
+object = "obj_wall"
+x = 20.0
+y = 500.0
+
+[[entries]]
+id = "inst_wall_71"
+object = "obj_wall"
+x = 940.0
+y = 500.0

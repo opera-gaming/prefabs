@@ -1,0 +1,21 @@
+#:schema ../../.gm-schema/v1.json#object
+
+sprite = "spr_demo_ball"
+
+[physics]
+kind = "dynamic"
+
+[physics.body]
+density = 0.5
+restitution = 0.85
+friction = 0.05
+linear_damping = 0.1
+angular_damping = 0.4
+
+# Final pixels, deliberately not `scale = "instance"` — that bakes the
+# fixture at instance-creation scale, which runs before Create.gml can set
+# `image_xscale`, and the hitbox stops matching the art.
+[physics.body.shape]
+type = "circle"
+centre = [16.0, 16.0]
+radius = 16.0

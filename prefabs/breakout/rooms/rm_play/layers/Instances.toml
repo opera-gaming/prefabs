@@ -1,0 +1,303 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_obj_breakout"
+object = "obj_breakout"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_0"
+object = "obj_brick"
+x = 62.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_1"
+object = "obj_brick"
+x = 138.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_2"
+object = "obj_brick"
+x = 214.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_3"
+object = "obj_brick"
+x = 290.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_4"
+object = "obj_brick"
+x = 366.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_5"
+object = "obj_brick"
+x = 442.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_6"
+object = "obj_brick"
+x = 518.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_7"
+object = "obj_brick"
+x = 594.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_8"
+object = "obj_brick"
+x = 670.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_9"
+object = "obj_brick"
+x = 746.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_10"
+object = "obj_brick"
+x = 822.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_11"
+object = "obj_brick"
+x = 898.0
+y = 70.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_12"
+object = "obj_brick"
+x = 62.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_13"
+object = "obj_brick"
+x = 138.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_14"
+object = "obj_brick"
+x = 214.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_15"
+object = "obj_brick"
+x = 290.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_16"
+object = "obj_brick"
+x = 366.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_17"
+object = "obj_brick"
+x = 442.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_18"
+object = "obj_brick"
+x = 518.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_19"
+object = "obj_brick"
+x = 594.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_20"
+object = "obj_brick"
+x = 670.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_21"
+object = "obj_brick"
+x = 746.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_22"
+object = "obj_brick"
+x = 822.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_23"
+object = "obj_brick"
+x = 898.0
+y = 100.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_24"
+object = "obj_brick"
+x = 62.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_25"
+object = "obj_brick"
+x = 138.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_26"
+object = "obj_brick"
+x = 366.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_27"
+object = "obj_brick"
+x = 442.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_28"
+object = "obj_brick"
+x = 518.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_29"
+object = "obj_brick"
+x = 594.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_30"
+object = "obj_brick"
+x = 822.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_31"
+object = "obj_brick"
+x = 898.0
+y = 130.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_32"
+object = "obj_brick"
+x = 62.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_33"
+object = "obj_brick"
+x = 138.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_34"
+object = "obj_brick"
+x = 214.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_35"
+object = "obj_brick"
+x = 290.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_36"
+object = "obj_brick"
+x = 366.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_37"
+object = "obj_brick"
+x = 442.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_38"
+object = "obj_brick"
+x = 518.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_39"
+object = "obj_brick"
+x = 594.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_40"
+object = "obj_brick"
+x = 670.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_41"
+object = "obj_brick"
+x = 746.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_42"
+object = "obj_brick"
+x = 822.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_43"
+object = "obj_brick"
+x = 898.0
+y = 160.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_44"
+object = "obj_brick"
+x = 366.0
+y = 190.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_45"
+object = "obj_brick"
+x = 442.0
+y = 190.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_46"
+object = "obj_brick"
+x = 518.0
+y = 190.0
+
+[[entries]]
+id = "inst_rm_play_obj_brick_47"
+object = "obj_brick"
+x = 594.0
+y = 190.0
+
+[[entries]]
+id = "inst_rm_play_obj_paddle_0"
+object = "obj_paddle"
+x = 480.0
+y = 490.0

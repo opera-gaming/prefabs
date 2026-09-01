@@ -1,0 +1,74 @@
+schema_version = 1
+name = "Quiz / trivia"
+install = "copy"
+description = "Answer questions against the clock, with a combo for a streak."
+category = "game"
+tags = ["genre:quiz", "role:template"]
+
+# Direct composition. kernel and feel arrive transitively through
+# ui-board's `requires` too; listing them is the declaration of intent.
+requires = ["kernel", "feel", "ui_board"]
+
+seam = "scripts/scr_quiz_trivia_data/scr_quiz_trivia_data.gml"
+
+steps = [
+    "`quiz_trivia.gametest.json` came with the prefab and already passes: the quiz runs in rm_quiz, the question table is loaded, a question is on the board, and the answer clock counts down. Run it with `gmx test quiz_trivia.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+]
+
+[roles]
+obj_quiz = "the whole game: the question list, the answer board, the clock and the verdict"
+rm_quiz = "the only room — the board is laid out in GUI space, so its size is the window size"
+
+[tuning]
+question_time = 12.0
+points_correct = 100
+streak_bonus = 25
+lives = 3
+
+[art.answer_panel]
+catalog = "ui_panels_flat/sprites/Flat_Blue_Panel"
+placeholder = "drawn rectangle"
+
+[art.subject]
+catalog = "iconic_animals/sprites/spr_cartoon_cat_black"
+placeholder = "answer text only"
+
+[[content.questions]]
+ask = "Which of these animals barks?"
+answers = ["Dog", "Cat", "Cow", "Duck"]
+correct = 0
+
+[[content.questions]]
+ask = "Which one lays eggs?"
+answers = ["Horse", "Hen", "Pig", "Sheep"]
+correct = 1
+
+[[content.questions]]
+ask = "Which lives in the ocean?"
+answers = ["Camel", "Wolf", "Dolphin", "Goat"]
+correct = 2
+
+[[content.questions]]
+ask = "Which of these can fly?"
+answers = ["Penguin", "Ostrich", "Emu", "Falcon"]
+correct = 3
+
+[[content.questions]]
+ask = "Which is the largest?"
+answers = ["Blue whale", "Elephant", "Giraffe", "Bear"]
+correct = 0
+
+[[content.questions]]
+ask = "Which changes colour to hide?"
+answers = ["Badger", "Chameleon", "Otter", "Moose"]
+correct = 1
+
+[[content.questions]]
+ask = "Which has eight legs?"
+answers = ["Beetle", "Ant", "Spider", "Moth"]
+correct = 2
+
+[[content.questions]]
+ask = "Which sleeps upside down?"
+answers = ["Squirrel", "Rabbit", "Mole", "Bat"]
+correct = 3

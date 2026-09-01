@@ -1,0 +1,17 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "instances"
+depth = 0
+
+# One controller. Notes are created onto this same layer as the song plays.
+[[entries]]
+id = "inst_rhythm"
+object = "obj_rhythm"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_kernel"
+object = "::kernel::obj_kernel"
+x = 0.0
+y = 0.0

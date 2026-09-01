@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Health, damage and invulnerability"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::health::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Hit points with a maximum, damage that respects a window of invulnerability after each hit, healing that cannot overfill, and a bar to draw it with. The window is the whole point: without one an enemy that stays overlapping drains a full bar in three frames, and the run ends before the player understands they were touched — a game that validates, builds and boots perfectly while being unplayable."
+category = "library"
+tags = ["capability:health", "capability:damage", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "Call `health_step(state)` once a frame or the invulnerability window never expires.",
+]

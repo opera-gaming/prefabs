@@ -1,0 +1,139 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 160,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_x0=undefined; global.gt_moved=false; global.gt_shots=0; global.gt_bullets=0; global.gt_boss=false;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_ship)) { with (obj_ship) { global.gt_seen = true; if (global.gt_x0 == undefined) global.gt_x0 = x; if (abs(x - global.gt_x0) > 8) global.gt_moved = true; } } global.gt_shots = max(global.gt_shots, instance_number(obj_shot)); global.gt_bullets = max(global.gt_bullets, instance_number(obj_bullet)); if (instance_exists(obj_boss)) global.gt_boss = true;"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "moved": {
+      "gml": "return global.gt_moved;"
+    },
+    "fires": {
+      "gml": "return global.gt_shots > 0;"
+    },
+    "pattern": {
+      "gml": "return global.gt_bullets > 0;"
+    },
+    "boss": {
+      "gml": "return global.gt_boss;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 110,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "seen",
+        "name": "the ship is in rm_play",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "boss",
+        "name": "the boss is on screen",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "moved",
+        "name": "arrow keys move the ship",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "fires",
+        "name": "space fires a shot",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "pattern",
+        "name": "the boss puts bullets on screen",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 148,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

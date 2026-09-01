@@ -1,0 +1,17 @@
+schema_version = 1
+name = "Boss fights"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::boss::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Health split into stages, attacks gated by stage so a later one escalates rather than repeating, and a wind-up/active/recover cycle for every move. The telegraph is the whole design: an attack that fires the instant it is chosen is not difficult but unfair, and the fight reads as random. `boss_step` returns one event per frame rather than setting several flags, because a flag left set is how an attack fires twice."
+category = "library"
+tags = ["capability:boss", "capability:combat", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
+
+steps = [
+    "Make the boss invulnerable while a phase transition plays, or a big hit at the wrong moment skips a stage.",
+    "The recovery window is the player's turn — a boss with none is a boss you cannot approach.",
+]

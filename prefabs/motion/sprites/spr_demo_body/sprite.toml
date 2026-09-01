@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#sprite
+
+# Bottom-centre: a platformer character stands ON its y, so ledges and
+# floors line up without per-draw half-height maths.
+origin = "bottom"

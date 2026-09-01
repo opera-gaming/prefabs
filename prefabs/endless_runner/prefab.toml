@@ -1,0 +1,38 @@
+schema_version = 1
+name = "Endless runner"
+description = "Jump the gaps on ground that never stops, and get further than last time."
+category = "game"
+tags = ["genre:runner", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel"]
+
+seam = "scripts/scr_endless_runner_data/scr_endless_runner_data.gml"
+
+steps = [
+    "`endless_runner.gametest.json` came with the prefab and already passes: the runner stands on the ground in rm_play, the world scrolls past so distance climbs, space lifts it off the ground, and it does not fall in the first four seconds. Run it with `gmx test endless_runner.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The world scrolls past a stationary player rather than the player moving through it — that is what keeps the run endless without the room growing without limit.",
+    "Ground tiles are destroyed once they leave the left edge. Without that, a two-minute run accumulates thousands of instances and the frame rate falls away long after the mistake.",
+    "`gap_max_cells` is capped against `jump_strength` on purpose: a gap wider than the jump can clear is unfair rather than hard.",
+]
+
+[roles]
+obj_runner = "scrolls the world, emits ground, counts distance, ends the run"
+obj_player = "jumps; falling off the bottom ends the run"
+obj_ground = "one tile of floor, destroyed once it leaves the screen"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "distance reached and the best so far"
+
+[tuning]
+scroll_speed = 6
+scroll_gain = 0.0025
+scroll_max = 14
+gravity_per_frame = 0.75
+jump_strength = 15
+# The widest gap that can be generated. Beyond what the jump clears it is
+# unfair rather than hard, so raise `jump_strength` before raising this.
+gap_max_cells = 3
+gap_chance = 0.22
+cell = 64
+distance_per_point = 10

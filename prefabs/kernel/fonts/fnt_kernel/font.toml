@@ -1,0 +1,13 @@
+#:schema ../../.gm-schema/v1.json#font
+
+# A chain, not one family: every game built on the kernel draws through
+# `kernel_draw_text`, so a family the build machine happens to lack would
+# silently reshape the text of the whole catalogue. The trailing CSS generic
+# always resolves.
+#
+# `gmx tools font-freeze --project .` bakes the glyphs into the repo if you want the build to
+# stop depending on the machine at all.
+mode = "system"
+family = ["Inter", "Helvetica Neue", "Arial", "sans-serif"]
+size = 20
+anti_alias = true

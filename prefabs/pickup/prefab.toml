@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Collectables"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::pickup::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Collection by distance rather than collision mask, so a pickup can be drawn rather than sprited. A magnet radius pulls one in faster the closer it gets, a bob offset keeps it looking loose on the floor without moving the instance out of range, and scatter drops a handful around a point — what a destroyed enemy leaves behind."
+category = "library"
+tags = ["capability:pickups", "capability:collectables", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_coin", "rooms/rm_demo"]
+
+steps = [
+    "`pickup_step` returns the collector and leaves the instance alive, so score it, play a sound, then `instance_destroy()` — in that order.",
+]

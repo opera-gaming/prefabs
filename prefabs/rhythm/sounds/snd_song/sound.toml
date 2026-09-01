@@ -1,0 +1,6 @@
+#:schema ../../.gm-schema/v1.json#sound
+
+channel_format = "mono"
+# Uncompressed: the chart is read against `audio_sound_get_track_position`, and
+# a decode that starts late shifts every note with it.
+compression = "uncompressed"

@@ -1,0 +1,18 @@
+#:schema ../../.gm-schema/v1.json#object
+
+sprite = "spr_bumper"
+
+[physics]
+kind = "static"
+
+[physics.body]
+density = 0.0
+# Where most of the energy comes from. Past ~1.1 the ball gains speed on
+# every bounce and the cap becomes the only thing keeping it in the room.
+restitution = 1.05
+friction = 0.0
+
+[physics.body.shape]
+type = "circle"
+centre = [26.0, 26.0]
+radius = 26.0

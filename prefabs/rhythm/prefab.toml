@@ -1,0 +1,41 @@
+schema_version = 1
+name = "Rhythm"
+description = "Notes fall to the beat and you hit them on the line — a whole rhythm game whose clock is the song itself."
+category = "game"
+tags = ["genre:rhythm", "capability:audio", "role:template"]
+
+install = "copy"
+requires = ["kernel"]
+
+# The chart is the game. Adding, moving or removing a note is editing this
+# array, and nothing else has to move with it.
+seam = "objects/obj_rhythm/Create.gml"
+
+steps = [
+    "`rhythm.gametest.json` came with the recipe: the song's transport runs, notes are spawned from it, a press on the beat scores, and the track clamps at its end. Run it with `gmx test rhythm.gametest.json --project .` before and after a change, and extend it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "It needs a runtime whose headless audio works, and until one ships that means `--dev-runtime`. On an older runtime every one of the eight asserts fails with `0.0`, because `audio_play_sound` returns a negative handle and `audio_sound_get_track_position` then reads 0 on every frame: no note is ever spawned and the HUD sits at `0.00 / 8.00s` for the whole run. That is the runtime, not the chart and not the test — a game built on it looks like it is working and simply never starts. This recipe is the regression test for it, so eight red asserts here are the failure being reported rather than a recipe to repair.",
+    "The song is the clock. `obj_rhythm`'s Step reads `audio_sound_get_track_position(voice)` once and every note position, judgement and ending is measured against that one number. Do not add a frame counter beside it: two clocks drift apart, and the one the player hears is the one that is right. A note's `y` is a pure function of `time - song_time`, so a note can never wander off its own beat.",
+    "The chart is the `chart` array in `obj_rhythm`'s Create: one `[seconds, lane]` pair per note, lanes 0-3 left to right on the arrow keys. It is written as a loop over beats because the shipped track is a metronome-steady 120 BPM, so beat `b` is at `b * beat` seconds; replace the loop with literal pairs the moment the music stops being a grid.",
+    "Swapping the music is `gmx new sound snd_song --source <file>` over the existing asset, and then two numbers have to follow it: `song_length` in Create must match the new track's duration, and `bpm` must match its tempo or the beat-indexed chart lands between beats. A chart written for one track means nothing against another.",
+    "Timing windows are `perfect_window`, `good_window` and `miss_window`, in seconds. They are seconds rather than frames on purpose — a window in frames says something different at 30fps than at 60, and the player's ear is measuring in seconds either way.",
+    "`snd_song` is `compression = \"uncompressed\"`. A track that decodes on first play starts late, and every note in the chart is then early by however long the decode took. Leave it uncompressed until the track is long enough that its size matters, and check the first note by ear after changing it.",
+    "The placeholder art is flat colour and swapping it is data, not code: point `sprite` at new art in `objects/obj_note/object.toml`. `spr_hitline` is drawn by `obj_rhythm`'s Draw event rather than being an object, so a wider playfield means changing the draw call and the `lane_x` array together.",
+]
+
+traps = [
+    "The kernel's pause is on by default and this game turns it off in `obj_rhythm`'s Create. It stops the game while the track keeps playing, so the song runs on behind a frozen screen and every note after it is off the beat — no error, and a chart that simply never lines up again. Anything else driven by audio rather than by frames has the same problem.",
+    "`song_length` and `bpm` are read from `[tuning]` and have to match the actual track. A chart is written in beats, so a wrong `bpm` lands every note between beats and a wrong `song_length` ends the song early or never — both look like a mistuned chart rather than a mismatched number.",
+]
+
+[roles]
+obj_rhythm = "owns the song, the chart, the judging and the HUD — the only clock in the game"
+obj_note = "one note; its position is read from the song's playback position, never integrated"
+rm_song = "the one room — a fixed screen, no views, so nothing has to track the camera"
+
+[tuning]
+bpm = 120
+song_length = 8.0
+scroll_px = 300
+perfect_window = 0.05
+good_window = 0.15
+miss_window = 0.20

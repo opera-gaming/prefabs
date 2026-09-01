@@ -1,0 +1,27 @@
+schema_version = 1
+name = "Isometric scene"
+description = "A diamond grid you can hover and pan, with correct depth sorting."
+category = "component"
+tags = ["capability:iso", "role:template"]
+
+install = "copy"
+requires = ["iso", "kernel"]
+
+seam = "objects/obj_iso_scene/Step.gml"
+
+steps = [
+  "Place obj_iso_scene on an instance layer in your room.",
+  "Measure your tileset before trusting the numbers: tile_h is the DIAMOND height, not the sprite height. A sprite with a vertical skirt is taller than its diamond, and using the sprite height opens seams between neighbours. Set both in the generated tuning.",
+  "Draw a tile sprite in place of the outline: use ::iso::iso_depth(col, row) as the instance depth so a tile's skirt occludes the row behind it.",
+]
+
+[roles]
+obj_iso_scene = "owns the projection: draws the diamond grid back-to-front, tracks the hovered cell, and pans by moving the origin"
+
+[tuning]
+cols = 9
+rows = 9
+tile_w = 96
+# The diamond alone. For a 180x125 sprite with a 52px skirt this is 73.
+tile_h = 48
+pan_speed = 320

@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Levels as text"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::tilemap::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Build a room from an array of strings with a legend mapping characters to objects, find the cells holding a character without spawning anything, and size the room to the map. A level held as placed instances can only be changed in an editor; a level held as twelve strings can be changed in a diff, and you can see its shape while you do."
+category = "library"
+tags = ["capability:levels", "capability:tilemap", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_block", "rooms/rm_demo"]
+
+steps = [
+    "Instances land centred in their cell, so give their sprites a centred origin or they will sit half a cell up and left.",
+]

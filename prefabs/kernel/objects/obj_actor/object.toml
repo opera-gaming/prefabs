@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# The shared base every pack attaches to. GameMaker allows ONE parent,
+# so motion, combat and items cannot each own the player object —
+# the kernel publishes this and packs attach by instance id instead.

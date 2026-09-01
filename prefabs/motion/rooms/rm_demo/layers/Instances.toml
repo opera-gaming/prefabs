@@ -1,0 +1,249 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_demo_player"
+object = "obj_demo"
+x = 120.0
+y = 300.0
+
+[[entries]]
+id = "inst_demo_block_0"
+object = "obj_demo_wall"
+x = 0.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_1"
+object = "obj_demo_wall"
+x = 32.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_2"
+object = "obj_demo_wall"
+x = 64.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_3"
+object = "obj_demo_wall"
+x = 96.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_4"
+object = "obj_demo_wall"
+x = 128.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_5"
+object = "obj_demo_wall"
+x = 160.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_6"
+object = "obj_demo_wall"
+x = 192.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_7"
+object = "obj_demo_wall"
+x = 224.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_8"
+object = "obj_demo_wall"
+x = 256.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_9"
+object = "obj_demo_wall"
+x = 288.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_10"
+object = "obj_demo_wall"
+x = 320.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_11"
+object = "obj_demo_wall"
+x = 352.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_12"
+object = "obj_demo_wall"
+x = 384.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_13"
+object = "obj_demo_wall"
+x = 416.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_14"
+object = "obj_demo_wall"
+x = 448.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_15"
+object = "obj_demo_wall"
+x = 480.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_16"
+object = "obj_demo_wall"
+x = 512.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_17"
+object = "obj_demo_wall"
+x = 544.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_18"
+object = "obj_demo_wall"
+x = 576.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_19"
+object = "obj_demo_wall"
+x = 608.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_20"
+object = "obj_demo_wall"
+x = 640.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_21"
+object = "obj_demo_wall"
+x = 672.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_22"
+object = "obj_demo_wall"
+x = 704.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_23"
+object = "obj_demo_wall"
+x = 736.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_24"
+object = "obj_demo_wall"
+x = 768.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_25"
+object = "obj_demo_wall"
+x = 800.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_26"
+object = "obj_demo_wall"
+x = 832.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_27"
+object = "obj_demo_wall"
+x = 864.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_28"
+object = "obj_demo_wall"
+x = 896.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_29"
+object = "obj_demo_wall"
+x = 928.0
+y = 480.0
+
+[[entries]]
+id = "inst_demo_block_30"
+object = "obj_demo_wall"
+x = 320.0
+y = 380.0
+
+[[entries]]
+id = "inst_demo_block_31"
+object = "obj_demo_wall"
+x = 352.0
+y = 380.0
+
+[[entries]]
+id = "inst_demo_block_32"
+object = "obj_demo_wall"
+x = 384.0
+y = 380.0
+
+[[entries]]
+id = "inst_demo_block_33"
+object = "obj_demo_wall"
+x = 416.0
+y = 380.0
+
+[[entries]]
+id = "inst_demo_block_34"
+object = "obj_demo_wall"
+x = 448.0
+y = 380.0
+
+[[entries]]
+id = "inst_demo_block_35"
+object = "obj_demo_wall"
+x = 600.0
+y = 290.0
+
+[[entries]]
+id = "inst_demo_block_36"
+object = "obj_demo_wall"
+x = 632.0
+y = 290.0
+
+[[entries]]
+id = "inst_demo_block_37"
+object = "obj_demo_wall"
+x = 664.0
+y = 290.0
+
+[[entries]]
+id = "inst_demo_block_38"
+object = "obj_demo_wall"
+x = 696.0
+y = 290.0
+
+[[entries]]
+id = "inst_demo_block_39"
+object = "obj_demo_wall"
+x = 728.0
+y = 290.0

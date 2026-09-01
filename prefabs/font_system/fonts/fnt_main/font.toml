@@ -1,0 +1,8 @@
+#:schema ../../.gm-schema/v1.json#font
+
+# A single host family. Swap for a list to give the build machine
+# alternatives: family = ["Inter", "Helvetica Neue", "sans-serif"]
+mode = "system"
+family = "Arial"
+size = 20
+anti_alias = true

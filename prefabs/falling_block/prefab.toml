@@ -1,0 +1,66 @@
+schema_version = 1
+name = "Falling block"
+install = "copy"
+description = "Stack falling pieces, clear full rows, survive the speed ramp."
+category = "game"
+tags = ["genre:puzzle", "role:template"]
+
+requires = ["kernel", "feel", "grid"]
+
+seam = "scripts/scr_falling_block_data/scr_falling_block_data.gml"
+
+steps = [
+    "`falling_block.gametest.json` came with the prefab and already passes: the well runs in rm_stack, the piece table is loaded, the active piece falls on its own, left moves it, and up rotates it. Run it with `gmx test falling_block.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+]
+
+[roles]
+obj_stack = "the whole game: the well, the active piece, gravity, locking and row clears"
+rm_stack = "the only room — the well is centred in it and the HUD sits in the margin"
+
+[tuning]
+cols = 10
+rows = 18
+cell = 26
+fall_interval = 0.65
+fall_floor = 0.12
+speed_ramp = 0.04
+soft_drop = 0.04
+points_per_row = 100
+
+# The seven tetrominoes, as data rather than seven branches of GML.
+# `cells` is the spawn rotation; the glue rotates about the piece centre,
+# which is why an O piece needs no special case.
+[[content.pieces]]
+name = "I"
+rgb = [80, 220, 230]
+cells = [[0, 1], [1, 1], [2, 1], [3, 1]]
+
+[[content.pieces]]
+name = "O"
+rgb = [235, 205, 75]
+cells = [[1, 0], [2, 0], [1, 1], [2, 1]]
+
+[[content.pieces]]
+name = "T"
+rgb = [180, 110, 220]
+cells = [[1, 0], [0, 1], [1, 1], [2, 1]]
+
+[[content.pieces]]
+name = "S"
+rgb = [110, 215, 120]
+cells = [[1, 0], [2, 0], [0, 1], [1, 1]]
+
+[[content.pieces]]
+name = "Z"
+rgb = [230, 95, 95]
+cells = [[0, 0], [1, 0], [1, 1], [2, 1]]
+
+[[content.pieces]]
+name = "J"
+rgb = [95, 130, 230]
+cells = [[0, 0], [0, 1], [1, 1], [2, 1]]
+
+[[content.pieces]]
+name = "L"
+rgb = [230, 155, 75]
+cells = [[2, 0], [0, 1], [1, 1], [2, 1]]

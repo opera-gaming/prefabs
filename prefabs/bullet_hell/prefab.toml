@@ -1,0 +1,47 @@
+schema_version = 1
+name = "Bullet hell"
+description = "Thread the pattern. One hit ends it, so the hitbox is smaller than you are."
+category = "game"
+tags = ["genre:shmup", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "boss", "projectile", "timer"]
+
+seam = "scripts/scr_bullet_hell_data/scr_bullet_hell_data.gml"
+
+steps = [
+    "`bullet_hell.gametest.json` came with the prefab and already passes: the ship is in rm_play with the boss on screen, arrows move it, space fires a shot, and the boss puts bullets on screen. Run it with `gmx test bullet_hell.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "`hitbox_radius` is far smaller than the ship sprite on purpose. A hitbox that matches the art makes a dense pattern impossible rather than difficult, and every game in this genre does this.",
+    "Patterns are emitted on the boss's `telegraph_end`, so the player always sees a wind-up before a wall of bullets arrives.",
+    "Bullets are destroyed off-screen by `::projectile::`. Without that a two-minute fight accumulates thousands and the frame rate falls away long after the mistake.",
+]
+
+[roles]
+obj_hell = "runs the fight, picks patterns, ends the round"
+obj_ship = "the player — moves, and has a hitbox much smaller than its sprite"
+obj_shot = "the ship's shot, and the only thing that damages the boss"
+obj_bullet = "one shot; travels, expires, and ends the run on contact"
+obj_boss = "takes damage, changes phase, telegraphs every pattern"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "how long you survived, and the best"
+
+[tuning]
+ship_speed = 5
+focus_speed = 2
+# Much smaller than the sprite. A hitbox matching the art makes a dense
+# pattern impossible rather than hard — the whole genre depends on this.
+hitbox_radius = 4
+boss_hp = 400
+boss_phases = 3
+bullet_speed = 3.5
+bullet_life = 8
+ring_count = 18
+telegraph_seconds = 0.8
+recover_seconds = 1.0
+# The ship's own gun. `boss_hp` is only reachable through this.
+shot_damage = 6
+shot_interval = 0.12
+shot_speed = 9
+shot_life = 2
+survive_score = 5

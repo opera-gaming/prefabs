@@ -1,0 +1,21 @@
+schema_version = 1
+name = "Parallax backgrounds"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::parallax::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+steps = [
+    "Reach for `parallax_layer(\"<LayerName>\", factor)` first. It offsets a *background layer* — art named in the room file, with `sprite` and `tiled_x = true` — so the editor, a room thumbnail and anyone reading the TOML all see the backdrop the game shows. A band drawn from a Draw event is invisible to every one of them, and the room ends up looking nothing like the game.",
+    "Seat each band with `parallax_layer(\"<LayerName>\", <factor>, parallax_seat_y(<sprite>, <ground_y>))` rather than working out `y` by hand. A background layer draws from its top-left with no origin, and catalog bands are padded, so subtracting `sprite_get_height` puts the art well above the ground; two bands seated by eye end up within a few pixels of each other and the nearer one is never seen.",
+    "Depth and factor have to agree: a band that moves less must draw further back. `parallax_order([\"Far\", \"Near\"])` sets the depths from the order you list them in, so the two cannot disagree. **Look at the art before deciding that order** — a name is not a depth. `spr_backtrees_1` is a mountain range and `spr_backtrees_2` a green treeline, both described in the catalog as distant tree bands, and ordering them by their suffix put the mountains in front and hid the treeline completely.",
+    "Two things a background layer *can* do that look like reasons to reach for the drawn stack, and are not. **It can drift on its own**: `[background] hspeed` scrolls the element in pixels per step, and it composes with `parallax_layer` — the layer moves against the camera while the element scrolls within it, so clouds get both. **It can sit in front of the action**: layer depth may be negative, and `parallax_layer` accepts `factor > 1`, so a foreground band is a background layer at depth -100. A band at any depth between two others is fine too; depths are arbitrary numbers.",
+    "`parallax_make` / `parallax_add` / `parallax_draw` are the genuine fallback, and it is narrower than it looks: a background layer cannot *scale* its sprite (`stretch` fills the room, which is a different thing), so it is for bands whose art you cannot resize to size — `parallax_fit` scales at draw time. Resize the asset with `gmx tools sprite-resize --fit-height` and the layer form covers it. Anything drawn this way is invisible to the editor, so reach for it last.",
+    "Catalog backdrops are drawn far larger than a view — `parallax_fit(stack, index, view_height)` sizes one to the camera, and the tiling follows the scale. A background layer scales with `stretch` instead, in the room file.",
+]
+
+description = "A back-to-front stack of layers, each moving at a fraction of the camera, tiled to cover the view so no layer ever ends. Factors above 1 sit in front of the action for a foreground. Optional self-drift for clouds that move while the player stands still, with the tiling anchored to the sprite rather than to distance travelled, so a long level does not slowly desynchronise. Layers carry a scale, so art drawn at a different size than the view still fits and still tiles."
+category = "library"
+tags = ["capability:background", "capability:parallax", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo", "sprites/spr_demo_far", "sprites/spr_demo_near"]

@@ -1,0 +1,9 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+# Load-bearing: this clears the surface each frame. A room without a
+# background layer accumulates every draw call visually.
+kind = "background"
+depth = 100
+
+[background]
+colour = "#12141C"

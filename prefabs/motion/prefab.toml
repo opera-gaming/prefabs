@@ -1,0 +1,18 @@
+schema_version = 1
+name = "Movement and collision"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::motion::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+steps = [
+    "A moving platform is `motion_carry(obj_player, dx, dy, obj_solid)` from the platform's Step, called *before* the rider takes its own step so the rider resolves gravity against where the platform now is. Riders are found by their feet — standing on something means one pixel above it, not overlapping it — and are moved through `motion_move_x`/`motion_move_y`, so a platform that shoves one into a wall leaves it flush rather than inside. Without this a moving platform is a wall that slides out from under you.",
+    "`obj_solid` is whatever the character must not pass through — pass `noone` when nothing blocks it yet.",
+    "Double jump, wall jump and bounce pads all go through `motion_platformer_jump(state, strength)` — the step owns `vy`, so assigning it yourself is overwritten on the next frame.",
+]
+
+description = "Top-down and platformer movement against solid instances, resolved axis by axis so a wall stops you without sticking. Gravity, a jump with coyote time and a buffered press, and clamping to the room. The part of a game that is identical everywhere and easy to get subtly wrong."
+category = "library"
+tags = ["capability:movement", "capability:collision", "genre:platformer", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_wall", "rooms/rm_demo", "sprites/spr_demo_body", "sprites/spr_demo_block"]

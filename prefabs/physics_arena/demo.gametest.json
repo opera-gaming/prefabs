@@ -1,0 +1,110 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 140,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_p0=undefined; global.gt_ballmoved=false; global.gt_targets=0; global.gt_t0=undefined; global.gt_counts=false;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_ball)) { with (obj_ball) { global.gt_seen = true; if (global.gt_p0 == undefined) global.gt_p0 = { x: x, y: y }; if (point_distance(x, y, global.gt_p0.x, global.gt_p0.y) > 8) global.gt_ballmoved = true; } } global.gt_targets = max(global.gt_targets, instance_number(obj_target)); if (instance_exists(obj_arena)) { with (obj_arena) { if (global.gt_t0 == undefined) global.gt_t0 = clock.left; if (clock.left < global.gt_t0 - 0.5) global.gt_counts = true; } }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "moves": {
+      "gml": "return global.gt_ballmoved;"
+    },
+    "targets": {
+      "gml": "return global.gt_targets > 0;"
+    },
+    "counts": {
+      "gml": "return global.gt_counts;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "seen",
+        "name": "the ball is in the arena",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "targets",
+        "name": "the arena is set with targets",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "moves",
+        "name": "the ball rolls under the physics step",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "counts",
+        "name": "the round clock counts down",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 128,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

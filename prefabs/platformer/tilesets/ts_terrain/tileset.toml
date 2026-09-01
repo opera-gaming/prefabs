@@ -1,0 +1,62 @@
+#:schema ../../.gm-schema/v1.json#tileset
+
+# The sheet's first row is blank on purpose: tile index 0 is GameMaker's empty
+# tile, so the 47-tile template starts on row 1 (`derive --origin 1,0`) and no
+# art lands in a cell nothing can name.
+sprite = "spr_terrain_sheet"
+
+[tile_size]
+width = 32
+height = 32
+
+[autotile.default]
+template = "sides_47"
+
+[autotile.default.tiles]
+"ESW|" = 28
+"ESW|SE" = 29
+"ESW|SE,SW" = 31
+"ESW|SW" = 30
+"ES|" = 42
+"ES|SE" = 43
+"EW|" = 41
+"E|" = 51
+"NESW|" = 8
+"NESW|NE" = 10
+"NESW|NE,NW" = 11
+"NESW|NE,NW,SE" = 15
+"NESW|NE,NW,SE,SW" = 23
+"NESW|NE,NW,SW" = 19
+"NESW|NE,SE" = 14
+"NESW|NE,SE,SW" = 22
+"NESW|NE,SW" = 18
+"NESW|NW" = 9
+"NESW|NW,SE" = 13
+"NESW|NW,SE,SW" = 21
+"NESW|NW,SW" = 17
+"NESW|SE" = 12
+"NESW|SE,SW" = 20
+"NESW|SW" = 16
+"NES|" = 24
+"NES|NE" = 25
+"NES|NE,SE" = 27
+"NES|SE" = 26
+"NEW|" = 36
+"NEW|NE" = 38
+"NEW|NE,NW" = 39
+"NEW|NW" = 37
+"NE|" = 48
+"NE|NE" = 49
+"NSW|" = 32
+"NSW|NW" = 34
+"NSW|NW,SW" = 35
+"NSW|SW" = 33
+"NS|" = 40
+"NW|" = 46
+"NW|NW" = 47
+"N|" = 52
+"SW|" = 44
+"SW|SW" = 45
+"S|" = 50
+"W|" = 53
+"|" = 54

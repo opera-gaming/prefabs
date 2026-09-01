@@ -1,0 +1,1198 @@
+#:schema ../../../.gm-schema/v1.json#layer
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_obj_maze"
+object = "obj_maze"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_0"
+object = "obj_dot"
+x = 48.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_1"
+object = "obj_dot"
+x = 80.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_2"
+object = "obj_dot"
+x = 112.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_3"
+object = "obj_dot"
+x = 144.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_4"
+object = "obj_dot"
+x = 176.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_5"
+object = "obj_dot"
+x = 208.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_6"
+object = "obj_dot"
+x = 240.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_7"
+object = "obj_dot"
+x = 272.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_8"
+object = "obj_dot"
+x = 304.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_9"
+object = "obj_dot"
+x = 336.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_10"
+object = "obj_dot"
+x = 368.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_11"
+object = "obj_dot"
+x = 400.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_12"
+object = "obj_dot"
+x = 496.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_13"
+object = "obj_dot"
+x = 528.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_14"
+object = "obj_dot"
+x = 560.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_15"
+object = "obj_dot"
+x = 592.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_16"
+object = "obj_dot"
+x = 624.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_17"
+object = "obj_dot"
+x = 656.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_18"
+object = "obj_dot"
+x = 688.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_19"
+object = "obj_dot"
+x = 720.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_20"
+object = "obj_dot"
+x = 752.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_21"
+object = "obj_dot"
+x = 784.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_22"
+object = "obj_dot"
+x = 816.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_23"
+object = "obj_dot"
+x = 848.0
+y = 48.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_24"
+object = "obj_dot"
+x = 48.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_25"
+object = "obj_dot"
+x = 208.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_26"
+object = "obj_dot"
+x = 400.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_27"
+object = "obj_dot"
+x = 496.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_28"
+object = "obj_dot"
+x = 688.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_29"
+object = "obj_dot"
+x = 848.0
+y = 80.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_30"
+object = "obj_dot"
+x = 48.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_31"
+object = "obj_dot"
+x = 80.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_32"
+object = "obj_dot"
+x = 112.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_33"
+object = "obj_dot"
+x = 144.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_34"
+object = "obj_dot"
+x = 176.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_35"
+object = "obj_dot"
+x = 208.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_36"
+object = "obj_dot"
+x = 240.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_37"
+object = "obj_dot"
+x = 272.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_38"
+object = "obj_dot"
+x = 304.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_39"
+object = "obj_dot"
+x = 336.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_40"
+object = "obj_dot"
+x = 368.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_41"
+object = "obj_dot"
+x = 400.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_42"
+object = "obj_dot"
+x = 432.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_43"
+object = "obj_dot"
+x = 464.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_44"
+object = "obj_dot"
+x = 496.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_45"
+object = "obj_dot"
+x = 528.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_46"
+object = "obj_dot"
+x = 560.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_47"
+object = "obj_dot"
+x = 592.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_48"
+object = "obj_dot"
+x = 624.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_49"
+object = "obj_dot"
+x = 656.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_50"
+object = "obj_dot"
+x = 688.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_51"
+object = "obj_dot"
+x = 720.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_52"
+object = "obj_dot"
+x = 752.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_53"
+object = "obj_dot"
+x = 784.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_54"
+object = "obj_dot"
+x = 816.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_55"
+object = "obj_dot"
+x = 848.0
+y = 112.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_56"
+object = "obj_dot"
+x = 48.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_57"
+object = "obj_dot"
+x = 208.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_58"
+object = "obj_dot"
+x = 304.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_59"
+object = "obj_dot"
+x = 592.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_60"
+object = "obj_dot"
+x = 688.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_61"
+object = "obj_dot"
+x = 848.0
+y = 144.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_62"
+object = "obj_dot"
+x = 48.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_63"
+object = "obj_dot"
+x = 80.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_64"
+object = "obj_dot"
+x = 112.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_65"
+object = "obj_dot"
+x = 144.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_66"
+object = "obj_dot"
+x = 176.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_67"
+object = "obj_dot"
+x = 208.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_68"
+object = "obj_dot"
+x = 304.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_69"
+object = "obj_dot"
+x = 336.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_70"
+object = "obj_dot"
+x = 368.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_71"
+object = "obj_dot"
+x = 400.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_72"
+object = "obj_dot"
+x = 496.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_73"
+object = "obj_dot"
+x = 528.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_74"
+object = "obj_dot"
+x = 560.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_75"
+object = "obj_dot"
+x = 592.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_76"
+object = "obj_dot"
+x = 688.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_77"
+object = "obj_dot"
+x = 720.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_78"
+object = "obj_dot"
+x = 752.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_79"
+object = "obj_dot"
+x = 784.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_80"
+object = "obj_dot"
+x = 816.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_81"
+object = "obj_dot"
+x = 848.0
+y = 176.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_82"
+object = "obj_dot"
+x = 208.0
+y = 208.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_83"
+object = "obj_dot"
+x = 400.0
+y = 208.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_84"
+object = "obj_dot"
+x = 496.0
+y = 208.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_85"
+object = "obj_dot"
+x = 688.0
+y = 208.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_86"
+object = "obj_dot"
+x = 48.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_87"
+object = "obj_dot"
+x = 80.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_88"
+object = "obj_dot"
+x = 112.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_89"
+object = "obj_dot"
+x = 144.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_90"
+object = "obj_dot"
+x = 176.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_91"
+object = "obj_dot"
+x = 208.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_92"
+object = "obj_dot"
+x = 240.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_93"
+object = "obj_dot"
+x = 272.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_ghost_0"
+object = "obj_ghost"
+x = 304.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_94"
+object = "obj_dot"
+x = 336.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_95"
+object = "obj_dot"
+x = 368.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_96"
+object = "obj_dot"
+x = 400.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_97"
+object = "obj_dot"
+x = 432.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_hero_0"
+object = "obj_hero"
+x = 464.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_98"
+object = "obj_dot"
+x = 496.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_99"
+object = "obj_dot"
+x = 528.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_ghost_1"
+object = "obj_ghost"
+x = 560.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_100"
+object = "obj_dot"
+x = 592.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_101"
+object = "obj_dot"
+x = 624.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_102"
+object = "obj_dot"
+x = 656.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_103"
+object = "obj_dot"
+x = 688.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_104"
+object = "obj_dot"
+x = 720.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_105"
+object = "obj_dot"
+x = 752.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_106"
+object = "obj_dot"
+x = 784.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_107"
+object = "obj_dot"
+x = 816.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_108"
+object = "obj_dot"
+x = 848.0
+y = 240.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_109"
+object = "obj_dot"
+x = 208.0
+y = 272.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_110"
+object = "obj_dot"
+x = 400.0
+y = 272.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_111"
+object = "obj_dot"
+x = 496.0
+y = 272.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_112"
+object = "obj_dot"
+x = 688.0
+y = 272.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_113"
+object = "obj_dot"
+x = 48.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_114"
+object = "obj_dot"
+x = 80.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_115"
+object = "obj_dot"
+x = 112.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_116"
+object = "obj_dot"
+x = 144.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_117"
+object = "obj_dot"
+x = 176.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_118"
+object = "obj_dot"
+x = 208.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_119"
+object = "obj_dot"
+x = 304.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_120"
+object = "obj_dot"
+x = 336.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_121"
+object = "obj_dot"
+x = 368.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_122"
+object = "obj_dot"
+x = 400.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_123"
+object = "obj_dot"
+x = 496.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_124"
+object = "obj_dot"
+x = 528.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_125"
+object = "obj_dot"
+x = 560.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_126"
+object = "obj_dot"
+x = 592.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_127"
+object = "obj_dot"
+x = 688.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_128"
+object = "obj_dot"
+x = 720.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_129"
+object = "obj_dot"
+x = 752.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_130"
+object = "obj_dot"
+x = 784.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_131"
+object = "obj_dot"
+x = 816.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_132"
+object = "obj_dot"
+x = 848.0
+y = 304.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_133"
+object = "obj_dot"
+x = 48.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_134"
+object = "obj_dot"
+x = 208.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_135"
+object = "obj_dot"
+x = 304.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_136"
+object = "obj_dot"
+x = 592.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_137"
+object = "obj_dot"
+x = 688.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_138"
+object = "obj_dot"
+x = 848.0
+y = 336.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_139"
+object = "obj_dot"
+x = 48.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_140"
+object = "obj_dot"
+x = 80.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_141"
+object = "obj_dot"
+x = 112.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_142"
+object = "obj_dot"
+x = 144.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_143"
+object = "obj_dot"
+x = 176.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_144"
+object = "obj_dot"
+x = 208.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_145"
+object = "obj_dot"
+x = 240.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_146"
+object = "obj_dot"
+x = 272.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_147"
+object = "obj_dot"
+x = 304.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_148"
+object = "obj_dot"
+x = 336.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_149"
+object = "obj_dot"
+x = 368.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_150"
+object = "obj_dot"
+x = 400.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_151"
+object = "obj_dot"
+x = 432.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_152"
+object = "obj_dot"
+x = 464.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_153"
+object = "obj_dot"
+x = 496.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_154"
+object = "obj_dot"
+x = 528.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_155"
+object = "obj_dot"
+x = 560.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_156"
+object = "obj_dot"
+x = 592.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_157"
+object = "obj_dot"
+x = 624.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_158"
+object = "obj_dot"
+x = 656.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_159"
+object = "obj_dot"
+x = 688.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_160"
+object = "obj_dot"
+x = 720.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_161"
+object = "obj_dot"
+x = 752.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_162"
+object = "obj_dot"
+x = 784.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_163"
+object = "obj_dot"
+x = 816.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_164"
+object = "obj_dot"
+x = 848.0
+y = 368.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_165"
+object = "obj_dot"
+x = 48.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_166"
+object = "obj_dot"
+x = 208.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_167"
+object = "obj_dot"
+x = 400.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_168"
+object = "obj_dot"
+x = 496.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_169"
+object = "obj_dot"
+x = 688.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_170"
+object = "obj_dot"
+x = 848.0
+y = 400.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_171"
+object = "obj_dot"
+x = 48.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_172"
+object = "obj_dot"
+x = 80.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_173"
+object = "obj_dot"
+x = 112.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_174"
+object = "obj_dot"
+x = 144.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_175"
+object = "obj_dot"
+x = 176.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_176"
+object = "obj_dot"
+x = 208.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_177"
+object = "obj_dot"
+x = 240.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_178"
+object = "obj_dot"
+x = 272.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_179"
+object = "obj_dot"
+x = 304.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_180"
+object = "obj_dot"
+x = 336.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_181"
+object = "obj_dot"
+x = 368.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_182"
+object = "obj_dot"
+x = 400.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_183"
+object = "obj_dot"
+x = 496.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_184"
+object = "obj_dot"
+x = 528.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_185"
+object = "obj_dot"
+x = 560.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_186"
+object = "obj_dot"
+x = 592.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_187"
+object = "obj_dot"
+x = 624.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_188"
+object = "obj_dot"
+x = 656.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_189"
+object = "obj_dot"
+x = 688.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_190"
+object = "obj_dot"
+x = 720.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_191"
+object = "obj_dot"
+x = 752.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_192"
+object = "obj_dot"
+x = 784.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_193"
+object = "obj_dot"
+x = 816.0
+y = 432.0
+
+[[entries]]
+id = "inst_rm_play_obj_dot_194"
+object = "obj_dot"
+x = 848.0
+y = 432.0
+

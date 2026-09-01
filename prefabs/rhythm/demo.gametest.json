@@ -1,0 +1,233 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 570,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "global.rh_probe_5s = false; global.rh_probe_end = false;"
+    },
+    "probe_5s": {
+      "gml": "global.rh_probe_5s = (global.rh_time > 4.6 && global.rh_time < 5.4);"
+    },
+    "probe_end": {
+      "gml": "global.rh_probe_end = (global.rh_time > 7.5 && global.rh_time < 8.1);"
+    },
+    "voice_valid": {
+      "gml": "return global.rh_voice >= 0;"
+    },
+    "clock_ran": {
+      "gml": "return global.rh_time_max > 7.5;"
+    },
+    "clock_at_5s": {
+      "gml": "return global.rh_probe_5s;"
+    },
+    "notes_spawned": {
+      "gml": "return global.rh_notes_max > 0;"
+    },
+    "notes_hit": {
+      "gml": "return global.rh_hits >= 5;"
+    },
+    "combo_built": {
+      "gml": "return global.rh_best_combo >= 3;"
+    },
+    "song_finished": {
+      "gml": "return global.rh_finished;"
+    },
+    "clamped": {
+      "gml": "return global.rh_probe_end;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 2,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 120,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 122,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 152,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 180,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 182,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 210,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 212,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 240,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 242,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 270,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 272,
+      "inputs": [
+        {
+          "key": "vk_down",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 300,
+      "code": [
+        "probe_5s"
+      ]
+    },
+    {
+      "frame": 560,
+      "code": [
+        "probe_end"
+      ]
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "voice_valid",
+        "name": "audio_play_sound returns a playable voice",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "clock_ran",
+        "name": "and its track position advances across the whole song",
+        "expect": true
+      }
+    },
+    {
+      "frame": 300,
+      "assert": {
+        "id": "clock_at_5s",
+        "name": "at a rate of one second per sixty frames",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "notes_spawned",
+        "name": "the chart spawns notes off that position",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "notes_hit",
+        "name": "a press on the beat is judged a hit",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "combo_built",
+        "name": "and consecutive hits build a combo",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "song_finished",
+        "name": "the song ends itself at the end of the track",
+        "expect": true
+      }
+    },
+    {
+      "frame": 565,
+      "assert": {
+        "id": "clamped",
+        "name": "and the position clamps there rather than running on",
+        "expect": true
+      }
+    }
+  ]
+}

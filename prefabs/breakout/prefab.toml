@@ -1,0 +1,36 @@
+schema_version = 1
+name = "Breakout"
+description = "Clear the bricks, do not drop the ball — and steer it with the paddle."
+category = "game"
+tags = ["genre:arcade", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel"]
+
+seam = "rooms/rm_play/layers/Instances.toml"
+
+steps = [
+    "`breakout.gametest.json` came with the prefab and already passes: the ball is in play, it travels, the paddle answers to left/right, the room is laid out with bricks, and the ball clears at least one of them. Run it with `gmx test breakout.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The wall is real entries in rm_play's instances layer, and that layer is the only copy of it — drag a brick in the room editor, or edit `rooms/rm_play/layers/Instances.toml` directly. A brick is an instance rather than a tile because the game destroys it and counts what is left: `instance_number(obj_brick)` is how a cleared board is detected, which a tile layer cannot answer.",
+    "`steer` is the number that decides whether the game has skill in it. At 0 the ball bounces off the paddle like a wall and every rally is identical.",
+]
+
+[roles]
+obj_breakout = "serves the ball, counts bricks, ends the round"
+obj_paddle = "moves on the arrow keys, clamped to the room"
+obj_ball = "bounces off walls, bricks and the paddle; steered by where it lands"
+obj_brick = "one cell of the map; scores and vanishes"
+rm_title = "boot room — its size is the window size"
+rm_play = "the whole game"
+rm_results = "cleared or dropped, and the best score"
+
+[tuning]
+paddle_speed = 9
+ball_speed = 6
+ball_speed_gain = 0.12
+# How much where the ball lands on the paddle bends its bounce. 0 makes the
+# paddle a wall and every rally identical; this is the number that puts skill
+# in the game.
+steer = 65
+lives = 3
+brick_score = 50

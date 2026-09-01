@@ -1,0 +1,7 @@
+#:schema .gm-schema/v1.json#project
+
+schema_version = 1
+name = "wave"
+
+[room_order]
+order = ["rm_demo"]

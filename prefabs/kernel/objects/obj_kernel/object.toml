@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Persistent: the lifecycle, score and save must survive a room change,
+# which is the whole reason the kernel is an object and not a script.
+persistent = true

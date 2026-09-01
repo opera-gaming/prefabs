@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Isometric projection"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::iso::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = []
+
+description = "Grid-to-screen isometric projection, the inverse, and the depth key that makes a tile skirt occlude correctly."
+category = "library"
+tags = ["capability:isometric", "capability:projection", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

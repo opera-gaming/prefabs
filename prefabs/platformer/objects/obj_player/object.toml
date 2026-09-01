@@ -1,0 +1,8 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# `sprite` is the picture and `mask` is the hitbox, deliberately named apart
+# even though they are the same sprite today. Swapping in real art is then one
+# line: point `sprite` at the catalog pose and the tuned hitbox stays where the
+# movement was tuned against it, however tall the art turns out to be.
+sprite = "spr_player"
+mask = "spr_player"

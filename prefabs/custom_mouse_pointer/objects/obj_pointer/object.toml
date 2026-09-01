@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Persistent so the cursor survives a room change; without this every
+# room transition drops you back to the OS pointer for a frame.
+persistent = true

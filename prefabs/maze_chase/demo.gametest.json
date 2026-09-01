@@ -1,0 +1,121 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 140,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_x0=undefined; global.gt_moved=false; global.gt_dots=0; global.gt_g0=undefined; global.gt_ghost=false; global.gt_hp=1;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_hero)) { with (obj_hero) { global.gt_seen = true; global.gt_hp = min(global.gt_hp, (vitals.hp / vitals.max)); if (global.gt_x0 == undefined) global.gt_x0 = x; if (abs(x - global.gt_x0) > 8) global.gt_moved = true; } } if (instance_exists(obj_ghost)) { var _g = instance_find(obj_ghost, 0); if (global.gt_g0 == undefined) global.gt_g0 = { x: _g.x, y: _g.y }; if (point_distance(_g.x, _g.y, global.gt_g0.x, global.gt_g0.y) > 8) global.gt_ghost = true; } global.gt_dots = max(global.gt_dots, instance_number(obj_dot));"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "moved": {
+      "gml": "return global.gt_moved;"
+    },
+    "dots": {
+      "gml": "return global.gt_dots > 0;"
+    },
+    "ghost": {
+      "gml": "return global.gt_ghost;"
+    },
+    "hurt": {
+      "gml": "return global.gt_hp < 1;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "seen",
+        "name": "the hero is in the maze",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "dots",
+        "name": "the maze is laid out with dots to eat",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "moved",
+        "name": "holding a direction walks the hero",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "ghost",
+        "name": "a ghost routes toward the hero rather than standing still",
+        "expect": true
+      }
+    },
+    {
+      "frame": 130,
+      "assert": {
+        "id": "hurt",
+        "name": "a ghost that reaches the hero costs health",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 128,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

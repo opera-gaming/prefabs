@@ -1,0 +1,21 @@
+schema_version = 1
+name = "Pathfinding on a grid"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::pathgrid::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "A* over a grid of blocked cells, four-directional, returning the cells to walk. An empty array means no route exists, which callers must handle — a walled-off target is a normal state, not an error. Blocked cells can be rebuilt from the instances of an object, so a door that opens is a cell that clears."
+category = "library"
+tags = ["capability:pathfinding", "capability:ai", "role:library"]
+exclude = ["objects/obj_demo", "objects/obj_demo_wall", "rooms/rm_demo"]
+
+steps = [
+    "Rebuild the blocked cells after the world changes — a wall that was destroyed stays blocked until something says otherwise.",
+    "Block from whichever holds the walls: `pathgrid_block_instances(grid, obj_wall)` when they are objects, `pathgrid_block_tilemap(grid, pathgrid_tilemap(\"Tiles\"))` when they are terrain in a tile layer. Terrain nothing counts or destroys belongs in the tile layer, and then there are no instances to walk.",
+]
+
+traps = [
+    "`pathgrid_block_tilemap` reads the tile at each cell's *centre*, so it assumes the grid's cell and the tileset's tile size agree. A grid coarser than the tiles samples between them and silently misses walls — the path is then computed through terrain, and the mover walks into it with no error anywhere.",
+]

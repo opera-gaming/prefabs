@@ -1,0 +1,16 @@
+schema_version = 1
+name = "Room transitions"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::transition::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+description = "Fades, wipes and closing bars, with the room change performed on the frame the screen is fully covered. Going first and fading after shows the new room for a frame, which is worse than no transition at all. Includes a busy flag to gate input on, so the player stops playing a room they are leaving."
+category = "library"
+tags = ["capability:transitions", "capability:rooms", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo", "rooms/rm_demo_two"]
+
+steps = [
+    "Draw the overlay last, in a Draw GUI event — a transition the score sits on top of is not a transition.",
+]

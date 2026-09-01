@@ -1,0 +1,39 @@
+schema_version = 1
+name = "Waves and spawning"
+description = "Spawn things on a timer, in waves, without flooding the room."
+category = "component"
+tags = ["capability:spawning", "role:template"]
+
+install = "copy"
+requires = ["kernel"]
+
+seam = "objects/obj_spawner/Alarm_0.gml"
+
+steps = [
+    "Place obj_spawner on an instance layer in your game room. It has no sprite — it is a controller, not something the player sees.",
+    "Set `spawns` in `obj_spawner`'s Create to the object you want — an object asset is not something a TOML value can name, so this is code rather than tuning. Give that object a sprite: a spriteless one has no collision mask, so nothing will ever hit it.",
+    "The population cap is what stops a long run turning into a slideshow. Raise it deliberately, after watching the frame rate, not before.",
+]
+
+traps = [
+    "`spawns` is `noone` until you set it in obj_spawner's Create. Until then the waves run, the timer fires and the counter climbs, and nothing is ever spawned — no error, and a HUD that says the game is working.",
+]
+
+exclude = ["objects/obj_demo", "objects/obj_mote", "rooms/rm_demo"]
+
+[roles]
+obj_spawner = "runs the waves — set its `spawns` to your object; it is `noone` until you do, so nothing spawns by accident"
+
+[tuning]
+# Frames between spawns at wave 1. Alarms count in frames, so this is
+# `room_speed` divided by spawns-per-second.
+interval_start = 90
+# Every wave takes this fraction off the interval — the difficulty ramp.
+interval_scale = 0.88
+# Never spawn faster than this, however long the run goes.
+interval_min = 20
+# Frames per wave.
+wave_frames = 600
+# Hard ceiling on live instances. The one number that decides whether
+# minute ten is playable.
+population_cap = 24

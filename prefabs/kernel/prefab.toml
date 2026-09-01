@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Kernel"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::kernel::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = []
+
+description = "The floor every game shares: run lifecycle on a seeded RNG, an action-based input map, score and combo, a save store with flags, HUD helpers, audio buses, and the data/tuning accessors a generated template feeds."
+category = "library"
+tags = ["capability:lifecycle", "capability:save", "capability:input", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]

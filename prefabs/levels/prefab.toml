@@ -1,0 +1,27 @@
+schema_version = 1
+name = "Several levels, in order"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::levels::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+
+requires = ["kernel", "transition"]
+
+steps = [
+    "Adding a level is authoring the room and appending it to `[room_order]` — nothing in GML names a specific room, so nothing else changes.",
+    "Hold the state in a global and the controller persistent: it performs the room change, so it has to outlive the room it starts in.",
+    "Call `levels_gate(state, instance_number(obj_coin))` from the level's room-start, not its create — create runs as each instance is made, so a controller placed first would count a half-built room.",
+    "Gate gameplay on `levels_busy` and stand still while it is true. A player who keeps running behind the cover arrives somewhere the level did not put them.",
+]
+
+description = "A run through several rooms in order. Which level you are on and how many there are is derived by walking `[room_order]`, so it cannot disagree with the order the game plays. Advancing goes through the cover so the room changes on the frame the screen is opaque, and never re-boots the kernel — a run's score belongs to the run, and a level that refunds its score on death is one you can farm by dying. The exit carries a count so it can wait for the coins, keys or switches a level asks for."
+category = "library"
+tags = ["capability:levels", "capability:progression", "capability:rooms", "role:library"]
+
+exclude = ["objects/obj_demo", "rooms/rm_demo", "rooms/rm_demo_2"]
+
+[tuning]
+# The cover, each way. Long enough to read as a beat, short enough that a
+# player replaying a level is not waiting on it.
+cover_seconds = 0.3

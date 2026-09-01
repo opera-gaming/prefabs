@@ -1,0 +1,16 @@
+#:schema ../../../.gm-schema/v1.json#layer
+
+kind = "instances"
+depth = 0
+
+[[entries]]
+id = "inst_kernel"
+object = "::kernel::obj_kernel"
+x = 0.0
+y = 0.0
+
+[[entries]]
+id = "inst_title"
+object = "obj_title_controller"
+x = 0.0
+y = 0.0

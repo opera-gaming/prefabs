@@ -1,0 +1,50 @@
+schema_version = 1
+name = "Top-down arena"
+description = "Survive waves in one room: move, dodge, collect, and last as long as you can."
+category = "game"
+tags = ["genre:action", "role:template"]
+
+install = "copy"
+requires = ["kernel", "feel", "motion", "health", "enemy_ai", "wave", "pickup"]
+
+seam = "scripts/scr_top_down_arena_data/scr_top_down_arena_data.gml"
+
+steps = [
+    "`top_down_arena.gametest.json` came with the prefab and already passes: the player is in rm_arena, walks under the arrow keys, the wave curve spawns enemies, and the run survives five seconds. Run it with `gmx test top_down_arena.gametest.json --project .` before and after a change, and *extend* it for whatever you add rather than authoring a new one. Never delete a failing assert to get a pass — a test that had to lose its check to go green has verified nothing.",
+    "The whole game is one room, so difficulty comes from the wave curve rather than from new levels — `spawn_interval` and `spawn_scale` are the two numbers that decide whether it is playable at minute five.",
+    "The placeholder art is flat colour. `gmx prefab add iconic_animals/...` swaps in real sprites without touching any code.",
+]
+
+[roles]
+obj_arena = "runs the wave curve, spawns enemies, and ends the run"
+obj_player = "eight-way movement, takes damage with an i-frame window"
+obj_enemy = "chases the player, separated from its neighbours"
+obj_coin = "one drops each wave; collected with a magnet, and the only thing that scores"
+obj_wall = "the arena edge — what movement stops against"
+rm_title = "boot room — its size is the window size"
+rm_arena = "the whole game"
+rm_results = "how long you lasted, and the best so far"
+
+[art.player]
+catalog = "iconic_animals/sprites/spr_cartoon_cat_ginger"
+placeholder = "flat rectangle"
+
+[art.enemy]
+catalog = "iconic_animals/sprites/spr_cartoon_fox"
+placeholder = "flat circle"
+
+[tuning]
+player_speed = 4
+player_hp = 5
+iframe_seconds = 1.0
+enemy_speed = 1.8
+enemy_sight = 900
+enemy_touch_damage = 1
+# Seconds between spawns at wave one, multiplied by `spawn_scale` each wave
+# and never below `spawn_floor`. These three decide whether minute five is
+# playable, and they are the first thing to change.
+spawn_interval = 2.2
+spawn_scale = 0.85
+spawn_floor = 0.35
+wave_seconds = 15
+coin_score = 25

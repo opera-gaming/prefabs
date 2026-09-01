@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Feel"
+
+# A library: installed under `prefabs/<ns>/` in the target project and
+# called as `::feel::`, rather than emitted as source you
+# edit. Namespacing is what stops two libraries colliding on a name.
+install = "namespace"
+requires = []
+
+description = "Tweens and easing, hit-stop, screen shake, floating score popups and squash-and-stretch. Deliberately depends on nothing, so it can be retuned and re-released without moving the kernel."
+category = "library"
+tags = ["capability:tween", "capability:screenshake", "role:vfx", "role:library"]
+exclude = ["objects/obj_demo", "rooms/rm_demo"]
