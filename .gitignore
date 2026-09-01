@@ -1,2 +1,11 @@
 # macOS
 .DS_Store
+
+# Baked gametest bytecode. `gmx test` compiles `foo.gametest.json` to
+# `foo.json` beside it; the source is the file worth versioning, and the
+# baked one both goes stale and installs into consumer projects.
+prefabs/*/demo.json
+prefabs/*/thumbnail.json
+
+# `gmx run` writes its capture bookkeeping into the prefab it ran.
+prefabs/*/.gmx/

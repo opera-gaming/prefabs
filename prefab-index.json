@@ -9424,7 +9424,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/boss/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/boss/thumbnail.png",
       "resources": [
         {
           "prefab": "boss",
@@ -9465,7 +9465,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/breakout/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/breakout/thumbnail.png",
       "resources": [
         {
           "prefab": "breakout",
@@ -9628,7 +9628,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/bullet_hell/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/bullet_hell/thumbnail.png",
       "resources": [
         {
           "prefab": "bullet_hell",
@@ -9821,7 +9821,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/camera/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/camera/thumbnail.png",
       "resources": [
         {
           "prefab": "camera",
@@ -9848,7 +9848,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/camera3d/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/camera3d/thumbnail.png",
       "resources": [
         {
           "prefab": "camera3d",
@@ -9889,7 +9889,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/camera3d_basics/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/camera3d_basics/thumbnail.png",
       "resources": [
         {
           "prefab": "camera3d_basics",
@@ -10142,7 +10142,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/custom_mouse_pointer/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/custom_mouse_pointer/thumbnail.png",
       "resources": [
         {
           "prefab": "custom_mouse_pointer",
@@ -10168,7 +10168,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/dialogue/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/dialogue/thumbnail.png",
       "resources": [
         {
           "prefab": "dialogue",
@@ -10210,7 +10210,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/economy/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/economy/thumbnail.png",
       "resources": [
         {
           "prefab": "economy",
@@ -10243,7 +10243,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/endless_runner/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/endless_runner/thumbnail.png",
       "resources": [
         {
           "prefab": "endless_runner",
@@ -10377,7 +10377,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/enemy_ai/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/enemy_ai/thumbnail.png",
       "resources": [
         {
           "prefab": "enemy_ai",
@@ -10418,7 +10418,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/falling_block/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/falling_block/thumbnail.png",
       "resources": [
         {
           "prefab": "falling_block",
@@ -27439,7 +27439,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/feel/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/feel/thumbnail.png",
       "resources": [
         {
           "prefab": "feel",
@@ -27488,7 +27488,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/font_system/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/font_system/thumbnail.png",
       "resources": [
         {
           "prefab": "font_system",
@@ -27514,7 +27514,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/grid/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/grid/thumbnail.png",
       "resources": [
         {
           "prefab": "grid",
@@ -27564,7 +27564,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/hazard/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/hazard/thumbnail.png",
       "resources": [
         {
           "prefab": "hazard",
@@ -27598,7 +27598,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/health/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/health/thumbnail.png",
       "resources": [
         {
           "prefab": "health",
@@ -30982,7 +30982,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/hud/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/hud/thumbnail.png",
       "resources": [
         {
           "prefab": "hud",
@@ -64759,7 +64759,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/inventory/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/inventory/thumbnail.png",
       "resources": [
         {
           "prefab": "inventory",
@@ -64793,7 +64793,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/iso/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/iso/thumbnail.png",
       "resources": [
         {
           "prefab": "iso",
@@ -64818,7 +64818,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/isometric_basics/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/isometric_basics/thumbnail.png",
       "resources": [
         {
           "prefab": "isometric_basics",
@@ -64845,7 +64845,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/kernel/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/kernel/thumbnail.png",
       "resources": [
         {
           "prefab": "kernel",
@@ -64936,7 +64936,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/levels/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/levels/thumbnail.png",
       "resources": [
         {
           "prefab": "levels",
@@ -64978,7 +64978,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/lighting/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/lighting/thumbnail.png",
       "resources": [
         {
           "prefab": "lighting",
@@ -65011,7 +65011,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/main_menu/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/main_menu/thumbnail.png",
       "resources": [
         {
           "prefab": "main_menu",
@@ -70733,7 +70733,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/maze_chase/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/maze_chase/thumbnail.png",
       "resources": [
         {
           "prefab": "maze_chase",
@@ -70920,7 +70920,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/motion/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/motion/thumbnail.png",
       "resources": [
         {
           "prefab": "motion",
@@ -70961,7 +70961,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/music_and_sfx/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/music_and_sfx/thumbnail.png",
       "resources": [
         {
           "prefab": "music_and_sfx",
@@ -73975,7 +73975,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/parallax/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/parallax/thumbnail.png",
       "resources": [
         {
           "prefab": "parallax",
@@ -74009,7 +74009,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/pathgrid/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/pathgrid/thumbnail.png",
       "resources": [
         {
           "prefab": "pathgrid",
@@ -74058,7 +74058,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/pause_menu/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/pause_menu/thumbnail.png",
       "resources": [
         {
           "prefab": "pause_menu",
@@ -74083,7 +74083,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/physics_arena/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/physics_arena/thumbnail.png",
       "resources": [
         {
           "prefab": "physics_arena",
@@ -74269,7 +74269,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/physics_body/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/physics_body/thumbnail.png",
       "resources": [
         {
           "prefab": "physics_body",
@@ -74311,7 +74311,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/pickup/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/pickup/thumbnail.png",
       "resources": [
         {
           "prefab": "pickup",
@@ -76065,7 +76065,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/platformer/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/platformer/thumbnail.png",
       "resources": [
         {
           "prefab": "platformer",
@@ -83794,7 +83794,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/powerup/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/powerup/thumbnail.png",
       "resources": [
         {
           "prefab": "powerup",
@@ -83829,7 +83829,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/projectile/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/projectile/thumbnail.png",
       "resources": [
         {
           "prefab": "projectile",
@@ -83870,7 +83870,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/quiz_trivia/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/quiz_trivia/thumbnail.png",
       "resources": [
         {
           "prefab": "quiz_trivia",
@@ -83903,7 +83903,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/rooms_as_state_machines/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/rooms_as_state_machines/thumbnail.png",
       "resources": [
         {
           "prefab": "rooms_as_state_machines",
@@ -83969,7 +83969,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/save_slots/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/save_slots/thumbnail.png",
       "resources": [
         {
           "prefab": "save_slots",
@@ -95864,7 +95864,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/snake/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/snake/thumbnail.png",
       "resources": [
         {
           "prefab": "snake",
@@ -95937,7 +95937,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/sokoban/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/sokoban/thumbnail.png",
       "resources": [
         {
           "prefab": "sokoban",
@@ -98633,7 +98633,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/spawner/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/spawner/thumbnail.png",
       "resources": [
         {
           "prefab": "spawner",
@@ -98659,7 +98659,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/tilemap/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/tilemap/thumbnail.png",
       "resources": [
         {
           "prefab": "tilemap",
@@ -98693,7 +98693,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/timer/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/timer/thumbnail.png",
       "resources": [
         {
           "prefab": "timer",
@@ -98734,7 +98734,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/title_screen/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/title_screen/thumbnail.png",
       "resources": [
         {
           "prefab": "title_screen",
@@ -98759,7 +98759,7 @@
       "asset_bundle": false,
       "install": "copy",
       "readme_path": "prefabs/top_down_arena/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/top_down_arena/thumbnail.png",
       "resources": [
         {
           "prefab": "top_down_arena",
@@ -105475,7 +105475,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/transition/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/transition/thumbnail.png",
       "resources": [
         {
           "prefab": "transition",
@@ -107276,7 +107276,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/ui_board/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/ui_board/thumbnail.png",
       "resources": [
         {
           "prefab": "ui_board",
@@ -129658,7 +129658,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/wave/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/wave/thumbnail.png",
       "resources": [
         {
           "prefab": "wave",
@@ -138399,7 +138399,7 @@
       "asset_bundle": false,
       "install": "namespace",
       "readme_path": "prefabs/zone/README.md",
-      "thumbnail_path": null,
+      "thumbnail_path": "prefabs/zone/thumbnail.png",
       "resources": [
         {
           "prefab": "zone",
