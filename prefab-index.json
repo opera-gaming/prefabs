@@ -83891,6 +83891,114 @@
       ]
     },
     {
+      "name": "rhythm",
+      "version": "",
+      "display_name": "Rhythm",
+      "description": "Notes fall to the beat and you hit them on the line — a whole rhythm game whose clock is the song itself.",
+      "category": "game",
+      "tags": [
+        "genre:rhythm",
+        "capability:audio",
+        "role:template"
+      ],
+      "asset_bundle": false,
+      "install": "copy",
+      "readme_path": "prefabs/rhythm/README.md",
+      "thumbnail_path": "prefabs/rhythm/thumbnail.png",
+      "resources": [
+        {
+          "prefab": "rhythm",
+          "kind": "object",
+          "name": "obj_note",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "object",
+          "name": "obj_rhythm",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "room",
+          "name": "rm_song",
+          "description": null,
+          "tags": [],
+          "preview": null
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "sound",
+          "name": "snd_hit",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sound",
+            "path": "prefabs/rhythm/sounds/snd_hit/source.wav"
+          }
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "sound",
+          "name": "snd_song",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sound",
+            "path": "prefabs/rhythm/sounds/snd_song/source.wav"
+          }
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "sprite",
+          "name": "spr_hitline",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/rhythm/sprites/spr_hitline/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 344,
+              "height": 6
+            },
+            "colour": "#ffffff"
+          }
+        },
+        {
+          "prefab": "rhythm",
+          "kind": "sprite",
+          "name": "spr_note",
+          "description": null,
+          "tags": [],
+          "preview": {
+            "kind": "sprite",
+            "frames": [
+              "prefabs/rhythm/sprites/spr_note/frame_000.png"
+            ],
+            "speed": {
+              "unit": "frames_per_second",
+              "value": 30.0
+            },
+            "size": {
+              "width": 56,
+              "height": 20
+            },
+            "colour": "#ecf0f6"
+          }
+        }
+      ]
+    },
+    {
       "name": "rooms_as_state_machines",
       "version": "",
       "display_name": "Rooms as state machines",

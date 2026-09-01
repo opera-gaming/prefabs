@@ -1,0 +1,5 @@
+#:schema ../../.gm-schema/v1.json#sound
+
+channel_format = "mono"
+compression = "uncompressed"
+preload = true
