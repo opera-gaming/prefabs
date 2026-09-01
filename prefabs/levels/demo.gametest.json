@@ -1,0 +1,121 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 160,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "global.gt_level = 1; global.gt_took = false; global.gt_open = false; global.gt_busy = false;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_demo)) { global.gt_level = max(global.gt_level, level_number()); if (obj_demo.run.taken > 0) global.gt_took = true; if (levels_gate_open(obj_demo.run)) global.gt_open = true; if (levels_busy(obj_demo.run)) global.gt_busy = true; }"
+    },
+    "total": {
+      "gml": "return levels_total();"
+    },
+    "reached": {
+      "gml": "return global.gt_level;"
+    },
+    "gate_shut_at_first": {
+      "gml": "return global.gt_took;"
+    },
+    "gate_opened": {
+      "gml": "return global.gt_open;"
+    },
+    "covered": {
+      "gml": "return global.gt_busy;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_enter",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "inputs": [
+        {
+          "key": "vk_enter",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 156,
+      "assert": {
+        "id": "total",
+        "name": "the order holds two levels",
+        "expect": 2
+      }
+    },
+    {
+      "frame": 156,
+      "assert": {
+        "id": "gate_shut_at_first",
+        "name": "the gate counts what it is given",
+        "expect": true
+      }
+    },
+    {
+      "frame": 156,
+      "assert": {
+        "id": "gate_opened",
+        "name": "collecting the last one opens the exit",
+        "expect": true
+      }
+    },
+    {
+      "frame": 156,
+      "assert": {
+        "id": "covered",
+        "name": "the change goes through the cover",
+        "expect": true
+      }
+    },
+    {
+      "frame": 156,
+      "assert": {
+        "id": "reached",
+        "name": "the exit advances to the next level",
+        "expect": 2
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 1,
+      "until": 155,
+      "code": [
+        "watch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 130,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_y0=undefined; global.gt_rose=false; global.gt_dist=0; global.gt_ended=false;"
+    },
+    "watch": {
+      "gml": "if (room == rm_results) global.gt_ended = true; if (instance_exists(obj_player)) { with (obj_player) { global.gt_seen = true; if (global.gt_y0 == undefined && grounded) global.gt_y0 = y; if (global.gt_y0 != undefined && y < global.gt_y0 - 12) global.gt_rose = true; } } if (instance_exists(obj_runner)) global.gt_dist = max(global.gt_dist, obj_runner.travelled);"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "rose": {
+      "gml": "return global.gt_rose;"
+    },
+    "scrolls": {
+      "gml": "return global.gt_dist > 0;"
+    },
+    "alive": {
+      "gml": "return !global.gt_ended;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 40,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "seen",
+        "name": "the runner is on the ground in rm_play",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "scrolls",
+        "name": "the world scrolls past \u2014 distance climbs",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "rose",
+        "name": "space lifts the runner off the ground",
+        "expect": true
+      }
+    },
+    {
+      "frame": 60,
+      "assert": {
+        "id": "alive",
+        "name": "it does not fall at once \u2014 the ground and collision work",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 118,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

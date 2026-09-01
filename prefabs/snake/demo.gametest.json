@@ -1,0 +1,139 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 160,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen = false; global.gt_head0 = undefined; global.gt_moved = false; global.gt_turned = false; global.gt_len = 0; global.gt_ended = false;"
+    },
+    "watch": {
+      "gml": "if (room == rm_results) global.gt_ended = true; if (instance_exists(obj_snake)) { with (obj_snake) { global.gt_seen = true; var _h = body[0]; if (global.gt_head0 == undefined) global.gt_head0 = { col: _h.col, row: _h.row }; if (_h.col != global.gt_head0.col || _h.row != global.gt_head0.row) global.gt_moved = true; if (dir.row == -1) global.gt_turned = true; global.gt_len = max(global.gt_len, array_length(body)); } }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "moved": {
+      "gml": "return global.gt_moved;"
+    },
+    "turned": {
+      "gml": "return global.gt_turned;"
+    },
+    "has_body": {
+      "gml": "return global.gt_len >= 3;"
+    },
+    "alive": {
+      "gml": "return !global.gt_ended;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "seen",
+        "name": "obj_snake runs in rm_play",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "has_body",
+        "name": "the snake has a body of at least three cells",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "moved",
+        "name": "the snake advances a cell on its own tick",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "turned",
+        "name": "pressing up turns the snake upward",
+        "expect": true
+      }
+    },
+    {
+      "frame": 60,
+      "assert": {
+        "id": "alive",
+        "name": "it is still playing a second in \u2014 collision has not killed it at once",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 148,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

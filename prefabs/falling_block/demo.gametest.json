@@ -1,0 +1,121 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 130,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_stack); global.gt_seen=false; global.gt_px0=undefined; global.gt_shifted=false; global.gt_fell=false; global.gt_py0=undefined; global.gt_rot0=undefined; global.gt_rotated=false; global.gt_pieces=0;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_stack)) { with (obj_stack) { global.gt_seen = true; global.gt_pieces = array_length(pieces); if (global.gt_px0 == undefined) global.gt_px0 = px; if (px < global.gt_px0) global.gt_shifted = true; if (global.gt_py0 == undefined) global.gt_py0 = py; if (py > global.gt_py0) global.gt_fell = true; if (global.gt_rot0 == undefined) global.gt_rot0 = rot; if (rot != global.gt_rot0) global.gt_rotated = true; } }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "pieces": {
+      "gml": "return global.gt_pieces > 0;"
+    },
+    "falls": {
+      "gml": "return global.gt_fell;"
+    },
+    "shifts": {
+      "gml": "return global.gt_shifted;"
+    },
+    "rotates": {
+      "gml": "return global.gt_rotated;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 30,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "inputs": [
+        {
+          "key": "vk_left",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "inputs": [
+        {
+          "key": "vk_up",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "seen",
+        "name": "the well runs in rm_stack",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "pieces",
+        "name": "the piece table is loaded",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "falls",
+        "name": "the active piece falls on its own",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "shifts",
+        "name": "left moves the piece",
+        "expect": true
+      }
+    },
+    {
+      "frame": 120,
+      "assert": {
+        "id": "rotates",
+        "name": "up rotates the piece",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 118,
+      "code": [
+        "watch"
+      ]
+    }
+  ]
+}

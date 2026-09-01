@@ -1,0 +1,121 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 160,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_p0=undefined; global.gt_paddle=false; global.gt_bx=undefined; global.gt_ballmoved=false; global.gt_bricks0=0; global.gt_bricks_min=99999;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_ball)) { global.gt_seen=true; with (obj_ball) { if (global.gt_bx == undefined) global.gt_bx = { x: x, y: y }; if (point_distance(x, y, global.gt_bx.x, global.gt_bx.y) > 8) global.gt_ballmoved = true; } } if (instance_exists(obj_paddle)) { with (obj_paddle) { if (global.gt_p0 == undefined) global.gt_p0 = x; if (x > global.gt_p0 + 8) global.gt_paddle = true; } } var _n = instance_number(obj_brick); if (_n > 0) { if (global.gt_bricks0 == 0) global.gt_bricks0 = _n; global.gt_bricks_min = min(global.gt_bricks_min, _n); }"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "ball_moves": {
+      "gml": "return global.gt_ballmoved;"
+    },
+    "paddle_moves": {
+      "gml": "return global.gt_paddle;"
+    },
+    "bricks_present": {
+      "gml": "return global.gt_bricks0 > 0;"
+    },
+    "brick_broken": {
+      "gml": "return global.gt_bricks_min < global.gt_bricks0;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "seen",
+        "name": "the ball is in play in rm_play",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "ball_moves",
+        "name": "the ball travels",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "paddle_moves",
+        "name": "holding right moves the paddle",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "bricks_present",
+        "name": "the room is laid out with bricks",
+        "expect": true
+      }
+    },
+    {
+      "frame": 150,
+      "assert": {
+        "id": "brick_broken",
+        "name": "the ball clears at least one brick",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 148,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 220,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "global.gt_landings = 0; global.gt_leaves = 0; global.gt_prev = obj_demo.jump.on_ground;"
+    },
+    "watch": {
+      "gml": "if (instance_exists(obj_demo)) { var _g = obj_demo.jump.on_ground; if (_g && !global.gt_prev) global.gt_landings += 1; if (!_g && global.gt_prev) global.gt_leaves += 1; global.gt_prev = _g; }"
+    },
+    "landings": {
+      "gml": "return global.gt_landings;"
+    },
+    "leaves": {
+      "gml": "return global.gt_leaves;"
+    },
+    "grounded_at_start": {
+      "gml": "return global.gt_prev;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 40,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 100,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 112,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 160,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 172,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 216,
+      "assert": {
+        "id": "grounded_at_start",
+        "name": "the demo has landed before the run starts",
+        "expect": true
+      }
+    },
+    {
+      "frame": 216,
+      "assert": {
+        "id": "leaves",
+        "name": "three jumps leave the ground three times",
+        "expect": 3
+      }
+    },
+    {
+      "frame": 216,
+      "assert": {
+        "id": "landings",
+        "name": "and land exactly three times \u2014 a landing that reports twice is the sub-pixel bug",
+        "expect": 3
+      }
+    },
+    {
+      "frame": 30,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 31,
+      "every": 1,
+      "until": 215,
+      "code": [
+        "watch"
+      ]
+    }
+  ]
+}

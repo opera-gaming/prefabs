@@ -1,0 +1,110 @@
+{
+  "seed": 7,
+  "fps": 60,
+  "total_frames": 210,
+  "stop_on_error": true,
+  "chunks": {
+    "init": {
+      "gml": "room_goto(rm_title); global.gt_seen=false; global.gt_x0=undefined; global.gt_moved=false; global.gt_enemies=0; global.gt_ended=false;"
+    },
+    "watch": {
+      "gml": "if (room == rm_results) global.gt_ended = true; if (instance_exists(obj_player)) { with (obj_player) { global.gt_seen = true; if (global.gt_x0 == undefined) global.gt_x0 = x; if (x > global.gt_x0 + 8) global.gt_moved = true; } } global.gt_enemies = max(global.gt_enemies, instance_number(obj_enemy));"
+    },
+    "seen": {
+      "gml": "return global.gt_seen;"
+    },
+    "moved": {
+      "gml": "return global.gt_moved;"
+    },
+    "spawns": {
+      "gml": "return global.gt_enemies > 0;"
+    },
+    "alive": {
+      "gml": "return !global.gt_ended;"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 20,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "inputs": [
+        {
+          "key": "vk_right",
+          "state": "up"
+        }
+      ]
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "seen",
+        "name": "the player is in the arena",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "moved",
+        "name": "holding right walks the player",
+        "expect": true
+      }
+    },
+    {
+      "frame": 200,
+      "assert": {
+        "id": "spawns",
+        "name": "the wave curve spawns enemies",
+        "expect": true
+      }
+    },
+    {
+      "frame": 60,
+      "assert": {
+        "id": "alive",
+        "name": "the run is still going a second in \u2014 nothing kills the player at once",
+        "expect": true
+      }
+    },
+    {
+      "frame": 5,
+      "code": [
+        "init"
+      ]
+    },
+    {
+      "frame": 6,
+      "every": 3,
+      "until": 198,
+      "code": [
+        "watch"
+      ]
+    },
+    {
+      "frame": 10,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "down"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "inputs": [
+        {
+          "key": "vk_space",
+          "state": "up"
+        }
+      ]
+    }
+  ]
+}
