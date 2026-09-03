@@ -1,0 +1,26 @@
+name = "Sprite FX"
+license = "MIT"
+description = "The in-game host for subject shaders (kind = \"subject\"): captures a sprite, rig or anything drawn between vfx_begin and vfx_end, builds the distance field the shader samples, and composites it where the subject was — the editor preview's pipeline, in game."
+category = "effects"
+tags = ["effect:shader", "role:library", "capability:shader", "capability:shader-effect", "role:vfx"]
+asset_bundle = false
+
+[assets."scripts/vfx"]
+description = "vfx_create / vfx_destroy / vfx_set / vfx_get / vfx_set_time / vfx_retake / vfx_set_scale, and vfx_begin … vfx_end around the subject's draws."
+tags = ["asset_type:script", "role:api"]
+
+[assets."shaders/shd_vfx_seed"]
+description = "Pass shader: silhouette-edge texels of the subject become seeds."
+tags = ["asset_type:shader", "role:internal"]
+
+[assets."shaders/shd_vfx_jfa"]
+description = "Pass shader: one jump-flood step over the seeds."
+tags = ["asset_type:shader", "role:internal"]
+
+[assets."shaders/shd_vfx_resolve"]
+description = "Pass shader: seeds to a distance, folded into last frame's field with linger and drift."
+tags = ["asset_type:shader", "role:internal"]
+
+[assets."shaders/shd_vfx_unpremult"]
+description = "Pass shader: the premultiplied capture as the straight-alpha subject the effect reads."
+tags = ["asset_type:shader", "role:internal"]
