@@ -1,0 +1,20 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "size"
+label = "Size"
+default = 0.04
+
+[[uniform]]
+name = "zoom"
+label = "Zoom"
+default = 50.0
+max = 200.0
+
+[[uniform]]
+name = "color_separation"
+label = "Color separation"
+default = 0.3

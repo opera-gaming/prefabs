@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "power"
+label = "Power"
+default = 5.0
+max = 20.0

@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "rotation"
+label = "Rotation"
+default = 6.0
+max = 20.0
+
+[[uniform]]
+name = "scale"
+label = "Scale"
+default = 1.2
+max = 5.0

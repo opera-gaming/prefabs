@@ -1,0 +1,48 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.5
+snapshot = "uEndRate"
+
+[[uniform]]
+name = "uEndRate"
+label = "Rate"
+default = 0.15
+min = 0.1
+max = 1.0
+step = 0.05
+
+[[uniform]]
+name = "uEndGrain"
+label = "Grain"
+default = 24.0
+min = 3.0
+max = 30.0
+step = 0.5
+
+[[uniform]]
+name = "uEndSweep"
+label = "Sweep"
+default = 0.5
+step = 0.01
+
+[[uniform]]
+name = "uEndReach"
+label = "Blow"
+default = 0.08
+min = 0.05
+max = 0.6
+step = 0.01
+
+[[uniform]]
+name = "uEndDust"
+label = "Dust"
+default = 0.8
+step = 0.01
+
+[[uniform]]
+name = "uColour"
+label = "Colour"
+type = "colour"
+default = [0.45, 0.38, 0.32]

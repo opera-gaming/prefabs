@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "starting_angle"
+label = "Starting angle"
+default = 90.0
+max = 360.0

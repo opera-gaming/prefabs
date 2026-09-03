@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "dots"
+label = "Dots"
+default = 20.0
+max = 50.0

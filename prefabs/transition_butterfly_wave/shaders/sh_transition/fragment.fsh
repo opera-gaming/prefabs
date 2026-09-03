@@ -17,9 +17,9 @@ out vec4 frag_colour;
 vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
-uniform float amplitude;          // knob; default in scr_transition_defaults
-uniform float waves;              // knob; default in scr_transition_defaults
-uniform float color_separation;   // knob; default in scr_transition_defaults
+uniform float amplitude;
+uniform float waves;
+uniform float color_separation;
 
 const float PI = 3.14159265358979323846264;
 

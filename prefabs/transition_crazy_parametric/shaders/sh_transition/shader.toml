@@ -1,0 +1,27 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "a"
+label = "A"
+default = 4.0
+max = 10.0
+
+[[uniform]]
+name = "b"
+label = "B"
+default = 1.0
+max = 2.0
+
+[[uniform]]
+name = "amplitude"
+label = "Amplitude"
+default = 120.0
+max = 500.0
+
+[[uniform]]
+name = "smoothness"
+label = "Smoothness"
+default = 0.1

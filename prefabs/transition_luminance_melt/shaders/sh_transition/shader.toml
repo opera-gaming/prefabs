@@ -1,0 +1,10 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "threshold"
+label = "Threshold"
+default = 0.8
+max = 2.0

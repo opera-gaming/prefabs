@@ -1,0 +1,43 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.3
+linger = 0.7
+
+[[uniform]]
+name = "uGlowWidth"
+label = "Width"
+default = 0.08
+min = 0.02
+max = 0.25
+step = 0.005
+
+[[uniform]]
+name = "uRingFreq"
+label = "Rings"
+default = 60.0
+min = 10.0
+max = 160.0
+step = 1.0
+
+[[uniform]]
+name = "uPulse"
+label = "Pulse rate"
+default = 2.5
+min = 0.5
+max = 10.0
+step = 0.1
+
+[[uniform]]
+name = "uGlowInt"
+label = "Intensity"
+default = 1.2
+max = 2.5
+step = 0.05
+
+[[uniform]]
+name = "uColour"
+label = "Colour"
+type = "colour"
+default = [0.36, 0.28, 1.0]

@@ -1,0 +1,21 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "scale"
+label = "Scale"
+default = 4.0
+max = 10.0
+
+[[uniform]]
+name = "smoothness"
+label = "Smoothness"
+default = 0.01
+
+[[uniform]]
+name = "seed"
+label = "Seed"
+default = 12.9898
+max = 50.0

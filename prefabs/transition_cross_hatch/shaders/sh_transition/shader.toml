@@ -1,0 +1,15 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "threshold"
+label = "Threshold"
+default = 3.0
+max = 10.0
+
+[[uniform]]
+name = "fade_edge"
+label = "Fade edge"
+default = 0.1

@@ -1,0 +1,9 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "smoothness"
+label = "Smoothness"
+default = 0.3

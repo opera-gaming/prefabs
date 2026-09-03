@@ -17,10 +17,10 @@ out vec4 frag_colour;
 vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
-uniform float persp;       // knob; default in scr_transition_defaults
-uniform float unzoom;      // knob; default in scr_transition_defaults
-uniform float reflection;  // knob; default in scr_transition_defaults
-uniform float floating;    // knob; default in scr_transition_defaults
+uniform float persp;
+uniform float unzoom;
+uniform float reflection;
+uniform float floating;
 
 vec2 project(vec2 p) {
     float fl = floating;

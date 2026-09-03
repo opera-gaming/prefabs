@@ -1,0 +1,51 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.5
+linger = 0.7
+
+[[uniform]]
+name = "uAuraLen"
+label = "Reach"
+default = 0.05
+min = 0.05
+max = 0.35
+step = 0.005
+
+[[uniform]]
+name = "uDensity"
+label = "Density"
+default = 0.94
+step = 0.01
+
+[[uniform]]
+name = "uFlicker"
+label = "Flicker"
+default = 12.0
+min = 2.0
+max = 30.0
+step = 0.5
+
+[[uniform]]
+name = "uJag"
+label = "Jaggedness"
+default = 0.06
+max = 0.06
+step = 0.001
+
+[[uniform]]
+name = "uBoltScale"
+label = "Detail"
+default = 13.5
+min = 4.0
+max = 30.0
+step = 0.5
+
+[[uniform]]
+name = "uThick"
+label = "Thickness"
+default = 0.03
+min = 0.01
+max = 0.12
+step = 0.005

@@ -1,0 +1,42 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.15
+linger = 0.7
+
+[[uniform]]
+name = "uOutW"
+label = "Width"
+default = 0.005
+min = 0.002
+max = 0.1
+step = 0.001
+
+[[uniform]]
+name = "uOutGap"
+label = "Gap"
+default = 0.0
+max = 0.08
+step = 0.001
+
+[[uniform]]
+name = "uOutSoft"
+label = "Softness"
+default = 0.002
+max = 0.03
+step = 0.0005
+
+[[uniform]]
+name = "uColour"
+label = "Colour"
+type = "colour"
+default = [1.0, 0.9, 0.1]
+
+[[uniform]]
+name = "uOutInt"
+label = "Brightness"
+default = 1.5
+min = 0.2
+max = 3.0
+step = 0.05

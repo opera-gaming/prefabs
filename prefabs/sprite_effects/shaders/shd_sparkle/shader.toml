@@ -1,0 +1,46 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.5
+linger = 0.7
+
+[[uniform]]
+name = "uSpkReach"
+label = "Reach"
+default = 0.12
+min = 0.04
+max = 0.3
+step = 0.005
+
+[[uniform]]
+name = "uSpkDensity"
+label = "Density"
+type = "int"
+default = 22
+min = 8
+max = 40
+
+[[uniform]]
+name = "uSpkTwinkle"
+label = "Twinkle"
+default = 6.0
+min = 1.0
+max = 15.0
+step = 0.5
+
+[[uniform]]
+name = "uSpkSize"
+label = "Size"
+default = 1.2
+min = 0.4
+max = 3.0
+step = 0.05
+
+[[uniform]]
+name = "uSpkSpeed"
+label = "Orbit"
+default = 2.0
+min = 0.1
+max = 4.0
+step = 0.05

@@ -1,0 +1,26 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "persp"
+label = "Persp"
+default = 0.7
+max = 2.0
+
+[[uniform]]
+name = "unzoom"
+label = "Unzoom"
+default = 0.3
+
+[[uniform]]
+name = "reflection"
+label = "Reflection"
+default = 0.4
+
+[[uniform]]
+name = "floating"
+label = "Floating"
+default = 3.0
+max = 10.0

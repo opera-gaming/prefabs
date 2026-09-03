@@ -81602,6 +81602,146 @@
       ]
     },
     {
+      "name": "sprite_effects",
+      "version": "",
+      "display_name": "Sprite Effects",
+      "description": "Eleven ready-made subject shaders — fire, frost, glow, electric, teleport, endgame and more — with the sprite_fx host built in: vfx_create(shd_fire) and draw_sprite_vfx, nothing else to install.",
+      "category": "effects",
+      "tags": [
+        "effect:shader",
+        "role:library",
+        "capability:shader",
+        "capability:shader-effect",
+        "role:vfx"
+      ],
+      "asset_bundle": false,
+      "readme_path": "prefabs/sprite_effects/README.md",
+      "thumbnail_path": null,
+      "resources": [
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_air",
+          "description": "Wisps of wind spiralling around the silhouette.",
+          "tags": [
+            "asset_type:shader",
+            "effect:air"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_earth",
+          "description": "Rings of rock chunks orbiting the silhouette through a haze of dust.",
+          "tags": [
+            "asset_type:shader",
+            "effect:earth"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_electric",
+          "description": "Crackling discharge along the silhouette: jagged arcs, hot filaments and a charged rim.",
+          "tags": [
+            "asset_type:shader",
+            "effect:electric"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_endgame",
+          "description": "The sprite turns to stone, crumbles along a noise front and blows away as dust. Snapshots the silhouette each cycle.",
+          "tags": [
+            "asset_type:shader",
+            "effect:endgame"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_explode",
+          "description": "Repeating detonations: a silhouette-shaped shockwave, flung debris and a white-hot flash. Snapshots the silhouette each cycle.",
+          "tags": [
+            "asset_type:shader",
+            "effect:explode"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_fire",
+          "description": "Flames licking up off every edge, with smoke above and a charred, ember-lit rim.",
+          "tags": [
+            "asset_type:shader",
+            "effect:fire"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_frost",
+          "description": "Cold water dripping down off every edge, with glints and a wet caustic sheen inside.",
+          "tags": [
+            "asset_type:shader",
+            "effect:frost"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_glow",
+          "description": "A breathing halo outside the silhouette and rings of light travelling inward from the edge.",
+          "tags": [
+            "asset_type:shader",
+            "effect:glow"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_outline",
+          "description": "A flat band outside the silhouette that trails a moving subject.",
+          "tags": [
+            "asset_type:shader",
+            "effect:outline"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_sparkle",
+          "description": "Twinkling stars orbiting the silhouette in counter-rotating rings.",
+          "tags": [
+            "asset_type:shader",
+            "effect:sparkle"
+          ],
+          "preview": null
+        },
+        {
+          "prefab": "sprite_effects",
+          "kind": "shader",
+          "name": "shd_teleport",
+          "description": "Teleport dissolve: the sprite breaks up along a glowing noise front into motes that drift off, then reassembles. Snapshots the silhouette each cycle.",
+          "tags": [
+            "asset_type:shader",
+            "effect:teleport"
+          ],
+          "preview": null
+        }
+      ]
+    },
+    {
       "name": "sprite_fx",
       "version": "",
       "display_name": "Sprite FX",
@@ -87310,14 +87450,6 @@
       "resources": [
         {
           "prefab": "transition_angular",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_angular",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87358,14 +87490,6 @@
         },
         {
           "prefab": "transition_base",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_base",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87389,14 +87513,6 @@
       "readme_path": "prefabs/transition_bounce/README.md",
       "thumbnail_path": "prefabs/transition_bounce/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_bounce",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_bounce",
           "kind": "shader",
@@ -87474,14 +87590,6 @@
       "resources": [
         {
           "prefab": "transition_butterfly_wave",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_butterfly_wave",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87505,14 +87613,6 @@
       "readme_path": "prefabs/transition_caleidoscope/README.md",
       "thumbnail_path": "prefabs/transition_caleidoscope/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_caleidoscope",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_caleidoscope",
           "kind": "shader",
@@ -87565,14 +87665,6 @@
       "resources": [
         {
           "prefab": "transition_circle_open",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_circle_open",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87596,14 +87688,6 @@
       "readme_path": "prefabs/transition_color_distance/README.md",
       "thumbnail_path": "prefabs/transition_color_distance/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_color_distance",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_color_distance",
           "kind": "shader",
@@ -87656,14 +87740,6 @@
       "resources": [
         {
           "prefab": "transition_crazy_parametric",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_crazy_parametric",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87687,14 +87763,6 @@
       "readme_path": "prefabs/transition_cross_hatch/README.md",
       "thumbnail_path": "prefabs/transition_cross_hatch/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_cross_hatch",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_cross_hatch",
           "kind": "shader",
@@ -87747,14 +87815,6 @@
       "resources": [
         {
           "prefab": "transition_cross_zoom",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_cross_zoom",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87778,14 +87838,6 @@
       "readme_path": "prefabs/transition_cube/README.md",
       "thumbnail_path": "prefabs/transition_cube/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_cube",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_cube",
           "kind": "shader",
@@ -87863,14 +87915,6 @@
       "resources": [
         {
           "prefab": "transition_doom",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_doom",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87894,14 +87938,6 @@
       "readme_path": "prefabs/transition_doorway/README.md",
       "thumbnail_path": "prefabs/transition_doorway/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_doorway",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_doorway",
           "kind": "shader",
@@ -87954,14 +87990,6 @@
       "resources": [
         {
           "prefab": "transition_dreamy_zoom",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_dreamy_zoom",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -87985,14 +88013,6 @@
       "readme_path": "prefabs/transition_fade_color/README.md",
       "thumbnail_path": "prefabs/transition_fade_color/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_fade_color",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_fade_color",
           "kind": "shader",
@@ -88020,14 +88040,6 @@
       "resources": [
         {
           "prefab": "transition_fade_grayscale",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_fade_grayscale",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88051,14 +88063,6 @@
       "readme_path": "prefabs/transition_flye_eye/README.md",
       "thumbnail_path": "prefabs/transition_flye_eye/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_flye_eye",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_flye_eye",
           "kind": "shader",
@@ -88136,14 +88140,6 @@
       "resources": [
         {
           "prefab": "transition_grid_flip",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_grid_flip",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88192,14 +88188,6 @@
       "readme_path": "prefabs/transition_hexagonalize/README.md",
       "thumbnail_path": "prefabs/transition_hexagonalize/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_hexagonalize",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_hexagonalize",
           "kind": "shader",
@@ -88252,14 +88240,6 @@
       "resources": [
         {
           "prefab": "transition_linear_blur",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_linear_blur",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88285,14 +88265,6 @@
       "resources": [
         {
           "prefab": "transition_luminance_melt",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_luminance_melt",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88316,14 +88288,6 @@
       "readme_path": "prefabs/transition_morph/README.md",
       "thumbnail_path": "prefabs/transition_morph/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_morph",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_morph",
           "kind": "shader",
@@ -88401,14 +88365,6 @@
       "resources": [
         {
           "prefab": "transition_perlin",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_perlin",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88432,14 +88388,6 @@
       "readme_path": "prefabs/transition_pinwheel/README.md",
       "thumbnail_path": "prefabs/transition_pinwheel/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_pinwheel",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_pinwheel",
           "kind": "shader",
@@ -88517,14 +88465,6 @@
       "resources": [
         {
           "prefab": "transition_polka_dots_curtain",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_polka_dots_curtain",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88548,14 +88488,6 @@
       "readme_path": "prefabs/transition_radial/README.md",
       "thumbnail_path": "prefabs/transition_radial/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_radial",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_radial",
           "kind": "shader",
@@ -88583,14 +88515,6 @@
       "resources": [
         {
           "prefab": "transition_random_squares",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_random_squares",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88614,14 +88538,6 @@
       "readme_path": "prefabs/transition_ripple/README.md",
       "thumbnail_path": "prefabs/transition_ripple/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_ripple",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_ripple",
           "kind": "shader",
@@ -88649,14 +88565,6 @@
       "resources": [
         {
           "prefab": "transition_rotate_scale_face",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_rotate_scale_face",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88680,14 +88588,6 @@
       "readme_path": "prefabs/transition_simple_zoom/README.md",
       "thumbnail_path": "prefabs/transition_simple_zoom/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_simple_zoom",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_simple_zoom",
           "kind": "shader",
@@ -88715,14 +88615,6 @@
       "resources": [
         {
           "prefab": "transition_squares_wire",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_squares_wire",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88748,14 +88640,6 @@
       "resources": [
         {
           "prefab": "transition_squeeze",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_squeeze",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88779,14 +88663,6 @@
       "readme_path": "prefabs/transition_swap/README.md",
       "thumbnail_path": "prefabs/transition_swap/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_swap",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_swap",
           "kind": "shader",
@@ -88839,14 +88715,6 @@
       "resources": [
         {
           "prefab": "transition_undulating_burnout",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_undulating_burnout",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88872,14 +88740,6 @@
       "resources": [
         {
           "prefab": "transition_water_drop",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
-        {
-          "prefab": "transition_water_drop",
           "kind": "shader",
           "name": "sh_transition",
           "description": null,
@@ -88903,14 +88763,6 @@
       "readme_path": "prefabs/transition_wind/README.md",
       "thumbnail_path": "prefabs/transition_wind/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_wind",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_wind",
           "kind": "shader",
@@ -88961,14 +88813,6 @@
       "readme_path": "prefabs/transition_window_slice/README.md",
       "thumbnail_path": "prefabs/transition_window_slice/thumbnail.png",
       "resources": [
-        {
-          "prefab": "transition_window_slice",
-          "kind": "script",
-          "name": "scr_transition_defaults",
-          "description": null,
-          "tags": [],
-          "preview": null
-        },
         {
           "prefab": "transition_window_slice",
           "kind": "shader",

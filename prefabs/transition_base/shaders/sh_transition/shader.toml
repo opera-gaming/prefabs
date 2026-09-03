@@ -1,1 +1,4 @@
 #:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"

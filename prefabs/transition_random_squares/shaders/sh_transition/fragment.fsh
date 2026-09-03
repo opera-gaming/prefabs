@@ -19,7 +19,7 @@ vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 // size is a vec2 param (default [10,10]) — baked as a const.
 const vec2 size = vec2(10.0, 10.0);
-uniform float smoothness;   // knob; default in scr_transition_defaults
+uniform float smoothness;
 
 float rand(vec2 co) {
   return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);

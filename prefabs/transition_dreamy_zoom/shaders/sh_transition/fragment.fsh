@@ -20,8 +20,8 @@ vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 #define DEG2RAD 0.03926990816987241548078304229099 // 1/180*PI
 
-uniform float rotation;     // knob; default in scr_transition_defaults
-uniform float scale;        // knob; default in scr_transition_defaults
+uniform float rotation;
+uniform float scale;
 
 vec4 transition(vec2 uv) {
   float rot = rotation;
