@@ -1,0 +1,56 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.5
+linger = 0.7
+drift = [0.0, -0.05]
+
+[[uniform]]
+name = "uFlameLen"
+label = "Reach"
+default = 0.16
+min = 0.05
+max = 0.4
+step = 0.005
+
+[[uniform]]
+name = "uNoiseScale"
+label = "Turbulence"
+default = 6.0
+min = 2.0
+max = 14.0
+step = 0.1
+
+[[uniform]]
+name = "uSpeed"
+label = "Speed"
+default = 1.1
+min = 0.2
+max = 3.0
+step = 0.05
+
+[[uniform]]
+name = "uWobble"
+label = "Wobble"
+default = 0.4
+step = 0.01
+
+[[uniform]]
+name = "uHeat"
+label = "Heat"
+default = 0.5
+step = 0.01
+
+[[uniform]]
+name = "uSmoke"
+label = "Smoke"
+default = 0.35
+step = 0.01
+
+[[uniform]]
+name = "uEmber"
+label = "Ember rim"
+default = 0.9
+max = 2.0
+step = 0.05

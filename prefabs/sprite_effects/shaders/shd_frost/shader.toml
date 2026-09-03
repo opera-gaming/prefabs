@@ -1,0 +1,37 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "subject"
+margin = 0.5
+linger = 0.7
+
+[[uniform]]
+name = "uWatReach"
+label = "Reach"
+default = 0.14
+min = 0.05
+max = 0.35
+step = 0.005
+
+[[uniform]]
+name = "uWatSpeed"
+label = "Flow"
+default = 0.5
+min = 0.05
+max = 2.0
+step = 0.05
+
+[[uniform]]
+name = "uWatScale"
+label = "Waviness"
+default = 7.0
+min = 2.0
+max = 16.0
+step = 0.5
+
+[[uniform]]
+name = "uWatSheen"
+label = "Sheen"
+default = 1.0
+max = 2.5
+step = 0.05

@@ -1,0 +1,53 @@
+name = "Sprite Effects"
+license = "MIT"
+description = "Eleven ready-made subject shaders — fire, frost, glow, electric, teleport, endgame and more — with the sprite_fx host built in: vfx_create(shd_fire) and draw_sprite_vfx, nothing else to install."
+category = "effects"
+tags = ["effect:shader", "role:library", "capability:shader", "capability:shader-effect", "role:vfx"]
+asset_bundle = false
+
+[parent-link]
+source = "sprite_fx"
+
+[assets."shaders/shd_fire"]
+description = "Flames licking up off every edge, with smoke above and a charred, ember-lit rim."
+tags = ["asset_type:shader", "effect:fire"]
+
+[assets."shaders/shd_frost"]
+description = "Cold water dripping down off every edge, with glints and a wet caustic sheen inside."
+tags = ["asset_type:shader", "effect:frost"]
+
+[assets."shaders/shd_electric"]
+description = "Crackling discharge along the silhouette: jagged arcs, hot filaments and a charged rim."
+tags = ["asset_type:shader", "effect:electric"]
+
+[assets."shaders/shd_air"]
+description = "Wisps of wind spiralling around the silhouette."
+tags = ["asset_type:shader", "effect:air"]
+
+[assets."shaders/shd_earth"]
+description = "Rings of rock chunks orbiting the silhouette through a haze of dust."
+tags = ["asset_type:shader", "effect:earth"]
+
+[assets."shaders/shd_glow"]
+description = "A breathing halo outside the silhouette and rings of light travelling inward from the edge."
+tags = ["asset_type:shader", "effect:glow"]
+
+[assets."shaders/shd_outline"]
+description = "A flat band outside the silhouette that trails a moving subject."
+tags = ["asset_type:shader", "effect:outline"]
+
+[assets."shaders/shd_sparkle"]
+description = "Twinkling stars orbiting the silhouette in counter-rotating rings."
+tags = ["asset_type:shader", "effect:sparkle"]
+
+[assets."shaders/shd_explode"]
+description = "Repeating detonations: a silhouette-shaped shockwave, flung debris and a white-hot flash. Snapshots the silhouette each cycle."
+tags = ["asset_type:shader", "effect:explode"]
+
+[assets."shaders/shd_teleport"]
+description = "Teleport dissolve: the sprite breaks up along a glowing noise front into motes that drift off, then reassembles. Snapshots the silhouette each cycle."
+tags = ["asset_type:shader", "effect:teleport"]
+
+[assets."shaders/shd_endgame"]
+description = "The sprite turns to stone, crumbles along a noise front and blows away as dust. Snapshots the silhouette each cycle."
+tags = ["asset_type:shader", "effect:endgame"]
