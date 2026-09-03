@@ -1,0 +1,15 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "amplitude"
+label = "Amplitude"
+default = 2.0
+max = 5.0
+
+[[uniform]]
+name = "frequency"
+label = "Frequency"
+default = 0.5

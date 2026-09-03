@@ -1,0 +1,19 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "pause"
+label = "Pause"
+default = 0.1
+
+[[uniform]]
+name = "divider_width"
+label = "Divider width"
+default = 0.05
+
+[[uniform]]
+name = "randomness"
+label = "Randomness"
+default = 0.1

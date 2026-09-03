@@ -17,7 +17,7 @@ out vec4 frag_colour;
 vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
-uniform float smoothness;   // knob; default in scr_transition_defaults
+uniform float smoothness;
 const bool opening = true;
 const vec2 center = vec2(0.5, 0.5);
 const float SQRT_2 = 1.414213562373;

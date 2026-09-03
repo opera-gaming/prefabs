@@ -19,7 +19,7 @@ vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 // Baked params: up = true (melt direction), above = false (melt below threshold).
 const bool above = false;
-uniform float threshold;   // knob; default in scr_transition_defaults
+uniform float threshold;
 
 // Random function borrowed from everywhere
 float rand(vec2 co){

@@ -18,8 +18,8 @@ vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 const vec4 shadow_colour = vec4(0.0, 0.0, 0.0, 0.6);
-uniform float shadow_height;   // knob; default in scr_transition_defaults
-uniform float bounces;         // knob; default in scr_transition_defaults
+uniform float shadow_height;
+uniform float bounces;
 
 const float PI = 3.14159265358;
 

@@ -1,0 +1,22 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "speed"
+label = "Speed"
+default = 1.0
+max = 2.0
+
+[[uniform]]
+name = "angle"
+label = "Angle"
+default = 1.0
+max = 6.283
+
+[[uniform]]
+name = "power"
+label = "Power"
+default = 1.5
+max = 5.0

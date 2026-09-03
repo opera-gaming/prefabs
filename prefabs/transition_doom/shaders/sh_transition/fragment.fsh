@@ -24,8 +24,8 @@ const float noise = 0.1;
 // How much the bars "run" from the middle first. 0 = no drip (valid); default 0.5.
 const float drip_scale = 0.5;
 
-uniform float amplitude;   // knob; default in scr_transition_defaults
-uniform float frequency;   // knob; default in scr_transition_defaults
+uniform float amplitude;
+uniform float frequency;
 
 float rand(int num) {
     return fract(mod(float(num) * 67123.313, 12.0) * sin(float(num) * 10.3) * cos(float(num)));

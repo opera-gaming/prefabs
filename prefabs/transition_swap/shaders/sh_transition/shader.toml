@@ -1,0 +1,20 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "reflection"
+label = "Reflection"
+default = 0.4
+
+[[uniform]]
+name = "perspective"
+label = "Perspective"
+default = 0.2
+
+[[uniform]]
+name = "depth"
+label = "Depth"
+default = 3.0
+max = 10.0

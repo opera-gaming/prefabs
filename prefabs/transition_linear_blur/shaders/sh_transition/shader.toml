@@ -1,0 +1,9 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "intensity"
+label = "Intensity"
+default = 0.1

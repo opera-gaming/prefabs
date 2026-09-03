@@ -21,8 +21,8 @@ vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 const vec2 center = vec2(0.5, 0.5);
 const vec4 back_color = vec4(0.15, 0.15, 0.15, 1.0);
-uniform float rotations;   // knob; default in scr_transition_defaults
-uniform float scale;       // knob; default in scr_transition_defaults
+uniform float rotations;
+uniform float scale;
 
 vec4 transition(vec2 uv) {
     float rot = rotations;

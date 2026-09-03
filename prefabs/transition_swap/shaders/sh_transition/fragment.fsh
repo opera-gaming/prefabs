@@ -17,9 +17,9 @@ out vec4 frag_colour;
 vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
-uniform float reflection;    // knob; default in scr_transition_defaults
-uniform float perspective;   // knob; default in scr_transition_defaults
-uniform float depth;         // knob; default in scr_transition_defaults
+uniform float reflection;
+uniform float perspective;
+uniform float depth;
 
 const vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
 const vec2 boundMin = vec2(0.0, 0.0);

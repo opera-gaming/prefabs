@@ -18,7 +18,7 @@ vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 const float SQRT_2 = 1.414213562373;
-uniform float dots;   // knob; default in scr_transition_defaults
+uniform float dots;
 const vec2 center = vec2(0.0, 0.0);
 
 vec4 transition(vec2 uv) {

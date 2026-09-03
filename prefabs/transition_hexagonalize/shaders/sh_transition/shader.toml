@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "steps"
+label = "Steps"
+default = 50.0
+max = 200.0
+
+[[uniform]]
+name = "horizontal_hexagons"
+label = "Horizontal hexagons"
+default = 20.0
+max = 50.0

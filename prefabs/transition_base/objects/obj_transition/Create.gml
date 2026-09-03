@@ -25,16 +25,15 @@ u_progress = shader_get_uniform(sh_transition, "progress");
 uniforms = [];   // each entry: [tag, loc, values]  tag 0 = int, 1 = float
 
 // Build the extra-uniform list for this effect. Every tunable knob is a float
-// uniform addressed by name; the effect's transition_defaults() supplies the
-// fallbacks, and the caller's `params` (from goto()) override them by key. A
+// uniform declared in the shader's shader.toml; its default there is the
+// fallback, and the caller's `params` (from goto()) override it by name. A
 // knob therefore always resolves to a concrete value, so passing 0 is a real 0
-// — not a "use the default" sentinel — and the defaults are discoverable from
-// the effect's scr_transition_defaults script rather than buried in the shader.
+// — not a "use the default" sentinel.
 configure = function(p) {
     uniforms = [];
 
     // Merge caller params over the effect's defaults (params win).
-    var merged = transition_defaults();
+    var merged = shader_get_uniform_defaults(sh_transition);
     var given = variable_struct_get_names(p);
     for (var i = 0; i < array_length(given); i++) merged[$ given[i]] = p[$ given[i]];
 

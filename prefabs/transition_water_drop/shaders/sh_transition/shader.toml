@@ -1,0 +1,16 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "amplitude"
+label = "Amplitude"
+default = 30.0
+max = 100.0
+
+[[uniform]]
+name = "speed"
+label = "Speed"
+default = 30.0
+max = 100.0

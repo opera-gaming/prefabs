@@ -18,8 +18,8 @@ vec4 getToColor(vec2 uv)   { return texture(to_tex,   vec2(uv.x, 1.0 - uv.y)); }
 vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 
 const vec2 center = vec2(0.5, 0.5);
-uniform float threshold;   // knob; default in scr_transition_defaults
-uniform float fade_edge;   // knob; default in scr_transition_defaults
+uniform float threshold;
+uniform float fade_edge;
 
 float rand(vec2 co) {
     return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);

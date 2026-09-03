@@ -1,0 +1,15 @@
+#:schema ../../.gm-schema/v1.json#shader
+
+[host]
+kind = "transition"
+
+[[uniform]]
+name = "shadow_height"
+label = "Shadow height"
+default = 0.075
+
+[[uniform]]
+name = "bounces"
+label = "Bounces"
+default = 3.0
+max = 10.0

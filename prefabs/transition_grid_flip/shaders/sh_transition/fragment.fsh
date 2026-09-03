@@ -21,9 +21,9 @@ vec4 getFromColor(vec2 uv) { return texture(from_tex, vec2(uv.x, 1.0 - uv.y)); }
 const vec2 size = vec2(4.0);
 const vec4 bgcolor = vec4(0.0, 0.0, 0.0, 1.0);
 
-uniform float pause;          // knob; default in scr_transition_defaults
-uniform float divider_width;  // knob; default in scr_transition_defaults
-uniform float randomness;     // knob; default in scr_transition_defaults
+uniform float pause;
+uniform float divider_width;
+uniform float randomness;
 
 float rand(vec2 co) {
     return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
